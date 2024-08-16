@@ -3,19 +3,80 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Bootstrap Demo</title>
+      <meta name="description" content="Portfolio of Mohsen Nozari - Web Designer">
+      <meta name="keywords" content="Web Design, Portfolio, Mohsen Nozari, HTML, CSS, JavaScript, Bootstrap">
+      <title>Mohsen Nozari - Web Designer</title>
+      
+      <!-- Bootstrap CSS -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      
+      <!-- Font Awesome CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM0s0c0l4c5I5x5V5I5x5V5I5x5V5I5" crossorigin="anonymous">
+      
       <style>
-         /* CSS for resizing the profile image */
+         body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+         }
+
          .home-img img {
-            width: 600px; /* Set width of the image */
-            height: 600px; /* Set height of the image */
-            object-fit: cover; /* Maintain aspect ratio */
+            width: 100%;
+            height: 500px;
+            max-width: 400px;
+            object-fit: cover;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+         }
+
+         .section-title h2 {
+            font-size: 2.5rem;
+            color: #343a40;
+         }
+
+         .fact-item h4 {
+            color: #dc3545;
+         }
+
+         .progress {
+            height: 10px;
+            border-radius: 5px;
+         }
+
+         .progress-bar {
+            border-radius: 5px;
+         }
+
+         .social-links a {
+            font-size: 1.5rem;
+            transition: color 0.3s;
+         }
+
+         .social-links a:hover {
+            color: #dc3545;
+         }
+
+         .btn-primary {
+            background-color: #007bff;
+            border: none;
+            transition: background-color 0.3s;
+         }
+
+         .btn-primary:hover {
+            background-color: #0056b3;
+         }
+
+         .btn-danger {
+            transition: background-color 0.3s;
+         }
+
+         .btn-danger:hover {
+            background-color: #c82333;
          }
       </style>
    </head>
-   <body class="bg-light">
+   <body>
+      <!-- Navbar -->
       <nav class="navbar navbar-light fixed-top bg-light shadow-sm">
          <div class="container-lg">
             <a class="navbar-brand text-danger fw-bold fs-4" href="#">IR</a>
@@ -24,39 +85,122 @@
                   <i class="fas fa-bars"></i>
                </button>
                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                  <li><a class="dropdown-item" href="#Home">Home</a></li>
-                  <li><a class="dropdown-item" href="#About">About</a></li>
-                  <li><a class="dropdown-item" href="#Services">Services</a></li>
-                  <li><a class="dropdown-item" href="#Portfolio">Portfolio</a></li>
-                  <li><a class="dropdown-item" href="#Testimonials">Testimonials</a></li>
-                  <li><a class="dropdown-item" href="#Contact">Contact</a></li>
+                  <li><a class="dropdown-item" href="#home">Home</a></li>
+                  <li><a class="dropdown-item" href="#about">About</a></li>
+                  <li><a class="dropdown-item" href="#services">Services</a></li>
+                  <li><a class="dropdown-item" href="#portfolio">Portfolio</a></li>
+                  <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+                  <li><a class="dropdown-item" href="#contact">Contact</a></li>
                </ul>
             </div>
          </div>
       </nav>
-      <!-- navbar end -->
+      <!-- Navbar end -->
+
       <!-- Home section start -->
-      <section class="home-section py-5"> <!-- Changed class name for uniqueness -->
+      <section class="home-section py-5" id="home">
          <div class="container-lg">
             <div class="row min-vh-100 align-items-center">
                <div class="col-md-6">
                   <div class="home-img text-center">
-                     <img src="/assets/pixelcut-export (2).png" alt="profile img" class="rounded-circle"> <!-- Ensure rounded-circle class is applied -->
+                     <img src="/assets/pixelcut-export (2).png" alt="profile img" class="rounded-circle">
                   </div>
                </div>
                <div class="col-md-6 order-md-first">
                   <div class="home-text">
-                     <p class="text-muted mb-1">Hello I'm</p>
-                     <h1 >Web Designer</h1>
-                     <h2>MOHSEN NOZARI</h2>
-                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus perspiciatis quidem vitae esse porro officia dolorum labore in adipisci sapiente quod quae commodi, ab, accusantium a? Alias vitae nisi expedita.</p>
-                     <a href="#portfolio">My Work</a>
+                     <p class="text-muted mb-1">Hello, I'm</p>
+                     <h1 class="display-4">Web Designer</h1>
+                     <h2 class="display-5">MOHSEN NOZARI</h2>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus perspiciatis quidem vitae esse porro officia dolorum labore in adipisci sapiente quod quae commodi, ab, accusantium a? Alias vitae nisi expedita.</p>
+                     <a href="#portfolio" class="btn btn-primary">My Work</a>
                   </div>
                </div>
             </div>
          </div>
       </section>
       <!-- Home section end -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+      <!-- About section start -->
+      <section class="about py-5" id="about">
+         <div class="container-lg py-4">
+            <div class="row justify-content-center">
+               <div class="col-md-8">
+                  <div class="section-title text-center">
+                     <h2 class="fw-bold mb-5">About Me</h2>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row justify-content-center">
+               <div class="col-md-6">
+                  <div class="about-text">
+                     <h3 class="fs-4 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</h3>
+                     <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor nobis laudantium, incidunt ullam placeat pariatur in quo voluptatem nisi ut ex ipsa labore odio, quas molestiae ipsam non beatae iste molestias tenetur! Officia commodi id nobis rerum reiciendis corporis ut iure eius odio earum ratione dolorum, et quas harum!</p>
+                  </div>
+                  <div class="row text-center text-uppercase my-3">
+                     <div class="col-sm-4">
+                        <div class="fact-item">
+                           <h4 class="fs-1 fw-bold">100</h4>
+                           <p class="text-muted">Projects Completed</p>
+                        </div>
+                     </div>
+                     <div class="col-sm-4">
+                        <div class="fact-item">
+                           <h4 class="fs-1 fw-bold">95</h4>
+                           <p class="text-muted">Positive Reviews</p>
+                        </div>
+                     </div>
+                     <div class="col-sm-4">
+                        <div class="fact-item">
+                           <h4 class="fs-1 fw-bold">90</h4>
+                           <p class="text-muted">Happy Clients</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-12 d-flex align-items-center">
+                        <a href="#" class="btn btn-danger px-3 me-5">Download CV</a>
+                        <div class="social-links">
+                           <a href="#" class="text-dark me-2"><i class="fab fa-facebook-f"></i></a>
+                           <a href="#"><i class="fab fa-twitter"></i></a>
+                           <a href="#"><i class="fab fa-instagram"></i></a>
+                           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 mt-5 mt-md-0">
+                  <div class="skill-item mb-4">
+                     <h3 class="fs-6">HTML</h3>
+                     <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                     </div>
+                  </div>
+                  <div class="skill-item mb-4">
+                     <h3 class="fs-6">CSS</h3>
+                     <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                     </div>
+                  </div>
+                  <div class="skill-item mb-4">
+                     <h3 class="fs-6">JavaScript</h3>
+                     <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                     </div>
+                  </div>
+                  <div class="skill-item mb-4">
+                     <h3 class="fs-6">Bootstrap</h3>
+                     <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- About section end -->
+      
+      <!-- Add JavaScript files at the bottom for faster page loading -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-7h9e+j/XxQyZqHSoh/3ppGzMN/jnwoz8mimT1PjVbsA5SU9Tux2t8nSyE3Si5IRa" crossorigin="anonymous"></script>
    </body>
 </html>
