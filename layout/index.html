@@ -286,41 +286,55 @@
          </div>
       </section>
       <!-- About section end -->
-      <div class="container py-5">
-         <h2 class="text-center mb-4">Our Services</h2>
-         <div class="row justify-content-center text-center">
-            <div class="col-lg-4 col-md-6 mb-4">
-               <div class="service-item shadow-sm p-4 rounded bg-white">
-                  <div class="icon my-3 text-danger fs-2">
-                     <i class="fas fa-code" aria-hidden="true"></i> <!-- Web Development Icon -->
-                  </div>
-                  <h3 class="fw-bold">Web Development</h3>
-                  <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, omnis.</p>
-                  <a href="#" class="btn btn-danger mt-3">Learn More</a>
-               </div>
+     <!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Include Animate.css for animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- About section -->
+<div class="container py-5">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row justify-content-center text-center">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-item shadow-lg p-4 rounded bg-primary text-white animate__animated animate__zoomIn" style="height: 100%; animation-delay: 0.1s;">
+                <div class="icon my-3 fs-2">
+                    <i class="fas fa-code" aria-hidden="true" style="color: #FFD700;"></i> <!-- Web Development Icon -->
+                </div>
+                <h3 class="fw-bold">Web Development</h3>
+                <p class="text-light">Building modern and responsive websites for your business needs.</p>
+                <a href="#" class="btn btn-warning mt-3">Learn More</a>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-               <div class="service-item shadow-sm p-4 rounded bg-white">
-                  <div class="icon my-3 text-danger fs-2">
-                     <i class="fas fa-paint-brush" aria-hidden="true"></i> <!-- Graphic Design Icon -->
-                  </div>
-                  <h3 class="fw-bold">Graphic Design</h3>
-                  <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, omnis.</p>
-                  <a href="#" class="btn btn-danger mt-3">Learn More</a>
-               </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-item shadow-lg p-4 rounded bg-success text-white animate__animated animate__zoomIn" style="height: 100%; animation-delay: 0.3s;">
+                <div class="icon my-3 fs-2">
+                    <i class="fas fa-paint-brush" aria-hidden="true" style="color: #FF4500;"></i> <!-- Graphic Design Icon -->
+                </div>
+                <h3 class="fw-bold">Graphic Design</h3>
+                <p class="text-light">Creating visually stunning graphics for branding and marketing.</p>
+                <a href="#" class="btn btn-warning mt-3">Learn More</a>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-               <div class="service-item shadow-sm p-4 rounded bg-white">
-                  <div class="icon my-3 text-danger fs-2">
-                     <i class="fas fa-mobile-alt" aria-hidden="true"></i> <!-- Mobile Development Icon -->
-                  </div>
-                  <h3 class="fw-bold">\Potoshop</h3>
-                  <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, omnis.</p>
-                  <a href="#" class="btn btn-danger mt-3">Learn More</a>
-               </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-item shadow-lg p-4 rounded bg-warning text-dark animate__animated animate__zoomIn" style="height: 100%; animation-delay: 0.5s;">
+                <div class="icon my-3 fs-2">
+                    <i class="fas fa-mobile-alt" aria-hidden="true" style="color: #008000;"></i> <!-- Mobile Development Icon -->
+                </div>
+                <h3 class="fw-bold">Mobile Development</h3>
+                <p class="text-dark">Developing mobile applications that work seamlessly on all devices.</p>
+                <a href="#" class="btn btn-warning mt-3">Learn More</a>
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS -->
+<!-- Include Animate.css for additional animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
       <!-- portfolio section start -->
       <section class="portfolio section-padding" id="portfolio">
          <div class="container-lg">
@@ -369,36 +383,147 @@
       </section>
       <!-- CSS for Portfolio Overlay -->
       <style>
-         .portfolio-item {
-         position: relative;
-         overflow: hidden;
-         }
-         .portfolio-item img {
-         transition: transform 0.3s ease;
-         }
-         .portfolio-item:hover img {
-         transform: scale(1.05); /* Zoom effect on hover */
-         }
-         .portfolio-overlay {
-         position: absolute;
-         top: 0;
-         left: 0;
-         right: 0;
-         bottom: 0;
-         background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-         opacity: 0;
-         transition: opacity 0.3s ease;
-         }
-         .portfolio-item:hover .portfolio-overlay {
-         opacity: 1; /* Show overlay on hover */
-         }
-         .portfolio-overlay h4, .portfolio-overlay p {
-         margin: 0;
-         }
+        /* Container for the services section */
+.services-container {
+    max-width: 1200px; /* Maximum width of the container */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    justify-content: space-between; /* Space between items */
+}
+
+/* Title styling */
+.services-title {
+    font-weight: bold;
+    font-size: 2.5rem; /* Font size for the title */
+    color: #003366; /* Dark Blue color */
+    margin-bottom: 30px; /* Space below the title */
+    text-align: center; /* Center the title */
+    text-transform: uppercase; /* Uppercase letters for emphasis */
+    animation: fadeInDown 0.8s ease; /* Fade-in down animation for title */
+}
+
+/* Service item card styling */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+    height: 100%; /* Equal height for all cards */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow of content */
+    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Gradient background */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px; /* Padding inside the card */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space between children */
+    position: relative; /* For positioning pseudo-elements */
+    opacity: 0; /* Start with hidden opacity */
+    animation: fadeIn 0.8s forwards; /* Fade-in animation for cards */
+    animation-delay: 0.2s; /* Delay for each card */
+}
+
+/* Hover effect for service cards */
+.service-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Button styling */
+.btn-warning {
+    background-color: #FFD700; /* Gold color */
+    border: none; /* Remove border */
+    color: #003366; /* Dark Blue text color */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+    font-size: 1rem; /* Font size for buttons */
+    font-weight: bold; /* Bold text for buttons */
+    text-transform: uppercase; /* Uppercase letters for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: auto; /* Push button to the bottom of the card */
+    animation: pulse 2s infinite; /* Gentle pulse animation for buttons */
+}
+
+/* Button hover effect */
+.btn-warning:hover {
+    background-color: #FFC300; /* Lighter Gold on hover */
+    color: #fff; /* White text color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Icon styling */
+.service-icon {
+    transition: transform 0.3s ease; /* Smooth transition for icons */
+    font-size: 3rem; /* Increase icon size */
+    margin-bottom: 15px; /* Space below the icon */
+    opacity: 0; /* Start with hidden opacity */
+    animation: fadeIn 0.8s forwards; /* Fade-in animation for icons */
+    animation-delay: 0.4s; /* Delay for icon animation */
+}
+
+/* Icon hover effect */
+.service-card:hover .service-icon {
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+    color: #FFD700; /* Change icon color on hover */
+}
+
+/* Description styling */
+.service-description {
+    font-size: 1rem; /* Font size for description */
+    color: #555; /* Darker gray for better readability */
+    margin-bottom: 20px; /* Space below the description */
+    line-height: 1.5; /* Increase line height for better readability */
+    opacity: 0; /* Start with hidden opacity */
+    animation: fadeIn 0.8s forwards; /* Fade-in animation for descriptions */
+    animation-delay: 0.6s; /* Delay for description animation */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-card {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+    .services-title {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+    .btn-warning {
+        font-size: 0.9rem; /* Reduce button font size */
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Start slightly higher */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.05); /* Slightly larger size */
+    }
+}
+
       </style>
       <section class="freelancer-available">
          <div class="container-lg">
