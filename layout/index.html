@@ -8,14 +8,21 @@
       <meta name="author" content="Mohsen Nozari"> <!-- Author of the document -->
       <meta name="robots" content="index, follow"> <!-- Instructions for search engine crawlers -->
       <title>My portfolio</title> <!-- Title of the page displayed in the browser tab -->
-      <link href="/style/style.css" rel="stylesheet"> <!-- Link to custom CSS file -->
-      <!-- Bootstrap CSS -->
+      
+    <!-- Path with starting slash -->
+    <link rel="stylesheet" href="/style/style.css">
+    
+    <!-- Path with ./ -->
+    <link rel="stylesheet" href="./style/style.css">
+    
+    <!-- Path without any prefix -->
+    <link rel="stylesheet" href="style/style.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Link to Font Awesome CSS -->
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"> <!-- Link to Bootstrap CSS -->
    </head>
    <body>
-      <style>
-         /* استایل ناوبار‭ - Styles for the navbar can be added here */
-      </style>
+     
 
       <!-- Navbar start -->
       <nav class="navbar navbar-expand-lg fixed-top">
@@ -194,10 +201,7 @@
             </div>
          </div>
       </div>
-      <style>
-         /* Container for services - Additional styling can be added here */
-      </style>
-      <!-- Custom CSS -->
+      
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- Additional Animations -->
 
       <!-- Portfolio section start -->
