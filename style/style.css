@@ -1,44 +1,37 @@
-@charset "UTF-8";
 .navbar {
-  background-color: rgba(255, 255, 255, 0.157); /* رنگ پس‌زمینه */
-  height: 3.75rem; /* ارتفاع ناوبار */
-  padding: 0 1.875rem; /* padding برای راحتی استفاده */
-  transition: background-color 0.5s ease, box-shadow 0.5s ease; /* انیمیشن تغییر رنگ و سایه */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* سایه بیشتر برای عمق */
-  transition: background-color 0.5s ease, box-shadow 0.5s ease; /* انیمیشن تغییر رنگ و سایه */
+  background-color: rgba(255, 255, 255, 0.157);
+  height: 3.75rem;
+  padding: 0 1.875rem;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-
 .navbar.scrolled {
-  background-color: rgb(255, 127, 95); /* رنگ پس‌زمینه در حالت اسکرول */
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4); /* سایه کمتر هنگام اسکرول */
+  background-color: rgb(255, 127, 95);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
 }
-
-/* استایل لینک‌ها */
-.nav-link {
-  color: rgb(0, 0, 0); /* رنگ متن لینک‌ها */
-  font-weight: 800; /* وزن متوسط برای متن لینک‌ها */
-  font-family: "georgia", sans-serif;
-  text-transform: uppercase; /* متن به حروف بزرگ */
-  letter-spacing: 0.1rem; /* فاصله حروف */
-  font-size: 0.875rem; /* اندازه متن لینک‌ها */
-  transition: color 0.3s ease, transform 0.3s ease; /* انیمیشن تغییر رنگ و اندازه */
-  padding: 0.625rem 0.9375rem; /* padding برای راحتی کلیک */
-  /* وزن متوسط برای متن لینک‌ها */
+.navbar .nav-link {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-family: "Georgia", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.875rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 0.625rem 0.9375rem;
 }
-
-.nav-link:hover {
-  color: #a50000; /* رنگ متن در حالت هاور */
-  transform: scale(1.1); /* بزرگ شدن در حالت هاور */
+.navbar .nav-link:hover {
+  color: #a50000;
+  transform: scale(1.1);
 }
-
-/* استایل برند */
-.navbar-brand {
-  font-size: 1.875rem; /* استفاده از rem برای سازگاری بیشتر */
+.navbar .navbar-brand {
+  font-size: 1.875rem;
   font-family: "Arial", sans-serif;
   font-weight: 700;
 }
 
-/* Overlay */
+.home-section {
+  position: relative;
+}
 .home-section::before {
   content: "";
   position: absolute;
@@ -47,33 +40,26 @@
   width: 100%;
   height: 100%;
 }
-
-/* Content should appear above the overlay */
 .home-section .container-lg {
   position: relative;
   z-index: 2;
 }
-
-/* Image Styling with Animation */
-.home-img img {
-  width: 300px;
-  height: 300px;
+.home-section .home-img img {
+  width: 400px;
+  height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 5px solid #007bff;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   animation: imageFadeIn 1.5s ease-in-out;
 }
-
-/* Text Styling with Animation */
-.home-text {
+.home-section .home-text {
   text-align: left;
-  color: #666666; /* تغییر رنگ متن به سفید برای کنتراست بهتر با پس‌زمینه */
+  color: #666666;
   animation: textSlideIn 1.5s ease-in-out;
 }
 
-/* سایر استایل‌ها همان‌طور که قبلاً بودند... */
-/* Keyframes for Image Animation */
 @keyframes imageFadeIn {
   0% {
     opacity: 0;
@@ -84,7 +70,6 @@
     transform: scale(1);
   }
 }
-/* Keyframes for Text Animation */
 @keyframes textSlideIn {
   0% {
     opacity: 0;
@@ -111,13 +96,12 @@ body {
      object-fit: cover;
   border: 1px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-
 .home-img img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .section-title h2 {
@@ -126,7 +110,6 @@ body {
   margin-bottom: 1rem;
   transition: color 0.5s ease;
 }
-
 .section-title h2:hover {
   color: #dc3545;
 }
@@ -136,86 +119,80 @@ body {
   font-size: 2rem;
   transition: transform 0.5s ease;
 }
-
 .fact-item h4:hover {
   transform: scale(1.1);
 }
 
 .progress {
-  height: 25px; /* Increased height for better visibility */
-  border-radius: 8px; /* More rounded corners */
-  background-color: #f3f4f6; /* Light background color */
-  margin-bottom: 1rem; /* Bottom margin */
-  transition: background-color 0.5s ease; /* Animation for background color change */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+  height: 25px;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  margin-bottom: 1rem;
+  transition: background-color 0.5s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.progress .progress-bar {
+  border-radius: 18px;
+  width: 0;
+  animation: progress-animation 1s ease-out forwards;
+  transition: width 0.5s ease, background-color 0.5s ease;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+.progress .progress-bar::after {
+  content: attr(data-progress);
+  position: absolute;
+  right: 10px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  line-height: 15px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 
-.progress-bar {
-  border-radius: 18px; /* Rounded corners for the progress bar */
-  width: 0; /* Initial width */
-  animation: progress-animation 1s ease-out forwards; /* Animation */
-  transition: width 0.5s ease, background-color 0.5s ease; /* Animation for width and background color change */
-  position: relative; /* For using ::after */
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Shadow for depth */
-}
-
-/* Keyframes for progress animation */
 @keyframes progress-animation {
   from {
-    width: 0; /* Start from zero */
+    width: 0;
   }
   to {
-    width: var(--progress-width); /* Final width */
+    width: var(--progress-width);
   }
 }
-/* Different classes for each progress bar with gradients */
 .progress-bar.html {
-  --progress-width: 90%; /* Width for HTML */
-  background: linear-gradient(90deg, #e44d26, #f76d3e); /* Gradient color for HTML */
-  animation-delay: 1s; /* Animation delay */
+  --progress-width: 90%;
+  background: linear-gradient(90deg, #e44d26, #f76d3e);
+  animation-delay: 1s;
 }
 
 .progress-bar.css {
-  --progress-width: 75%; /* Width for CSS */
-  background: linear-gradient(90deg, #2965f1, #4e8df5); /* Gradient color for CSS */
-  animation-delay: 1.3s; /* Animation delay */
+  --progress-width: 75%;
+  background: linear-gradient(90deg, #2965f1, #4e8df5);
+  animation-delay: 1.3s;
 }
 
 .progress-bar.javascript {
-  --progress-width: 25%; /* Width for JavaScript */
-  background: linear-gradient(90deg, #f7df1e, #f9e84d); /* Gradient color for JavaScript */
-  animation-delay: 1.5s; /* Animation delay */
+  --progress-width: 25%;
+  background: linear-gradient(90deg, #f7df1e, #f9e84d);
+  animation-delay: 1.5s;
 }
 
 .progress-bar.bootstrap {
-  --progress-width: 65%; /* Width for Bootstrap */
-  background: linear-gradient(90deg, #563d7c, #7a4b9d); /* Gradient color for Bootstrap */
-  animation-delay: 1.8s; /* Animation delay */
-}
-
-/* Adding text inside the progress bar */
-.progress-bar::after {
-  content: attr(data-progress); /* Display progress percentage */
-  position: absolute; /* Absolute positioning for placement */
-  right: 10px; /* Right margin */
-  color: #fff; /* Text color */
-  font-size: 0.85rem; /* Slightly larger text size */
-  line-height: 15px; /* Vertical alignment */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
-  font-weight: bold; /* Bold text for emphasis */
+  --progress-width: 65%;
+  background: linear-gradient(90deg, #563d7c, #7a4b9d);
+  animation-delay: 1.8s;
 }
 
 .social-links a {
   font-size: 1.5rem;
   transition: color 0.5s ease, transform 0.5s ease;
 }
-
 .social-links a:hover {
   color: #dc3545;
   transform: scale(1.3);
 }
 
-.btn-primary, .btn-danger {
+.btn-primary,
+.btn-danger {
   transition: background-color 0.5s ease, transform 0.5s ease;
   padding: 10px 20px;
   border-radius: 5px;
@@ -226,236 +203,201 @@ body {
   background-color: #007bff;
   border: none;
 }
-
 .btn-primary:hover {
   background-color: #0056b3;
   transform: scale(1.05);
 }
 
 .btn-danger {
-  background-color: #ff0019;
+  background-color: #dc3545;
   border: none;
 }
-
 .btn-danger:hover {
   background-color: #c82333;
   transform: scale(1.05);
 }
 
 .services-container {
-  height: 100vh; /* Full height of the container */
+  height: 100vh;
   width: 100%;
-  max-width: auto; /* Maximum width of the container */
-  margin: auto; /* Center the container */
-  padding: 20px; /* Padding around the container */
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allow wrapping to next line */
-  justify-content: space-between; /* Space between items */
+  max-width: auto;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
-/* Title styling */
-.services-title {
+.services-container .services-title {
   font-weight: bold;
-  font-size: 2.5rem; /* Font size for the title */
-  color: #003366; /* Dark Blue color */
-  margin-bottom: 30px; /* Space below the title */
-  text-align: center; /* Center the title */
-  text-transform: uppercase; /* Uppercase letters for emphasis */
-  animation: fadeInDown 0.8s ease; /* Fade-in down animation for title */
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  animation: fadeInDown 0.8s ease;
+}
+.services-container .service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+.services-container .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.services-container .btn-warning {
+  background-color: #FFD700;
+  border: none;
+  color: #003366;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: auto;
+}
+.services-container .btn-warning:hover {
+  background-color: #FFC300;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.services-container .service-icon {
+  transition: transform 0.3s ease;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+.services-container .service-icon:hover {
+  transform: scale(1.1);
+  color: #FFD700;
+}
+.services-container .service-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
 }
 
-/* Service item card styling */
-.service-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
-  height: 100%; /* Equal height for all cards */
-  border-radius: 15px; /* Rounded corners */
-  overflow: hidden; /* Prevent overflow of content */
-  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Gradient background */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  padding: 20px; /* Padding inside the card */
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: space-between; /* Space between children */
-  position: relative; /* For positioning pseudo-elements */
-  opacity: 0; /* Start with hidden opacity */
-  animation: fadeIn 0.8s forwards; /* Fade-in animation for cards */
-}
-
-/* Hover effect for service cards */
-.service-card:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-}
-
-/* Button styling */
-.btn-warning {
-  background-color: #FFD700; /* Gold color */
-  border: none; /* Remove border */
-  color: #003366; /* Dark Blue text color */
-  padding: 10px 20px; /* Padding for the button */
-  border-radius: 5px; /* Rounded corners for the button */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
-  font-size: 1rem; /* Font size for buttons */
-  font-weight: bold; /* Bold text for buttons */
-  text-transform: uppercase; /* Uppercase letters for buttons */
-  cursor: pointer; /* Pointer cursor on hover */
-  margin-top: auto; /* Push button to the bottom of the card */
-}
-
-/* Button hover effect */
-.btn-warning:hover {
-  background-color: #FFC300; /* Lighter Gold on hover */
-  color: #fff; /* White text color on hover */
-  transform: scale(1.05); /* Slightly enlarge button on hover */
-}
-
-/* Icon styling */
-.service-icon {
-  transition: transform 0.3s ease; /* Smooth transition for icons */
-  font-size: 3rem; /* Increase icon size */
-  margin-bottom: 15px; /* Space below the icon */
-  opacity: 0; /* Start with hidden opacity */
-  animation: fadeIn 0.8s forwards; /* Fade-in animation for icons */
-}
-
-/* Icon hover effect */
-.service-card:hover .service-icon {
-  transform: scale(1.1); /* Slightly enlarge icon on hover */
-  color: #FFD700; /* Change icon color on hover */
-}
-
-/* Description styling */
-.service-description {
-  font-size: 1rem; /* Font size for description */
-  color: #555; /* Darker gray for better readability */
-  margin-bottom: 20px; /* Space below the description */
-  line-height: 1.5; /* Increase line height for better readability */
-  opacity: 0; /* Start with hidden opacity */
-  animation: fadeIn 0.8s forwards; /* Fade-in animation for descriptions */
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .service-card {
-    flex: 1 1 100%; /* Full width on smaller screens */
-    padding: 15px; /* Reduce padding on smaller screens */
+    flex: 1 1 100%;
+    padding: 15px;
   }
   .services-title {
-    font-size: 2rem; /* Reduce font size for smaller screens */
+    font-size: 2rem;
   }
   .btn-warning {
-    font-size: 0.9rem; /* Reduce button font size */
+    font-size: 0.9rem;
   }
 }
-/* Keyframes for animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px); /* Start slightly lower */
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0); /* End at original position */
+    transform: translateY(0);
   }
 }
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-20px); /* Start slightly higher */
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0); /* End at original position */
+    transform: translateY(0);
   }
 }
 @keyframes pulse {
   0%, 100% {
-    transform: scale(1); /* Original size */
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.05); /* Slightly larger size */
+    transform: scale(1.05);
   }
 }
 .portfolio {
   height: 100vh;
   background-color: #f8f9fa;
-  padding: 60px 0; /* Padding for top and bottom */
-  background-color: #f8f9fa; /* Light background color */
+  padding: 60px 0;
 }
-
-/* Title styling */
-.section-title h2 {
+.portfolio .section-title h2 {
   font-weight: bold;
-  font-size: 2.5rem; /* Font size for the title */
-  color: #003366; /* Dark Blue color */
-  margin-bottom: 20px; /* Space below the title */
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 20px;
 }
-
-.section-title p {
-  color: #6c757d; /* Muted text color */
-  font-size: 1.1rem; /* Font size for description */
+.portfolio .section-title p {
+  color: #6c757d;
+  font-size: 1.1rem;
 }
-
-/* Portfolio item styling */
-.portfolio-item {
-  position: relative; /* For positioning overlay */
-  overflow: hidden; /* Prevent overflow */
-  border-radius: 10px; /* Rounded corners */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
-  height: 400px; /* Increased height for larger images */
+.portfolio .portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  height: 400px;
 }
-
-.portfolio-item:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+.portfolio .portfolio-item:hover {
+  transform: scale(1.05);
 }
-
-/* Image styling */
-.portfolio-item img {
-  width: 100%; /* Full width */
-  height: 100%; /* Set height to fill the card */
+.portfolio .portfolio-item img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
-     object-fit: cover; /* Maintain aspect ratio and cover the area */
+     object-fit: cover;
 }
-
-/* Overlay styling */
-.portfolio-overlay {
-  position: absolute; /* Position overlay */
+.portfolio .portfolio-item .portfolio-overlay {
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-  color: #ffffff; /* White text color */
-  display: flex; /* Use flexbox for centering */
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  opacity: 0; /* Start hidden */
-  transition: opacity 0.3s ease; /* Smooth transition for overlay */
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.portfolio-item:hover .portfolio .portfolio-item .portfolio-overlay {
+  opacity: 1;
 }
 
-.portfolio-item:hover .portfolio-overlay {
-  opacity: 1; /* Show overlay on hover */
-}
-
-/* Button styling */
 .btn-danger {
-  background-color: #dc3545; /* Bootstrap danger color */
-  border: none; /* Remove border */
-  color: #ffffff; /* White text color */
-  padding: 10px 20px; /* Padding for the button */
-  border-radius: 5px; /* Rounded corners for the button */
-  transition: background-color 0.3s ease; /* Smooth transition for hover */
+  background-color: #dc3545;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
-
 .btn-danger:hover {
-  background-color: #c82333; /* Darker shade on hover */
+  background-color: #c82333;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .portfolio-item {
-    height: auto; /* Allow height to adjust on smaller screens */
+    height: auto;
   }
 }
 .freelancer-available {
@@ -465,228 +407,185 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #ffffff; /* White background for a clean look */
-  padding: 0px 0; /* Increased padding for better spacing */
-  border-radius: 10px; /* Slightly more rounded corners */
-  background-color: #ffd900; /* White background for a clean look */
-  padding: 0px 0; /* Increased padding for better spacing */
-  border-radius: 10px; /* Slightly more rounded corners */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
-  margin: 0px 0; /* Margin to separate from other sections */
+  background-color: #f8f9fa;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  margin: 0;
 }
-
 .freelancer-available h2 {
-  color: #000000; /* Darker color for better readability */
-  font-size: 2.5rem; /* Larger font size for the heading */
+  color: #000000;
+  font-size: 2.5rem;
 }
-
 .freelancer-available p {
-  font-size: 1.2rem; /* Slightly larger font for the paragraph */
-  line-height: 1.6; /* Improved line height for readability */
-  margin-bottom: 30px; /* Space below the paragraph */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
-
 .freelancer-available .btn {
-  padding: 12px 25px; /* Increased padding for the button */
-  border-radius: 5px; /* Rounded button */
-  font-size: 1.1rem; /* Slightly larger font size for the button */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
-.freelancer-available .btn-primary {
-  background-color: #ff0000; /* Bootstrap primary color */
-  border: none; /* Remove border */
+.freelancer-available .btn.btn-primary {
+  background-color: #007bff;
+  border: none;
 }
-
-.freelancer-available .btn-primary:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  transform: translateY(-2px); /* Slight lift effect on hover */
+.freelancer-available .btn.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 .testimonials {
   height: 100vh;
-  background-color: #f8f9fa; /* Light background for contrast */
+  background-color: #f8f9fa;
 }
-
-.section-title h2 {
-  color: #343a40; /* Dark color for the title */
-  font-size: 2.5rem; /* Larger font size for the title */
-  margin-bottom: 10px; /* Space below the title */
+.testimonials .section-title h2 {
+  color: #343a40;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
-
-.section-title p {
-  font-size: 1.2rem; /* Font size for the subtitle */
-  color: #6c757d; /* Muted color for the subtitle */
+.testimonials .section-title p {
+  font-size: 1.2rem;
+  color: #6c757d;
 }
-
-.rating {
-  font-size: 1.5rem; /* Size of the stars */
-  color: #ffc107; /* Color for the stars (yellow) */
+.testimonials .rating {
+  font-size: 1.5rem;
+  color: #ffc107;
 }
-
-.testimonial-card {
-  background-color: #ffffff; /* White background for testimonials */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-  padding: 20px; /* Padding inside the card */
+.testimonials .testimonial-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
 }
-
-.testimonial-card:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+.testimonials .testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
-
-.testimonial-text {
-  font-size: 1.1rem; /* Font size for testimonial text */
-  color: #495057; /* Darker color for text */
-  margin-bottom: 15px; /* Space below testimonial text */
-  line-height: 1.5; /* Improved line height for readability */
+.testimonials .testimonial-card .testimonial-text {
+  font-size: 1.1rem;
+  color: #495057;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
-
-.testimonial-author {
-  font-size: 1rem; /* Font size for author name */
-  color: #007bff; /* Bootstrap primary color for author name */
-  font-weight: bold; /* Bold for emphasis */
+.testimonials .testimonial-card .testimonial-author {
+  font-size: 1rem;
+  color: #007bff;
+  font-weight: bold;
 }
 
 .contact-us {
   padding: 50px 0;
-  background-color: #f8f9fa; /* Light background */
+  background-color: #f8f9fa;
 }
-
-.section-title {
+.contact-us .section-title {
   text-align: center;
   margin-bottom: 30px;
   font-size: 2.5rem;
-  color: #343a40; /* Dark color for text */
+  color: #343a40;
 }
-
-/* Contact Item Styles */
-.contact-item {
+.contact-us .contact-item {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.contact-item:hover {
-  transform: translateY(-5px); /* Lift effect */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+.contact-us .contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-
-.contact-item .icon {
+.contact-us .contact-item .icon {
   font-size: 24px;
   margin-right: 15px;
-  color: #007bff; /* Bootstrap primary color */
+  color: #007bff;
 }
-
-.contact-item .text h4 {
+.contact-us .contact-item .text h4 {
   margin: 0;
   font-weight: bold;
-  color: #495057; /* Darker text color */
+  color: #495057;
 }
-
-.contact-item .text p {
+.contact-us .contact-item .text p {
   margin: 0;
-  color: #6c757d; /* Lighter text color */
+  color: #6c757d;
 }
-
-/* Form Styles */
-.contact-form input,
-.contact-form textarea {
+.contact-us .contact-form input,
+.contact-us .contact-form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ced4da; /* Light border */
+  border: 1px solid #ced4da;
   border-radius: 5px;
-  transition: border-color 0.3s; /* Animation on focus */
+  transition: border-color 0.3s;
 }
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #007bff; /* Change border color on focus */
-  outline: none; /* Remove default outline */
+.contact-us .contact-form input:focus,
+.contact-us .contact-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
 }
-
-.contact-form button {
+.contact-us .contact-form button {
   padding: 10px 20px;
   background-color: #007bff;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Animation on hover */
+  transition: background-color 0.3s;
+}
+.contact-us .contact-form button:hover {
+  background-color: #0056b3;
 }
 
-.contact-form button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .contact-item {
-    flex-direction: column; /* Stack items on smaller screens */
-    align-items: flex-start; /* Align items to start */
-  }
-}
 .footer {
-  background-color: #343a40; /* Dark background */
-  color: white;
+  background-color: #343a40;
+  color: #ffffff;
   padding: 40px 0;
-  perspective: 1000px; /* Perspective for 3D effect */
+  perspective: 1000px;
 }
-
-.footer-content {
-  transform-style: preserve-3d; /* Preserve 3D transformations */
-  transition: transform 0.3s; /* Smooth transition for hover effect */
+.footer .footer-content {
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
 }
-
-.footer:hover .footer-content {
-  transform: rotateY(5deg); /* Slight rotation on hover for 3D effect */
+.footer .footer-content:hover {
+  transform: rotateY(5deg);
 }
-
-.footer h5 {
+.footer .footer-content h5 {
   margin-bottom: 20px;
   font-weight: bold;
-  color: #ffffff; /* White text for headings */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-
-.footer p {
+.footer .footer-content p {
   margin-bottom: 15px;
-  color: #d3d3d3; /* Light gray for paragraph text */
+  color: #d3d3d3;
 }
-
-.footer a {
-  color: #ffffff; /* White links */
+.footer .footer-content a {
+  color: #ffffff;
   text-decoration: none;
-  transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+  transition: color 0.3s, transform 0.3s;
 }
-
-.footer a:hover {
-  color: #007bff; /* Change color on hover */
-  text-decoration: underline; /* Underline on hover */
-  transform: translateZ(5px); /* Move forward slightly on hover */
+.footer .footer-content a:hover {
+  color: #007bff;
+  text-decoration: underline;
+  transform: translateZ(5px);
 }
-
-.social-icons {
+.footer .footer-content .social-icons {
   margin-top: 10px;
 }
-
-.social-icons a {
-  color: #ffffff; /* White icons */
+.footer .footer-content .social-icons a {
+  color: #ffffff;
   margin: 0 10px;
-  font-size: 20px; /* Size of social media icons */
-  transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
 }
-
-.social-icons a:hover {
-  color: #007bff; /* Change color on hover */
-  transform: translateY(-3px) translateZ(5px); /* Move up and forward slightly on hover */
+.footer .footer-content .social-icons a:hover {
+  color: #007bff;
+  transform: translateY(-3px) translateZ(5px);
 }
 
 hr.my-4 {
-  border-top: 1px solid #d3d3d3; /* Light gray line */
-  margin: 20px 0; /* Spacing around the line */
+  border-top: 1px solid #d3d3d3;
+  margin: 20px 0;
 }/*# sourceMappingURL=style.css.map */

@@ -1,618 +1,726 @@
- .navbar {
-         background-color: rgba(255, 255, 255, 0.157); /* رنگ پس‌زمینه */
-         height: 3.75rem; /* ارتفاع ناوبار */
-         padding: 0 1.875rem; /* padding برای راحتی استفاده */
-         transition: background-color 0.5s ease, box-shadow 0.5s ease; /* انیمیشن تغییر رنگ و سایه */
-         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* سایه بیشتر برای عمق */
-         transition: background-color 0.5s ease, box-shadow 0.5s ease; /* انیمیشن تغییر رنگ و سایه */
-         }
-         .navbar.scrolled {
-         background-color: rgb(255, 127, 95); /* رنگ پس‌زمینه در حالت اسکرول */
-         box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4); /* سایه کمتر هنگام اسکرول */
-         }
-         /* استایل لینک‌ها */
-         .nav-link {
-         color: rgb(0, 0, 0); /* رنگ متن لینک‌ها */
-         font-weight: 800; /* وزن متوسط برای متن لینک‌ها */
-         font-family: 'georgia', sans-serif;
-         text-transform: uppercase; /* متن به حروف بزرگ */
-         letter-spacing: 0.1rem; /* فاصله حروف */
-         font-size: 0.875rem; /* اندازه متن لینک‌ها */
-         transition: color 0.3s ease, transform 0.3s ease; /* انیمیشن تغییر رنگ و اندازه */
-         padding: 0.625rem 0.9375rem; /* padding برای راحتی کلیک */
-         /* وزن متوسط برای متن لینک‌ها */
-         }
-         .nav-link:hover {
-         color: #a50000; /* رنگ متن در حالت هاور */
-         transform: scale(1.1); /* بزرگ شدن در حالت هاور */
-         }
-         /* استایل برند */
-         .navbar-brand {
-         font-size: 1.875rem; /* استفاده از rem برای سازگاری بیشتر */
-         font-family: 'Arial', sans-serif;
-         font-weight: 700;
-         }
+// Variables
+$primary-color: #007bff;
+$danger-color: #dc3545;
+$light-background: #f8f9fa;
+$dark-text: #343a40;
+$muted-text: #6c757d;
+$white: #ffffff;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$shadow-hover: rgba(0, 0, 0, 0.2);
 
+// Navbar Styles
+.navbar {
+  background-color: rgba(255, 255, 255, 0.157); // Background color with transparency
+  height: 3.75rem; // Height of the navbar
+  padding: 0 1.875rem; // Padding for better usability
+  transition: background-color 0.5s ease, box-shadow 0.5s ease; // Animation for background color and shadow change
+  box-shadow: 0 4px 20px $shadow-color; // Deeper shadow for depth
 
-           .home-section {
-            }
-            /* Overlay */
-            .home-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            }
-            /* Content should appear above the overlay */
-            .home-section .container-lg {
-            position: relative;
-            z-index: 2;
-            }
-            /* Image Styling with Animation */
-            .home-img img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border: 5px solid #007bff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            animation: imageFadeIn 1.5s ease-in-out;
-            }
-            /* Text Styling with Animation */
-            .home-text {
-            text-align: left;
-            color: #666666; /* تغییر رنگ متن به سفید برای کنتراست بهتر با پس‌زمینه */
-            animation: textSlideIn 1.5s ease-in-out;
-            }
-            /* سایر استایل‌ها همان‌طور که قبلاً بودند... */
-            /* Keyframes for Image Animation */
-            @keyframes imageFadeIn {
-            0% {
-            opacity: 0;
-            transform: scale(0.8);
-            }
-            100% {
-            opacity: 1;
-            transform: scale(1);
-            }
-            }
-            /* Keyframes for Text Animation */
-            @keyframes textSlideIn {
-            0% {
-            opacity: 0;
-            transform: translateX(-50px);
-            }
-            100% {
-            opacity: 1;
-            transform: translateX(0);
-            }
-            }
+  &.scrolled {
+    background-color: rgb(255, 127, 95); // Background color when scrolled
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4); // Less shadow when scrolled
+  }
 
+  // Link Styles
+  .nav-link {
+    color: rgb(0, 0, 0); // Text color for links
+    font-weight: 800; // Bold weight for link text
+    font-family: 'Georgia', sans-serif; // Font family for links
+    text-transform: uppercase; // Transform text to uppercase
+    letter-spacing: 0.1rem; // Letter spacing for better readability
+    font-size: 0.875rem; // Font size for link text
+    transition: color 0.3s ease, transform 0.3s ease; // Animation for color and scale change
+    padding: 0.625rem 0.9375rem; // Padding for better click area
 
+    &:hover {
+      color: #a50000; // Text color on hover
+      transform: scale(1.1); // Scale up on hover
+    }
+  }
 
-             body {
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.5s ease;
-            }
-            .home-img img {
-            width: 100%;
-            height: 500px;
-            max-width: 500px;
-            margin-top: 40px;
-            object-fit: cover;
-            border: 1px solid #ffffff;
-            border-radius: 50%;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
-            }
-            .home-img img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-            }
-            .section-title h2 {
-            font-size: 2.5rem;
-            color: #343a40;
-            margin-bottom: 1rem;
-            transition: color 0.5s ease;
-            }
-            .section-title h2:hover {
-            color: #dc3545;
-            }
-            .fact-item h4 {
-            color: #dc3545;
-            font-size: 2rem;
-            transition: transform 0.5s ease;
-            }
-            .fact-item h4:hover {
-            transform: scale(1.1);
-            }
-            .progress {
-            height: 25px; /* Increased height for better visibility */
-            border-radius: 8px; /* More rounded corners */
-            background-color: #f3f4f6; /* Light background color */
-            margin-bottom: 1rem; /* Bottom margin */
-            transition: background-color 0.5s ease; /* Animation for background color change */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
-            }
-            .progress-bar {
-            border-radius: 18px; /* Rounded corners for the progress bar */
-            width: 0; /* Initial width */
-            animation: progress-animation 1s ease-out forwards; /* Animation */
-            transition: width 0.5s ease, background-color 0.5s ease; /* Animation for width and background color change */
-            position: relative; /* For using ::after */
-            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Shadow for depth */
-            }
-            /* Keyframes for progress animation */
-            @keyframes progress-animation {
-            from {
-            width: 0; /* Start from zero */
-            }
-            to {
-            width: var(--progress-width); /* Final width */
-            }
-            }
-            /* Different classes for each progress bar with gradients */
-            .progress-bar.html {
-            --progress-width: 90%; /* Width for HTML */
-            background: linear-gradient(90deg, #e44d26, #f76d3e); /* Gradient color for HTML */
-            animation-delay: 1s; /* Animation delay */
-            }
-            .progress-bar.css {
-            --progress-width: 75%; /* Width for CSS */
-            background: linear-gradient(90deg, #2965f1, #4e8df5); /* Gradient color for CSS */
-            animation-delay: 1.3s; /* Animation delay */
-            }
-            .progress-bar.javascript {
-            --progress-width: 25%; /* Width for JavaScript */
-            background: linear-gradient(90deg, #f7df1e, #f9e84d); /* Gradient color for JavaScript */
-            animation-delay: 1.5s; /* Animation delay */
-            }
-            .progress-bar.bootstrap {
-            --progress-width: 65%; /* Width for Bootstrap */
-            background: linear-gradient(90deg, #563d7c, #7a4b9d); /* Gradient color for Bootstrap */
-            animation-delay: 1.8s; /* Animation delay */
-            }
-            /* Adding text inside the progress bar */
-            .progress-bar::after {
-            content: attr(data-progress); /* Display progress percentage */
-            position: absolute; /* Absolute positioning for placement */
-            right: 10px; /* Right margin */
-            color: #fff; /* Text color */
-            font-size: 0.85rem; /* Slightly larger text size */
-            line-height: 15px; /* Vertical alignment */
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
-            font-weight: bold; /* Bold text for emphasis */
-            }
-            .social-links a {
-            font-size: 1.5rem;
-            transition: color 0.5s ease, transform 0.5s ease;
-            }
-            .social-links a:hover {
-            color: #dc3545;
-            transform: scale(1.3);
-            }
-            .btn-primary, .btn-danger {
-            transition: background-color 0.5s ease, transform 0.5s ease;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
-            }
-            .btn-primary {
-            background-color: #007bff;
-            border: none;
-            }
-            .btn-primary:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-            }
-            .btn-danger {
-            background-color: #ff0019;
-            border: none;
-            }
-            .btn-danger:hover {
-            background-color: #c82333;
-            transform: scale(1.05);
-            }
+  // Brand Styles
+  .navbar-brand {
+    font-size: 1.875rem; // Font size for brand name
+    font-family: 'Arial', sans-serif; // Font family for brand
+    font-weight: 700; // Bold weight for brand text
+  }
+}
 
+// Home Section Styles
+.home-section {
+  position: relative;
 
-              .services-container {
-            height: 100vh; /* Full height of the container */
-            width: 100%;
-            max-width: auto; /* Maximum width of the container */
-            margin: auto; /* Center the container */
-            padding: 20px; /* Padding around the container */
-            display: flex; /* Use flexbox for layout */
-            flex-wrap: wrap; /* Allow wrapping to next line */
-            justify-content: space-between; /* Space between items */
-            }
-            /* Title styling */
-            .services-title {
-            font-weight: bold;
-            font-size: 2.5rem; /* Font size for the title */
-            color: #003366; /* Dark Blue color */
-            margin-bottom: 30px; /* Space below the title */
-            text-align: center; /* Center the title */
-            text-transform: uppercase; /* Uppercase letters for emphasis */
-            animation: fadeInDown 0.8s ease; /* Fade-in down animation for title */
-            }
-            /* Service item card styling */
-            .service-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
-            height: 100%; /* Equal height for all cards */
-            border-radius: 15px; /* Rounded corners */
-            overflow: hidden; /* Prevent overflow of content */
-            background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Gradient background */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
-            padding: 20px; /* Padding inside the card */
-            display: flex; /* Use flexbox for alignment */
-            flex-direction: column; /* Stack children vertically */
-            justify-content: space-between; /* Space between children */
-            position: relative; /* For positioning pseudo-elements */
-            opacity: 0; /* Start with hidden opacity */
-            animation: fadeIn 0.8s forwards; /* Fade-in animation for cards */
-            }
-            /* Hover effect for service cards */
-            .service-card:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-            }
-            /* Button styling */
-            .btn-warning {
-            background-color: #FFD700; /* Gold color */
-            border: none; /* Remove border */
-            color: #003366; /* Dark Blue text color */
-            padding: 10px 20px; /* Padding for the button */
-            border-radius: 5px; /* Rounded corners for the button */
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
-            font-size: 1rem; /* Font size for buttons */
-            font-weight: bold; /* Bold text for buttons */
-            text-transform: uppercase; /* Uppercase letters for buttons */
-            cursor: pointer; /* Pointer cursor on hover */
-            margin-top: auto; /* Push button to the bottom of the card */
-            }
-            /* Button hover effect */
-            .btn-warning:hover {
-            background-color: #FFC300; /* Lighter Gold on hover */
-            color: #fff; /* White text color on hover */
-            transform: scale(1.05); /* Slightly enlarge button on hover */
-            }
-            /* Icon styling */
-            .service-icon {
-            transition: transform 0.3s ease; /* Smooth transition for icons */
-            font-size: 3rem; /* Increase icon size */
-            margin-bottom: 15px; /* Space below the icon */
-            opacity: 0; /* Start with hidden opacity */
-            animation: fadeIn 0.8s forwards; /* Fade-in animation for icons */
-            }
-            /* Icon hover effect */
-            .service-card:hover .service-icon {
-            transform: scale(1.1); /* Slightly enlarge icon on hover */
-            color: #FFD700; /* Change icon color on hover */
-            }
-            /* Description styling */
-            .service-description {
-            font-size: 1rem; /* Font size for description */
-            color: #555; /* Darker gray for better readability */
-            margin-bottom: 20px; /* Space below the description */
-            line-height: 1.5; /* Increase line height for better readability */
-            opacity: 0; /* Start with hidden opacity */
-            animation: fadeIn 0.8s forwards; /* Fade-in animation for descriptions */
-            }
-            /* Responsive adjustments */
-            @media (max-width: 768px) {
-            .service-card {
-            flex: 1 1 100%; /* Full width on smaller screens */
-            padding: 15px; /* Reduce padding on smaller screens */
-            }
-            .services-title {
-            font-size: 2rem; /* Reduce font size for smaller screens */
-            }
-            .btn-warning {
-            font-size: 0.9rem; /* Reduce button font size */
-            }
-            }
-            /* Keyframes for animations */
-            @keyframes fadeIn {
-            from {
-            opacity: 0;
-            transform: translateY(10px); /* Start slightly lower */
-            }
-            to {
-            opacity: 1;
-            transform: translateY(0); /* End at original position */
-            }
-            }
-            @keyframes fadeInDown {
-            from {
-            opacity: 0;
-            transform: translateY(-20px); /* Start slightly higher */
-            }
-            to {
-            opacity: 1;
-            transform: translateY(0); /* End at original position */
-            }
-            }
-            @keyframes pulse {
-            0%, 100% {
-            transform: scale(1); /* Original size */
-            }
-            50% {
-            transform: scale(1.05); /* Slightly larger size */
-            }
-            }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
+  .container-lg {
+    position: relative;
+    z-index: 2;
+  }
 
+  .home-img {
+    img {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border: 1px solid $white;
+      border-radius: 50%;
+      box-shadow: 0 10px 30px $shadow-color;
+      animation: imageFadeIn 1.5s ease-in-out;
+    }
+  }
 
-             .portfolio {
-            height: 100vh;
-            background-color: #f8f9fa;
-            padding: 60px 0; /* Padding for top and bottom */
-            background-color: #f8f9fa; /* Light background color */
-            }
-            /* Title styling */
-            .section-title h2 {
-            font-weight: bold;
-            font-size: 2.5rem; /* Font size for the title */
-            color: #003366; /* Dark Blue color */
-            margin-bottom: 20px; /* Space below the title */
-            }
-            .section-title p {
-            color: #6c757d; /* Muted text color */
-            font-size: 1.1rem; /* Font size for description */
-            }
-            /* Portfolio item styling */
-            .portfolio-item {
-            position: relative; /* For positioning overlay */
-            overflow: hidden; /* Prevent overflow */
-            border-radius: 10px; /* Rounded corners */
-            transition: transform 0.3s ease; /* Smooth transition for hover effect */
-            height: 400px; /* Increased height for larger images */
-            }
-            .portfolio-item:hover {
-            transform: scale(1.05); /* Slightly enlarge on hover */
-            }
-            /* Image styling */
-            .portfolio-item img {
-            width: 100%; /* Full width */
-            height: 100%; /* Set height to fill the card */
-            object-fit: cover; /* Maintain aspect ratio and cover the area */
-            }
-            /* Overlay styling */
-            .portfolio-overlay {
-            position: absolute; /* Position overlay */
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-            color: #ffffff; /* White text color */
-            display: flex; /* Use flexbox for centering */
-            flex-direction: column; /* Stack children vertically */
-            align-items: center; /* Center horizontally */
-            justify-content: center; /* Center vertically */
-            opacity: 0; /* Start hidden */
-            transition: opacity 0.3s ease; /* Smooth transition for overlay */
-            }
-            .portfolio-item:hover .portfolio-overlay {
-            opacity: 1; /* Show overlay on hover */
-            }
-            /* Button styling */
-            .btn-danger {
-            background-color: #dc3545; /* Bootstrap danger color */
-            border: none; /* Remove border */
-            color: #ffffff; /* White text color */
-            padding: 10px 20px; /* Padding for the button */
-            border-radius: 5px; /* Rounded corners for the button */
-            transition: background-color 0.3s ease; /* Smooth transition for hover */
-            }
-            .btn-danger:hover {
-            background-color: #c82333; /* Darker shade on hover */
-            }
-            /* Responsive adjustments */
-            @media (max-width: 768px) {
-            .portfolio-item {
-            height: auto; /* Allow height to adjust on smaller screens */
-            }
-            }
+  .home-text {
+    text-align: left;
+    color: #666666; // Change text color for better contrast with background
+    animation: textSlideIn 1.5s ease-in-out;
+  }
+}
 
+// Keyframes for Image Animation
+@keyframes imageFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-            .freelancer-available {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: #ffffff; /* White background for a clean look */
-            padding: 0px 0; /* Increased padding for better spacing */
-            border-radius: 10px; /* Slightly more rounded corners */
-            background-color: #ffd900; /* White background for a clean look */
-            padding: 0px 0; /* Increased padding for better spacing */
-            border-radius: 10px; /* Slightly more rounded corners */
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
-            margin: 0px 0; /* Margin to separate from other sections */
-            }
-            .freelancer-available h2 {
-            color: #000000; /* Darker color for better readability */
-            font-size: 2.5rem; /* Larger font size for the heading */
-            }
-            .freelancer-available p {
-            font-size: 1.2rem; /* Slightly larger font for the paragraph */
-            line-height: 1.6; /* Improved line height for readability */
-            margin-bottom: 30px; /* Space below the paragraph */
-            }
-            .freelancer-available .btn {
-            padding: 12px 25px; /* Increased padding for the button */
-            border-radius: 5px; /* Rounded button */
-            font-size: 1.1rem; /* Slightly larger font size for the button */
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
-            }
-            .freelancer-available .btn-primary {
-            background-color: #ff0000; /* Bootstrap primary color */
-            border: none; /* Remove border */
-            }
-            .freelancer-available .btn-primary:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-            transform: translateY(-2px); /* Slight lift effect on hover */
-            }
+// Keyframes for Text Animation
+@keyframes textSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-             .testimonials {
-            height:100vh;
-            background-color: #f8f9fa; /* Light background for contrast */}
-            .section-title h2 {
-            color: #343a40; /* Dark color for the title */
-            font-size: 2.5rem; /* Larger font size for the title */
-            margin-bottom: 10px; /* Space below the title */
-            }
-            .section-title p {
-            font-size: 1.2rem; /* Font size for the subtitle */
-            color: #6c757d; /* Muted color for the subtitle */
-            }
-            .rating {
-            font-size: 1.5rem; /* Size of the stars */
-            color: #ffc107; /* Color for the stars (yellow) */
-            }
-            .testimonial-card {
-            background-color: #ffffff; /* White background for testimonials */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-            padding: 20px; /* Padding inside the card */
-            }
-            .testimonial-card:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-            }
-            .testimonial-text {
-            font-size: 1.1rem; /* Font size for testimonial text */
-            color: #495057; /* Darker color for text */
-            margin-bottom: 15px; /* Space below testimonial text */
-            line-height: 1.5; /* Improved line height for readability */
-            }
-            .testimonial-author {
-            font-size: 1rem; /* Font size for author name */
-            color: #007bff; /* Bootstrap primary color for author name */
-            font-weight: bold; /* Bold for emphasis */
-            }
-             .contact-us {
-            padding: 50px 0;
-            background-color: #f8f9fa; /* Light background */
-            }
-            .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-            color: #343a40; /* Dark color for text */
-            }
-            /* Contact Item Styles */
-            .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
-            }
-            .contact-item:hover {
-            transform: translateY(-5px); /* Lift effect */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
-            }
-            .contact-item .icon {
-            font-size: 24px;
-            margin-right: 15px;
-            color: #007bff; /* Bootstrap primary color */
-            }
-            .contact-item .text h4 {
-            margin: 0;
-            font-weight: bold;
-            color: #495057; /* Darker text color */
-            }
-            .contact-item .text p {
-            margin: 0;
-            color: #6c757d; /* Lighter text color */
-            }
-            /* Form Styles */
-            .contact-form input,
-            .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ced4da; /* Light border */
-            border-radius: 5px;
-            transition: border-color 0.3s; /* Animation on focus */
-            }
-            .contact-form input:focus,
-            .contact-form textarea:focus {
-            border-color: #007bff; /* Change border color on focus */
-            outline: none; /* Remove default outline */
-            }
-            .contact-form button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s; /* Animation on hover */
-            }
-            .contact-form button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-            }
-            /* Responsive Styles */
-            @media (max-width: 768px) {
-            .contact-item {
-            flex-direction: column; /* Stack items on smaller screens */
-            align-items: flex-start; /* Align items to start */
-            }
-            }
-              .footer {
-               background-color: #343a40; /* Dark background */
-               color: white;
-               padding: 40px 0;
-               perspective: 1000px; /* Perspective for 3D effect */
-               }
-               .footer-content {
-               transform-style: preserve-3d; /* Preserve 3D transformations */
-               transition: transform 0.3s; /* Smooth transition for hover effect */
-               }
-               .footer:hover .footer-content {
-               transform: rotateY(5deg); /* Slight rotation on hover for 3D effect */
-               }
-               .footer h5 {
-               margin-bottom: 20px;
-               font-weight: bold;
-               color: #ffffff; /* White text for headings */
-               text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-               }
-               .footer p {
-               margin-bottom: 15px;
-               color: #d3d3d3; /* Light gray for paragraph text */
-               }
-               .footer a {
-               color: #ffffff; /* White links */
-               text-decoration: none;
-               transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
-               }
-               .footer a:hover {
-               color: #007bff; /* Change color on hover */
-               text-decoration: underline; /* Underline on hover */
-               transform: translateZ(5px); /* Move forward slightly on hover */
-               }
-               .social-icons {
-               margin-top: 10px;
-               }
-               .social-icons a {
-               color: #ffffff; /* White icons */
-               margin: 0 10px;
-               font-size: 20px; /* Size of social media icons */
-               transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
-               }
-               .social-icons a:hover {
-               color: #007bff; /* Change color on hover */
-               transform: translateY(-3px) translateZ(5px); /* Move up and forward slightly on hover */
-               }
-               hr.my-4 {
-               border-top: 1px solid #d3d3d3; /* Light gray line */
-               margin: 20px 0; /* Spacing around the line */
-               }
+// Body Styles
+body {
+  background-color: $light-background;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease;
+}
+
+// Home Image Styles
+.home-img {
+  img {
+    width: 100%;
+    height: 500px;
+    max-width: 500px;
+    margin-top: 40px;
+    object-fit: cover;
+    border: 1px solid $white;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px $shadow-color;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px $shadow-hover;
+    }
+  }
+}
+
+// Section Title Styles
+.section-title {
+  h2 {
+    font-size: 2.5rem;
+    color: $dark-text;
+    margin-bottom: 1rem;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: #dc3545;
+    }
+  }
+}
+
+// Fact Item Styles
+.fact-item {
+  h4 {
+    color: #dc3545;
+    font-size: 2rem;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Progress Bar Styles
+.progress {
+  height: 25px; // Increased height for better visibility
+  border-radius: 8px; // More rounded corners
+  background-color: #f3f4f6; // Light background color
+  margin-bottom: 1rem; // Bottom margin
+  transition: background-color 0.5s ease; // Animation for background color change
+  box-shadow: 0 4px 10px $shadow-color; // Deeper shadow for more depth
+
+  .progress-bar {
+    border-radius: 18px; // Rounded corners for the progress bar
+    width: 0; // Initial width
+    animation: progress-animation 1s ease-out forwards; // Animation
+    transition: width 0.5s ease, background-color 0.5s ease; // Animation for width and background color change
+    position: relative; // For using ::after
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); // Shadow for depth
+
+    &::after {
+      content: attr(data-progress); // Display progress percentage
+      position: absolute; // Absolute positioning for placement
+      right: 10px; // Right margin
+      color: $white; // Text color
+      font-size: 0.85rem; // Slightly larger text size
+      line-height: 15px; // Vertical alignment
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); // Text shadow for better readability
+      font-weight: bold; // Bold text for emphasis
+    }
+  }
+}
+
+// Keyframes for Progress Animation
+@keyframes progress-animation {
+  from {
+    width: 0; // Start from zero
+  }
+  to {
+    width: var(--progress-width); // Final width
+  }
+}
+
+// Different classes for each progress bar with gradients
+.progress-bar.html {
+  --progress-width: 90%; // Width for HTML
+  background: linear-gradient(90deg, #e44d26, #f76d3e); // Gradient color for HTML
+  animation-delay: 1s; // Animation delay
+}
+
+.progress-bar.css {
+  --progress-width: 75%; // Width for CSS
+  background: linear-gradient(90deg, #2965f1, #4e8df5); // Gradient color for CSS
+  animation-delay: 1.3s; // Animation delay
+}
+
+.progress-bar.javascript {
+  --progress-width: 25%; // Width for JavaScript
+  background: linear-gradient(90deg, #f7df1e, #f9e84d); // Gradient color for JavaScript
+  animation-delay: 1.5s; // Animation delay
+}
+
+.progress-bar.bootstrap {
+  --progress-width: 65%; // Width for Bootstrap
+  background: linear-gradient(90deg, #563d7c, #7a4b9d); // Gradient color for Bootstrap
+  animation-delay: 1.8s; // Animation delay
+}
+
+// Social Links Styles
+.social-links {
+  a {
+    font-size: 1.5rem;
+    transition: color 0.5s ease, transform 0.5s ease;
+
+    &:hover {
+      color: #dc3545;
+      transform: scale(1.3);
+    }
+  }
+}
+
+// Button Styles
+.btn-primary,
+.btn-danger {
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border: none;
+
+  &:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+}
+
+.btn-danger {
+  background-color: $danger-color;
+  border: none;
+
+  &:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+  }
+}
+
+// Services Container Styles
+.services-container {
+  height: 100vh; // Full height of the container
+  width: 100%;
+  max-width: auto; // Maximum width of the container
+  margin: auto; // Center the container
+  padding: 20px; // Padding around the container
+  display: flex; // Use flexbox for layout
+  flex-wrap: wrap; // Allow wrapping to next line
+  justify-content: space-between; // Space between items
+
+  // Title styling
+  .services-title {
+    font-weight: bold;
+    font-size: 2.5rem; // Font size for the title
+    color: #003366; // Dark Blue color
+    margin-bottom: 30px; // Space below the title
+    text-align: center; // Center the title
+    text-transform: uppercase; // Uppercase letters for emphasis
+    animation: fadeInDown 0.8s ease; // Fade-in down animation for title
+  }
+
+  // Service item card styling
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // Transition effects
+    height: 100%; // Equal height for all cards
+    border-radius: 15px; // Rounded corners
+    overflow: hidden; // Prevent overflow of content
+    background: linear-gradient(145deg, $white, #e6e6e6); // Gradient background
+    box-shadow: 0 5px 15px $shadow-color; // Soft shadow
+    padding: 20px; // Padding inside the card
+    display: flex; // Use flexbox for alignment
+    flex-direction: column; // Stack children vertically
+    justify-content: space-between; // Space between children
+    position: relative; // For positioning pseudo-elements
+    opacity: 0; // Start with hidden opacity
+    animation: fadeIn 0.8s forwards; // Fade-in animation for cards
+
+    &:hover {
+      transform: translateY(-5px); // Lift effect on hover
+      box-shadow: 0 15px 30px $shadow-hover; // Deeper shadow on hover
+    }
+  }
+
+  // Button styling
+  .btn-warning {
+    background-color: #FFD700; // Gold color
+    border: none; // Remove border
+    color: #003366; // Dark Blue text color
+    padding: 10px 20px; // Padding for the button
+    border-radius: 5px; // Rounded corners for the button
+    transition: background-color 0.3s ease, transform 0.3s ease; // Smooth transition for hover
+    font-size: 1rem; // Font size for buttons
+    font-weight: bold; // Bold text for buttons
+    text-transform: uppercase; // Uppercase letters for buttons
+    cursor: pointer; // Pointer cursor on hover
+    margin-top: auto; // Push button to the bottom of the card
+
+    &:hover {
+      background-color: #FFC300; // Lighter Gold on hover
+      color: $white; // White text color on hover
+      transform: scale(1.05); // Slightly enlarge button on hover
+    }
+  }
+
+  // Icon styling
+  .service-icon {
+    transition: transform 0.3s ease; // Smooth transition for icons
+    font-size: 3rem; // Increase icon size
+    margin-bottom: 15px; // Space below the icon
+    opacity: 0; // Start with hidden opacity
+    animation: fadeIn 0.8s forwards; // Fade-in animation for icons
+
+    // Icon hover effect
+    &:hover {
+      transform: scale(1.1); // Slightly enlarge icon on hover
+      color: #FFD700; // Change icon color on hover
+    }
+  }
+
+  // Description styling
+  .service-description {
+    font-size: 1rem; // Font size for description
+    color: #555; // Darker gray for better readability
+    margin-bottom: 20px; // Space below the description
+    line-height: 1.5; // Increase line height for better readability
+    opacity: 0; // Start with hidden opacity
+    animation: fadeIn 0.8s forwards; // Fade-in animation for descriptions
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .service-card {
+    flex: 1 1 100%; // Full width on smaller screens
+    padding: 15px; // Reduce padding on smaller screens
+  }
+
+  .services-title {
+    font-size: 2rem; // Reduce font size for smaller screens
+  }
+
+  .btn-warning {
+    font-size: 0.9rem; // Reduce button font size
+  }
+}
+
+// Keyframes for animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); // Start slightly lower
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); // End at original position
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); // Start slightly higher
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); // End at original position
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1); // Original size
+  }
+  50% {
+    transform: scale(1.05); // Slightly larger size
+  }
+}
+
+// Portfolio Styles
+.portfolio {
+  height: 100vh;
+  background-color: $light-background; // Light background color
+  padding: 60px 0; // Padding for top and bottom
+
+  // Title styling
+  .section-title {
+    h2 {
+      font-weight: bold;
+      font-size: 2.5rem; // Font size for the title
+      color: #003366; // Dark Blue color
+      margin-bottom: 20px; // Space below the title
+    }
+
+    p {
+      color: $muted-text; // Muted text color
+      font-size: 1.1rem; // Font size for description
+    }
+  }
+
+  // Portfolio item styling
+  .portfolio-item {
+    position: relative; // For positioning overlay
+    overflow: hidden; // Prevent overflow
+    border-radius: 10px; // Rounded corners
+    transition: transform 0.3s ease; // Smooth transition for hover effect
+    height: 400px; // Increased height for larger images
+
+    &:hover {
+      transform: scale(1.05); // Slightly enlarge on hover
+    }
+
+    img {
+      width: 100%; // Full width
+      height: 100%; // Set height to fill the card
+      object-fit: cover; // Maintain aspect ratio and cover the area
+    }
+
+    .portfolio-overlay {
+      position: absolute; // Position overlay
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7); // Semi-transparent black background
+      color: $white; // White text color
+      display: flex; // Use flexbox for centering
+      flex-direction: column; // Stack children vertically
+      align-items: center; // Center horizontally
+      justify-content: center; // Center vertically
+      opacity: 0; // Start hidden
+      transition: opacity 0.3s ease; // Smooth transition for overlay
+
+      // Show overlay on hover
+      .portfolio-item:hover & {
+        opacity: 1; // Show overlay on hover
+      }
+    }
+  }
+}
+
+// Button styling
+.btn-danger {
+  background-color: $danger-color; // Bootstrap danger color
+  border: none; // Remove border
+  color: $white; // White text color
+  padding: 10px 20px; // Padding for the button
+  border-radius: 5px; // Rounded corners for the button
+  transition: background-color 0.3s ease; // Smooth transition for hover
+
+  &:hover {
+    background-color: #c82333; // Darker shade on hover
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .portfolio-item {
+    height: auto; // Allow height to adjust on smaller screens
+  }
+}
+
+// Freelancer Available Styles
+.freelancer-available {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $light-background; // White background for a clean look
+  padding: 0; // Increased padding for better spacing
+  border-radius: 10px; // Slightly more rounded corners
+  box-shadow: 0 8px 30px $shadow-hover; // Enhanced shadow for depth
+  margin: 0; // Margin to separate from other sections
+
+  h2 {
+    color: #000000; // Darker color for better readability
+    font-size: 2.5rem; // Larger font size for the heading
+  }
+
+  p {
+    font-size: 1.2rem; // Slightly larger font for the paragraph
+    line-height: 1.6; // Improved line height for readability
+    margin-bottom: 30px; // Space below the paragraph
+  }
+
+  .btn {
+    padding: 12px 25px; // Increased padding for the button
+    border-radius: 5px; // Rounded button
+    font-size: 1.1rem; // Slightly larger font size for the button
+    transition: background-color 0.3s ease, transform 0.3s ease; // Smooth transition for hover effect
+
+    &.btn-primary {
+      background-color: $primary-color; // Bootstrap primary color
+      border: none; // Remove border
+
+      &:hover {
+        background-color: #0056b3; // Darker blue on hover
+        transform: translateY(-2px); // Slight lift effect on hover
+      }
+    }
+  }
+}
+
+// Testimonials Styles
+.testimonials {
+  height: 100vh;
+  background-color: $light-background; // Light background for contrast
+
+  .section-title {
+    h2 {
+      color: $dark-text; // Dark color for the title
+      font-size: 2.5rem; // Larger font size for the title
+      margin-bottom: 10px; // Space below the title
+    }
+
+    p {
+      font-size: 1.2rem; // Font size for the subtitle
+      color: $muted-text; // Muted color for the subtitle
+    }
+  }
+
+  .rating {
+    font-size: 1.5rem; // Size of the stars
+    color: #ffc107; // Color for the stars (yellow)
+  }
+
+  .testimonial-card {
+    background-color: $white; // White background for testimonials
+    border-radius: 10px; // Rounded corners
+    box-shadow: 0 4px 20px $shadow-color; // Subtle shadow
+    transition: transform 0.3s, box-shadow 0.3s; // Smooth transition
+    padding: 20px; // Padding inside the card
+
+    &:hover {
+      transform: translateY(-5px); // Lift effect on hover
+      box-shadow: 0 8px 30px $shadow-hover; // Enhanced shadow on hover
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem; // Font size for testimonial text
+      color: #495057; // Darker color for text
+      margin-bottom: 15px; // Space below testimonial text
+      line-height: 1.5; // Improved line height for readability
+    }
+
+    .testimonial-author {
+      font-size: 1rem; // Font size for author name
+      color: $primary-color; // Bootstrap primary color for author name
+      font-weight: bold; // Bold for emphasis
+    }
+  }
+}
+
+// Contact Us Styles
+.contact-us {
+  padding: 50px 0;
+  background-color: $light-background; // Light background
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: $dark-text; // Dark color for text
+  }
+
+  // Contact Item Styles
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s; // Animation on hover
+
+    &:hover {
+      transform: translateY(-5px); // Lift effect
+      box-shadow: 0 4px 20px $shadow-hover; // Shadow effect
+    }
+
+    .icon {
+      font-size: 24px;
+      margin-right: 15px;
+      color: $primary-color; // Bootstrap primary color
+    }
+
+    .text {
+      h4 {
+        margin: 0;
+        font-weight: bold;
+        color: #495057; // Darker text color
+      }
+
+      p {
+        margin: 0;
+        color: $muted-text; // Lighter text color
+      }
+    }
+  }
+
+  // Form Styles
+  .contact-form {
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ced4da; // Light border
+      border-radius: 5px;
+      transition: border-color 0.3s; // Animation on focus
+
+      &:focus {
+        border-color: $primary-color; // Change border color on focus
+        outline: none; // Remove default outline
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: $primary-color; // Primary button color
+      color: $white; // White text
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s; // Animation on hover
+
+      &:hover {
+        background-color: #0056b3; // Darker blue on hover
+      }
+    }
+  }
+}
+
+// Footer Styles
+.footer {
+  background-color: $dark-text; // Dark background
+  color: $white;
+  padding: 40px 0;
+  perspective: 1000px; // Perspective for 3D effect
+
+  .footer-content {
+    transform-style: preserve-3d; // Preserve 3D transformations
+    transition: transform 0.3s; // Smooth transition for hover effect
+
+    &:hover {
+      transform: rotateY(5deg); // Slight rotation on hover for 3D effect
+    }
+
+    h5 {
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: $white; // White text for headings
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // Shadow for depth
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #d3d3d3; // Light gray for paragraph text
+    }
+
+    a {
+      color: $white; // White links
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s; // Smooth transition for hover effect
+
+      &:hover {
+        color: $primary-color; // Change color on hover
+        text-decoration: underline; // Underline on hover
+        transform: translateZ(5px); // Move forward slightly on hover
+      }
+    }
+
+    .social-icons {
+      margin-top: 10px;
+
+      a {
+        color: $white; // White icons
+        margin: 0 10px;
+        font-size: 20px; // Size of social media icons
+        transition: color 0.3s, transform 0.3s; // Smooth transition for hover effect
+
+        &:hover {
+          color: $primary-color; // Change color on hover
+          transform: translateY(-3px) translateZ(5px); // Move up and forward slightly on hover
+        }
+      }
+    }
+  }
+}
+
+// Horizontal Rule Styles
+hr.my-4 {
+  border-top: 1px solid #d3d3d3; // Light gray line
+  margin: 20px 0; // Spacing around the line
+}
