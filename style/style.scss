@@ -10,7 +10,12 @@ $shadow-hover: rgba(0, 0, 0, 0.2);
 
 // Navbar Styles
 .navbar {
-  background-color: rgba(255, 255, 255, 0.157); // Background color with transparency
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.157
+  ); // Background color with transparency
   height: 3.75rem; // Height of the navbar
   padding: 0 1.875rem; // Padding for better usability
   transition: background-color 0.5s ease, box-shadow 0.5s ease; // Animation for background color and shadow change
@@ -25,7 +30,7 @@ $shadow-hover: rgba(0, 0, 0, 0.2);
   .nav-link {
     color: rgb(0, 0, 0); // Text color for links
     font-weight: 800; // Bold weight for link text
-    font-family: 'Georgia', sans-serif; // Font family for links
+    font-family: "Georgia", sans-serif; // Font family for links
     text-transform: uppercase; // Transform text to uppercase
     letter-spacing: 0.1rem; // Letter spacing for better readability
     font-size: 0.875rem; // Font size for link text
@@ -41,7 +46,7 @@ $shadow-hover: rgba(0, 0, 0, 0.2);
   // Brand Styles
   .navbar-brand {
     font-size: 1.875rem; // Font size for brand name
-    font-family: 'Arial', sans-serif; // Font family for brand
+    font-family: "Arial", sans-serif; // Font family for brand
     font-weight: 700; // Bold weight for brand text
   }
 }
@@ -51,7 +56,7 @@ $shadow-hover: rgba(0, 0, 0, 0.2);
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -164,8 +169,8 @@ body {
 
 // Progress Bar Styles
 .progress {
-  height: 25px; // Increased height for better visibility
-  border-radius: 8px; // More rounded corners
+  height: 20px; // Increased height for better visibility
+  border-radius: 80px; // More rounded corners
   background-color: #f3f4f6; // Light background color
   margin-bottom: 1rem; // Bottom margin
   transition: background-color 0.5s ease; // Animation for background color change
@@ -205,25 +210,41 @@ body {
 // Different classes for each progress bar with gradients
 .progress-bar.html {
   --progress-width: 90%; // Width for HTML
-  background: linear-gradient(90deg, #e44d26, #f76d3e); // Gradient color for HTML
+  background: linear-gradient(
+    90deg,
+    #e44d26,
+    #f76d3e
+  ); // Gradient color for HTML
   animation-delay: 1s; // Animation delay
 }
 
 .progress-bar.css {
   --progress-width: 75%; // Width for CSS
-  background: linear-gradient(90deg, #2965f1, #4e8df5); // Gradient color for CSS
+  background: linear-gradient(
+    90deg,
+    #2965f1,
+    #4e8df5
+  ); // Gradient color for CSS
   animation-delay: 1.3s; // Animation delay
 }
 
 .progress-bar.javascript {
   --progress-width: 25%; // Width for JavaScript
-  background: linear-gradient(90deg, #f7df1e, #f9e84d); // Gradient color for JavaScript
+  background: linear-gradient(
+    90deg,
+    #f7df1e,
+    #f9e84d
+  ); // Gradient color for JavaScript
   animation-delay: 1.5s; // Animation delay
 }
 
 .progress-bar.bootstrap {
   --progress-width: 65%; // Width for Bootstrap
-  background: linear-gradient(90deg, #563d7c, #7a4b9d); // Gradient color for Bootstrap
+  background: linear-gradient(
+    90deg,
+    #563d7c,
+    #7a4b9d
+  ); // Gradient color for Bootstrap
   animation-delay: 1.8s; // Animation delay
 }
 
@@ -315,7 +336,7 @@ body {
 
   // Button styling
   .btn-warning {
-    background-color: #FFD700; // Gold color
+    background-color: #ffd700; // Gold color
     border: none; // Remove border
     color: #003366; // Dark Blue text color
     padding: 10px 20px; // Padding for the button
@@ -328,7 +349,7 @@ body {
     margin-top: auto; // Push button to the bottom of the card
 
     &:hover {
-      background-color: #FFC300; // Lighter Gold on hover
+      background-color: #ffc300; // Lighter Gold on hover
       color: $white; // White text color on hover
       transform: scale(1.05); // Slightly enlarge button on hover
     }
@@ -345,7 +366,7 @@ body {
     // Icon hover effect
     &:hover {
       transform: scale(1.1); // Slightly enlarge icon on hover
-      color: #FFD700; // Change icon color on hover
+      color: #ffd700; // Change icon color on hover
     }
   }
 
@@ -411,22 +432,31 @@ body {
 
 // Portfolio Styles
 .portfolio {
-  height: 100vh;
-  background-color: $light-background; // Light background color
-  padding: 60px 0; // Padding for top and bottom
+  padding: 60px 0px; // Padding for top and bottom
+  margin-top: 220px;
+  background-color: $light-background;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Soft shadow
+  position: relative; // For positioning pseudo-elements
+  opacity: 0; // Start with hidden opacity
+  animation: fadeIn 1.8s forwards; // Fade-in animation for cards
 
   // Title styling
   .section-title {
     h2 {
       font-weight: bold;
-      font-size: 2.5rem; // Font size for the title
-      color: #003366; // Dark Blue color
+      font-size: 3.5rem; // Font size for the title
+      color: #af0101; // Dark Blue color
       margin-bottom: 20px; // Space below the title
+      text-shadow: 2px 2px 2px rgba(0, 0, 0);
     }
 
     p {
       color: $muted-text; // Muted text color
-      font-size: 1.1rem; // Font size for description
+      font-size: 1.4rem; // Font size for description
+      font-weight: 700;
+      color: #555555;
+      margin-bottom: 60px; // Space below the description
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); // Shadow for better readability
     }
   }
 
@@ -439,13 +469,25 @@ body {
     height: 400px; // Increased height for larger images
 
     &:hover {
-      transform: scale(1.05); // Slightly enlarge on hover
+      transform: scale(1.11); // Slightly enlarge on hover
     }
 
     img {
-      width: 100%; // Full width
+      width: 100%; // Full width of the card
+      height: auto; // Maintain aspect ratio
       height: 100%; // Set height to fill the card
       object-fit: cover; // Maintain aspect ratio and cover the area
+      border-radius: 10px; // Rounded corners
+    }
+
+    // Overlay styling
+    .portfolio-overlay {
+      position: absolute; // Position overlay
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7); // Semi-transparent black background
     }
 
     .portfolio-overlay {
@@ -587,8 +629,8 @@ body {
 
 // Contact Us Styles
 .contact-us {
-  padding: 50px 0;
-  background-color: $light-background; // Light background
+  padding: 250px 0;
+  background-color: rgb(255, 255, 255); // Light background
 
   .section-title {
     text-align: center;
