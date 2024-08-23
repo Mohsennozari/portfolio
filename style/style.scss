@@ -152,7 +152,7 @@ body {
     transition: color 0.5s ease;
 
     &:hover {
-      color: #dc3545;
+      color: #d10015;
     }
   }
 }
@@ -160,9 +160,9 @@ body {
 // Fact Item Styles
 .fact-item {
   h4 {
-    color: #dc3545;
+    color: #ff0019;
     font-size: 2rem;
-    transition: transform 0.5s ease;
+    transition: transform 1.5s ease;
 
     &:hover {
       transform: scale(1.1);
@@ -213,41 +213,25 @@ body {
 // Different classes for each progress bar with gradients
 .progress-bar.html {
   --progress-width: 90%; // Width for HTML
-  background: linear-gradient(
-    90deg,
-    #e44d26,
-    #f76d3e
-  ); // Gradient color for HTML
+  background-color: red; // Gradient color for HTML
   animation-delay: 1s; // Animation delay
 }
 
 .progress-bar.css {
   --progress-width: 75%; // Width for CSS
-  background: linear-gradient(
-    90deg,
-    #2965f1,
-    #4e8df5
-  ); // Gradient color for CSS
+  background-color: red; // Gradient color for CSS
   animation-delay: 1.3s; // Animation delay
 }
 
 .progress-bar.javascript {
   --progress-width: 25%; // Width for JavaScript
-  background: linear-gradient(
-    90deg,
-    #f7df1e,
-    #f9e84d
-  ); // Gradient color for JavaScript
+  background-color:red; // Gradient color for JavaScript
   animation-delay: 1.5s; // Animation delay
 }
 
 .progress-bar.bootstrap {
   --progress-width: 65%; // Width for Bootstrap
-  background: linear-gradient(
-    90deg,
-    #563d7c,
-    #7a4b9d
-  ); // Gradient color for Bootstrap
+  background-color:red; // Gradient color for Bootstrap
   animation-delay: 1.8s; // Animation delay
 }
 
@@ -288,7 +272,7 @@ body {
   border: none;
 
   &:hover {
-    background-color: #c82333;
+    background-color: #ff0019;
     transform: scale(1.05);
   }
 }
@@ -447,10 +431,10 @@ body {
   .section-title {
     h2 {
       font-weight: bold;
-      font-size: 3.5rem; // Font size for the title
-      color: #af0101; // Dark Blue color
+      font-size: 6rem; // Font size for the title
+      color: #f80000; // Dark Blue color
       margin-bottom: 20px; // Space below the title
-      text-shadow: 2px 2px 2px rgba(0, 0, 0);
+      // text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.342);
     }
 
     p {

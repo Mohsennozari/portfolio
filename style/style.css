@@ -116,13 +116,13 @@ body {
   transition: color 0.5s ease;
 }
 .section-title h2:hover {
-  color: #dc3545;
+  color: #d10015;
 }
 
 .fact-item h4 {
-  color: #dc3545;
+  color: #ff0019;
   font-size: 2rem;
-  transition: transform 0.5s ease;
+  transition: transform 1.5s ease;
 }
 .fact-item h4:hover {
   transform: scale(1.1);
@@ -165,25 +165,25 @@ body {
 }
 .progress-bar.html {
   --progress-width: 90%;
-  background: linear-gradient(90deg, #e44d26, #f76d3e);
+  background-color: red;
   animation-delay: 1s;
 }
 
 .progress-bar.css {
   --progress-width: 75%;
-  background: linear-gradient(90deg, #2965f1, #4e8df5);
+  background-color: red;
   animation-delay: 1.3s;
 }
 
 .progress-bar.javascript {
   --progress-width: 25%;
-  background: linear-gradient(90deg, #f7df1e, #f9e84d);
+  background-color: red;
   animation-delay: 1.5s;
 }
 
 .progress-bar.bootstrap {
   --progress-width: 65%;
-  background: linear-gradient(90deg, #563d7c, #7a4b9d);
+  background-color: red;
   animation-delay: 1.8s;
 }
 
@@ -218,7 +218,7 @@ body {
   border: none;
 }
 .btn-danger:hover {
-  background-color: #c82333;
+  background-color: #ff0019;
   transform: scale(1.05);
 }
 
@@ -349,10 +349,9 @@ body {
 }
 .portfolio .section-title h2 {
   font-weight: bold;
-  font-size: 3.5rem;
-  color: #af0101;
+  font-size: 6rem;
+  color: #f80000;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 .portfolio .section-title p {
   color: #6c757d;
