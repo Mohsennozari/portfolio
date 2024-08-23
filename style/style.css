@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.157);
   height: 3.75rem;
@@ -85,6 +89,7 @@ body {
   margin: 0;
   padding: 0;
   transition: background-color 0.5s ease;
+  scroll-behavior: smooth;
 }
 
 .home-img img {
