@@ -8,7 +8,18 @@ $white: #ffffff;
 $shadow-color: rgba(0, 0, 0, 0.1);
 $shadow-hover: rgba(0, 0, 0, 0.2);
 html{
-      scroll-behavior: smooth;
+      
+}
+body {
+  font-family: "Arial", sans-serif; // Font family for body text
+  background-color: $light-background; // Background color for body
+  color: $dark-text; // Text color for body
+  margin: 0; // Remove default margin
+  padding: 0; // Remove default padding
+  font-size: 1rem; // Default font size
+  line-height: 1.5; // Default line height
+  text-align: center; // Center text
+  transition: background-color 0.5s ease; // Animation for background color change
 }
 // Navbar Styles
 .navbar {
