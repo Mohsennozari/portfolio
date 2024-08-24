@@ -460,6 +460,10 @@ body {
   transform: translateY(-2px);
 }
 
+.freelancer-available {
+  background-color: #f8f9fa;
+}
+
 .testimonials {
   height: 100vh;
   background-color: #f8f9fa;

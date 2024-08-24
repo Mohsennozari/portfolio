@@ -1,6 +1,6 @@
 body {
   font-family: "Arial", sans-serif;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   color: #343a40;
   margin: 0;
   padding: 0;
@@ -11,14 +11,14 @@ body {
 }
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.157);
+  background-color: #ffffff;
   height: 3.75rem;
   padding: 0 1.875rem;
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 .navbar.scrolled {
-  background-color: rgb(255, 127, 95);
+  background-color: #ffffff;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
 }
 .navbar .nav-link {
@@ -93,7 +93,6 @@ body {
   }
 }
 body {
-  background-color: #f8f9fa;
   margin: 0;
   padding: 0;
   transition: background-color 0.5s ease;
@@ -136,10 +135,14 @@ body {
   transform: scale(1.1);
 }
 
+#about {
+  background-color: #ffffff;
+}
+
 .progress {
+  background-color: #ffffff;
   height: 20px;
   border-radius: 80px;
-  background-color: #f3f4f6;
   margin-bottom: 1rem;
   transition: background-color 0.5s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -228,6 +231,34 @@ body {
 .btn-danger:hover {
   background-color: #ff0019;
   transform: scale(1.05);
+}
+
+#services-me {
+  border-radius: 20px;
+  color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .services-container {
@@ -349,7 +380,7 @@ body {
 .portfolio {
   padding: 60px 0px;
   margin-top: 220px;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
   opacity: 0;
@@ -438,7 +469,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   padding: 0;
   border-radius: 10px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
@@ -468,49 +499,53 @@ body {
   transform: translateY(-2px);
 }
 
-.testimonials {
+#testimonials .testimonial {
   height: 100vh;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
-.testimonials .section-title h2 {
+#testimonials .testimonial .section-title h2 {
   color: #343a40;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
-.testimonials .section-title p {
+#testimonials .testimonial .section-title p {
   font-size: 1.2rem;
   color: #6c757d;
 }
-.testimonials .rating {
+#testimonials .testimonial .rating {
   font-size: 1.5rem;
   color: #ffc107;
 }
-.testimonials .testimonial-card {
+#testimonials .testimonial .testimonial-card {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   padding: 20px;
 }
-.testimonials .testimonial-card:hover {
+#testimonials .testimonial .testimonial-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
-.testimonials .testimonial-card .testimonial-text {
+#testimonials .testimonial .testimonial-card .testimonial-text {
   font-size: 1.1rem;
   color: #495057;
   margin-bottom: 15px;
   line-height: 1.5;
 }
-.testimonials .testimonial-card .testimonial-author {
+#testimonials .testimonial .testimonial-card .testimonial-author {
   font-size: 1rem;
   color: #007bff;
   font-weight: bold;
 }
 
+#testimonials {
+  background-color: #ffffff;
+}
+
 .contact-us {
   padding: 250px 0;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 .contact-us .section-title {
   text-align: center;
@@ -619,4 +654,36 @@ body {
 hr.my-4 {
   border-top: 1px solid #d3d3d3;
   margin: 20px 0;
+}
+
+#portfolio {
+  background-color: #ffffff;
+}
+
+#home {
+  background-color: #ffffff;
+}
+
+#abou {
+  background-color: #ffffff;
+}
+
+#services-me {
+  background-color: #ffffff;
+}
+
+#portfolio {
+  background-color: #ffffff;
+}
+
+#testimonials {
+  background-color: #ffffff;
+}
+
+#contact-us {
+  background-color: #ffffff;
+}
+
+body {
+  color: #ffffff;
 }/*# sourceMappingURL=fa.css.map */

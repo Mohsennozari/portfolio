@@ -1,7 +1,7 @@
 // Variables
 $primary-color: #007bff;
 $danger-color: #dc3545;
-$light-background: #f8f9fa;
+$light-background: #ffffff;
 $dark-text: #343a40;
 $muted-text: #6c757d;
 $white: #ffffff;
@@ -23,19 +23,14 @@ body {
 }
 // Navbar Styles
 .navbar {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.157
-  ); // Background color with transparency
+ background-color:$light-background; // Background color with transparency
   height: 3.75rem; // Height of the navbar
   padding: 0 1.875rem; // Padding for better usability
   transition: background-color 0.5s ease, box-shadow 0.5s ease; // Animation for background color and shadow change
   box-shadow: 0 4px 20px $shadow-color; // Deeper shadow for depth
 
   &.scrolled {
-    background-color: rgb(255, 127, 95); // Background color when scrolled
+  background-color: $light-background;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4); // Less shadow when scrolled
   }
 
@@ -127,7 +122,7 @@ body {
 
 // Body Styles
 body {
-  background-color: $light-background;
+$light-background: #f8f9fa;
   margin: 0;
   padding: 0;
   transition: background-color 0.5s ease;
@@ -180,12 +175,16 @@ body {
     }
   }
 }
+#about{
+    background-color:$light-background;
+}
 
 // Progress Bar Styles
 .progress {
+    background-color: $light-background;
   height: 20px; // Increased height for better visibility
   border-radius: 80px; // More rounded corners
-  background-color: #f3f4f6; // Light background color
+  $light-background: #f8f9fa; // Light background color
   margin-bottom: 1rem; // Bottom margin
   transition: background-color 0.5s ease; // Animation for background color change
   box-shadow: 0 4px 10px $shadow-color; // Deeper shadow for more depth
@@ -288,6 +287,33 @@ body {
   }
 }
 
+#services-me{
+    border-radius: 20px;
+   color: $light-background;
+   width: 100%;
+   height: 100vh;
+   background-color: $light-background;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 20px;
+   box-sizing: border-box;
+   animation: fadeIn 0.8s ease-in-out;
+   animation-delay: 0.5s;
+   animation-fill-mode: forwards;
+   animation-duration: 1s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease-in-out;
+   animation-delay: 0.5s; // Delay the animation by 0.5 seconds
+   animation-fill-mode: forwards; // Ensure the animation completes before the element is removed
+   animation-duration: 1s; // Duration of the animation
+   animation-iteration-count: 1; // Number of times the animation should play
+   animation-timing-function: ease-in-out; // Timing function for the animation
+   animation-delay: 0.5s; // Delay the animation by 0.5 seconds
+   animation-fill-mode: forwards; // Ensure the animation completes before the element is removed
+}
 // Services Container Styles
 .services-container {
   height: 100vh; // Full height of the container
@@ -575,10 +601,10 @@ body {
   }
 }
 
-// Testimonials Styles
-.testimonials {
+
+#testimonials .testimonial {
   height: 100vh;
-  background-color: $light-background; // Light background for contrast
+ background-color:$light-background;// Light background for contrast
 
   .section-title {
     h2 {
@@ -599,7 +625,7 @@ body {
   }
 
   .testimonial-card {
-    background-color: $white; // White background for testimonials
+    background-color: $light-background;// White background for testimonials
     border-radius: 10px; // Rounded corners
     box-shadow: 0 4px 20px $shadow-color; // Subtle shadow
     transition: transform 0.3s, box-shadow 0.3s; // Smooth transition
@@ -624,11 +650,14 @@ body {
     }
   }
 }
+#testimonials{
+    background-color: $light-background;
+}
 
 // Contact Us Styles
 .contact-us {
   padding: 250px 0;
-  background-color: rgb(255, 255, 255); // Light background
+  background-color:$light-background; // Light background
 
   .section-title {
     text-align: center;
@@ -763,4 +792,29 @@ body {
 hr.my-4 {
   border-top: 1px solid #d3d3d3; // Light gray line
   margin: 20px 0; // Spacing around the line
+}
+#portfolio{
+    background-color:$light-background;
+}
+                
+#home{
+background-color: $light-background;
+}
+#abou{
+background-color: $light-background;
+}
+#services-me{
+background-color: $light-background;
+}
+#portfolio{
+background-color: $light-background;
+}
+#testimonials{
+background-color: $light-background;
+}
+#contact-us{
+background-color: $light-background;
+}
+body{
+  color: $light-background;
 }
