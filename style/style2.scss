@@ -1,7 +1,7 @@
 // Variables
 $primary-color: #007bff;
 $danger-color: #dc3545;
-$light-background: #ffffff;
+$light-background: #000000;
 $dark-text: #343a40;
 $muted-text: #6c757d;
 $white: #ffffff;
@@ -30,7 +30,7 @@ body {
 .navbar {
   background-color: $light-background;
   height: 3.75rem;
-  padding: 0 1.875rem;
+  padding: 0 1.25rem; // Updated padding
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
   box-shadow: 0 4px 20px $shadow-color;
 
@@ -47,7 +47,7 @@ body {
     letter-spacing: 0.1rem;
     font-size: 0.875rem;
     transition: color 0.3s ease, transform 0.3s ease;
-    padding: 0.625rem 0.9375rem;
+    padding: 0.5rem 1rem; // Updated padding
 
     &:hover {
       color: $hover-text-color;
@@ -56,7 +56,7 @@ body {
   }
 
   .navbar-brand {
-    font-size: 1.875rem;
+    font-size: 1.75rem; // Updated font-size
     font-family: "Arial", sans-serif;
     font-weight: 700;
   }
@@ -65,10 +65,10 @@ body {
 // Images and Animations
 .home-img {
   img {
-    width: 100%;
-    height: 500px;
-    max-width: 500px;
-    margin-top: 40px;
+    width: 400px;
+    height: 400px; // Changed height to auto for better responsiveness
+    max-width: 400px; // Updated max-width
+    margin: 20px auto; // Updated margin
     object-fit: cover;
     border: 1px solid $white;
     border-radius: 50%;
@@ -107,9 +107,9 @@ body {
 // Titles and Texts
 .section-title {
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem; // Updated font-size
     color: $dark-text;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; // Updated margin-bottom
     transition: color 0.5s ease;
 
     &:hover {
@@ -121,8 +121,12 @@ body {
 .fact-item {
   h4 {
     color: $danger-color;
-    font-size: 2rem;
+    font-size: 1.75rem; // Updated font-size
     transition: transform 1.5s ease;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
       transform: scale(1.1);
@@ -132,10 +136,10 @@ body {
 
 .portfolio-title {
   color: $portfolio-title-color;
-  font-size: 3rem;
+  font-size: 2.5rem; // Updated font-size
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; // Updated margin-bottom
   letter-spacing: 0.1rem;
   transition: color 0.5s ease;
 
@@ -146,10 +150,10 @@ body {
 
 // Services and Portfolio Cards
 .services-container {
-  height: 100vh;
+  height: auto; // Changed to auto
   width: 100%;
   margin: auto;
-  padding: 20px;
+  padding: 2rem; // Updated padding
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -158,9 +162,9 @@ body {
 
   .services-title {
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 2rem; // Updated font-size
     color: $portfolio-title-color;
-    margin-bottom: 30px;
+    margin-bottom: 2rem; // Updated margin-bottom
     text-align: center;
     text-transform: uppercase;
     animation: fadeInDown 0.8s ease;
@@ -168,12 +172,12 @@ body {
 
   .service-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
+    height: auto; // Changed to auto
     border-radius: 15px;
     overflow: hidden;
     background: linear-gradient(145deg, $white, #e6e6e6);
     box-shadow: 0 5px 15px $shadow-color;
-    padding: 20px;
+    padding: 1.5rem; // Updated padding
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -201,21 +205,21 @@ body {
 
 .portfolio-container {
   background-color: $light-background;
-  padding: 80px;
+  padding: 4rem; // Updated padding
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 2rem; // Updated gap
   animation: fadeIn 0.8s forwards;
 
   .portfolio-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
+    height: auto; // Changed to auto
     border-radius: 15px;
     overflow: hidden;
     background: linear-gradient(145deg, $white, #e6e6e6);
     box-shadow: 0 5px 15px $shadow-color;
-    padding: 20px;
+    padding: 1.5rem; // Updated padding
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -231,7 +235,7 @@ body {
     .portfolio-card-title {
       font-weight: bold;
       font-size: 1.5rem;
-      margin-top: 0.625rem;
+      margin-top: 0.5rem; // Updated margin-top
     }
 
     .portfolio-card-description {
@@ -261,7 +265,7 @@ body {
 .btn-primary,
 .btn-danger {
   transition: background-color 0.5s ease, transform 0.5s ease;
-  padding: 10px 20px;
+  padding: 0.75rem 1.5rem; // Updated padding
   border-radius: 5px;
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
 }
@@ -291,6 +295,7 @@ body {
   color: $white;
   border-radius: 8px;
   font-weight: 600;
+  padding: 0.75rem 1.5rem; // Updated padding
   transition: background-color 0.3s ease;
 
   &:hover {
@@ -302,8 +307,9 @@ body {
 .contact-info .contact-item {
   border-radius: 8px;
   background-color: $light-background;
-  padding: 15px;
+  padding: 1rem; // Updated padding
   box-shadow: 0 4px 8px $shadow-color;
+  margin-bottom: 1rem; // Added margin-bottom
 }
 
 .contact-info .contact-item .icon {
@@ -313,20 +319,20 @@ body {
 
 .contact-info .contact-item h4 {
   margin: 0;
-  font-size: 18px;
+  font-size: 1.125rem; // Updated font-size
   font-weight: 600;
 }
 
 .contact-info .contact-item p {
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem; // Updated font-size
   color: $dark-text;
 }
 
 .contact-form form {
   background-color: $light-background;
   border-radius: 8px;
-  padding: 20px;
+  padding: 1.5rem; // Updated padding
   box-shadow: 0 4px 8px $shadow-color;
 }
 
@@ -413,7 +419,7 @@ body {
 
 // Footer
 .footer {
-  padding: 20px;
+  padding: 1.25rem; // Updated padding
   background-color: $dark-text;
   color: $light-background;
   text-align: center;
@@ -449,15 +455,15 @@ body {
   }
 
   .portfolio-container {
-    padding: 60px;
-    gap: 30px;
+    padding: 3rem; // Updated padding
+    gap: 2rem; // Updated gap
   }
 }
 
 @media (max-width: 768px) {
   .portfolio-container {
-    padding: 40px;
-    gap: 20px;
+    padding: 2rem; // Updated padding
+    gap: 1.5rem; // Updated gap
   }
 
   .portfolio-card {
@@ -468,8 +474,8 @@ body {
 @media (max-width: 576px) {
   .home-img {
     img {
-      width: 200px;
-      height: 200px;
+      width: 150px; // Updated width
+      height: 150px; // Updated height
     }
   }
 
@@ -480,6 +486,45 @@ body {
 
 @media (max-width: 400px) {
   .home-text {
-    font-size: 0.9rem;
+    font-size: 0.875rem; // Updated font-size
   }
+}
+#home{
+background-color: $light-background;
+}
+#about{
+background-color: $light-background;
+margin-bottom: -100px;
+height: 100vh;
+}
+#services-me{
+background-color: $light-background;
+margin: 0;
+padding: 0;
+position: fixed;
+right:0;
+}
+#portfolio{
+background-color: $light-background;
+}
+#testimonials{
+background-color: $light-background;
+margin-bottom: -60px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+#contact-us{
+  background-color: $light-background;
+  
+}
+#freelancer-available{
+  width:100%;
+  height:60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-background;
 }
