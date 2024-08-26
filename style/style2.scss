@@ -7,53 +7,57 @@ $muted-text: #6c757d;
 $white: #ffffff;
 $shadow-color: rgba(0, 0, 0, 0.1);
 $shadow-hover: rgba(0, 0, 0, 0.2);
+$hover-text-color: #a50000; // Hover color for links
+$hover-danger-color: #ff0019; // Hover color for danger button
+$gold-color: #ffd700; // Gold color for warning button
+$hover-gold-color: #ffc300; // Hover color for warning button
+$portfolio-title-color: #f80000; // Title color for portfolio section
 
 body {
-  font-family: "Arial", sans-serif; // Font family for body text
-  background-color: $light-background; // Background color for body
-  color: $dark-text; // Text color for body
-  margin: 0; // Remove default margin
-  padding: 0; // Remove default padding
-  font-size: 1rem; // Default font size
-  line-height: 1.5; // Default line height
-  text-align: center; // Center text
-  transition: background-color 0.5s ease; // Animation for background color change
+  font-family: "Arial", sans-serif;
+  background-color: $light-background;
+  color: $dark-text;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  transition: background-color 0.5s ease;
 }
+
 // Navbar Styles
 .navbar {
- background-color:$light-background; // Background color with transparency
-  height: 3.75rem; // Height of the navbar
-  padding: 0 1.875rem; // Padding for better usability
-  transition: background-color 0.5s ease, box-shadow 0.5s ease; // Animation for background color and shadow change
-  box-shadow: 0 4px 20px $shadow-color; // Deeper shadow for depth
+  background-color: $light-background;
+  height: 3.75rem;
+  padding: 0 1.875rem;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 4px 20px $shadow-color;
 
   &.scrolled {
-  background-color: $light-background;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4); // Less shadow when scrolled
+    background-color: $light-background;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
   }
 
-  // Link Styles
   .nav-link {
-    color: rgb(0, 0, 0); // Text color for links
-    font-weight: 800; // Bold weight for link text
-    font-family: "Georgia", sans-serif; // Font family for links
-    text-transform: uppercase; // Transform text to uppercase
-    letter-spacing: 0.1rem; // Letter spacing for better readability
-    font-size: 0.875rem; // Font size for link text
-    transition: color 0.3s ease, transform 0.3s ease; // Animation for color and scale change
-    padding: 0.625rem 0.9375rem; // Padding for better click area
+    color: $dark-text;
+    font-weight: 800;
+    font-family: "Georgia", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.875rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 0.625rem 0.9375rem;
 
     &:hover {
-      color: #a50000; // Text color on hover
-      transform: scale(1.1); // Scale up on hover
+      color: $hover-text-color;
+      transform: scale(1.1);
     }
   }
 
-  // Brand Styles
   .navbar-brand {
-    font-size: 1.875rem; // Font size for brand name
-    font-family: "Arial", sans-serif; // Font family for brand
-    font-weight: 700; // Bold weight for brand text
+    font-size: 1.875rem;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
   }
 }
 
@@ -89,7 +93,7 @@ body {
 
   .home-text {
     text-align: left;
-    color: #666666; // Change text color for better contrast with background
+    color: #666666;
     animation: textSlideIn 1.5s ease-in-out;
   }
 }
@@ -116,15 +120,6 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-// Body Styles
-body {
-$light-background: #f8f9fa;
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.5s ease;
-  scroll-behavior: smooth;
 }
 
 // Home Image Styles
@@ -156,7 +151,7 @@ $light-background: #f8f9fa;
     transition: color 0.5s ease;
 
     &:hover {
-      color: #d10015;
+      color: $hover-danger-color;
     }
   }
 }
@@ -164,7 +159,7 @@ $light-background: #f8f9fa;
 // Fact Item Styles
 .fact-item {
   h4 {
-    color: #ff0019;
+    color: $danger-color;
     font-size: 2rem;
     transition: transform 1.5s ease;
 
@@ -173,37 +168,33 @@ $light-background: #f8f9fa;
     }
   }
 }
-#about{
-    background-color:$light-background;
-}
 
 // Progress Bar Styles
 .progress {
-    background-color: $light-background;
-  height: 20px; // Increased height for better visibility
-  border-radius: 80px; // More rounded corners
-  $light-background: #f8f9fa; // Light background color
-  margin-bottom: 1rem; // Bottom margin
-  transition: background-color 0.5s ease; // Animation for background color change
-  box-shadow: 0 4px 10px $shadow-color; // Deeper shadow for more depth
+  background-color: $light-background;
+  height: 20px;
+  border-radius: 80px;
+  margin-bottom: 1rem;
+  transition: background-color 0.5s ease;
+  box-shadow: 0 4px 10px $shadow-color;
 
   .progress-bar {
-    border-radius: 18px; // Rounded corners for the progress bar
-    width: 0; // Initial width
-    animation: progress-animation 1s ease-out forwards; // Animation
-    transition: width 0.5s ease, background-color 0.5s ease; // Animation for width and background color change
-    position: relative; // For using ::after
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); // Shadow for depth
+    border-radius: 18px;
+    width: 0;
+    animation: progress-animation 1s ease-out forwards;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
 
     &::after {
-      content: attr(data-progress); // Display progress percentage
-      position: absolute; // Absolute positioning for placement
-      right: 10px; // Right margin
-      color: $white; // Text color
-      font-size: 0.85rem; // Slightly larger text size
-      line-height: 15px; // Vertical alignment
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); // Text shadow for better readability
-      font-weight: bold; // Bold text for emphasis
+      content: attr(data-progress);
+      position: absolute;
+      right: 10px;
+      color: $white;
+      font-size: 0.85rem;
+      line-height: 15px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      font-weight: bold;
     }
   }
 }
@@ -211,36 +202,36 @@ $light-background: #f8f9fa;
 // Keyframes for Progress Animation
 @keyframes progress-animation {
   from {
-    width: 0; // Start from zero
+    width: 0;
   }
   to {
-    width: var(--progress-width); // Final width
+    width: var(--progress-width);
   }
 }
 
-// Different classes for each progress bar with gradients
+// Different classes for each progress bar
 .progress-bar.html {
-  --progress-width: 90%; // Width for HTML
-  background-color: red; // Gradient color for HTML
-  animation-delay: 1s; // Animation delay
+  --progress-width: 90%;
+  background-color: $danger-color;
+  animation-delay: 1s;
 }
 
 .progress-bar.css {
-  --progress-width: 75%; // Width for CSS
-  background-color: red; // Gradient color for CSS
-  animation-delay: 1.3s; // Animation delay
+  --progress-width: 75%;
+  background-color: $danger-color;
+  animation-delay: 1.3s;
 }
 
 .progress-bar.javascript {
-  --progress-width: 25%; // Width for JavaScript
-  background-color:red; // Gradient color for JavaScript
-  animation-delay: 1.5s; // Animation delay
+  --progress-width: 25%;
+  background-color: $danger-color;
+  animation-delay: 1.5s;
 }
 
 .progress-bar.bootstrap {
-  --progress-width: 65%; // Width for Bootstrap
-  background-color:red; // Gradient color for Bootstrap
-  animation-delay: 1.8s; // Animation delay
+  --progress-width: 65%;
+  background-color: $danger-color;
+  animation-delay: 1.8s;
 }
 
 // Social Links Styles
@@ -250,7 +241,7 @@ $light-background: #f8f9fa;
     transition: color 0.5s ease, transform 0.5s ease;
 
     &:hover {
-      color: #dc3545;
+      color: $danger-color;
       transform: scale(1.3);
     }
   }
@@ -270,7 +261,7 @@ $light-background: #f8f9fa;
   border: none;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: darken($primary-color, 10%);
     transform: scale(1.05);
   }
 }
@@ -280,450 +271,158 @@ $light-background: #f8f9fa;
   border: none;
 
   &:hover {
-    background-color: #ff0019;
+    background-color: $hover-danger-color;
     transform: scale(1.05);
   }
 }
 
-#services-me{
-    border-radius: 20px;
-   color: $light-background;
-   width: 100%;
-   height: 100vh;
-   background-color: $light-background;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   padding: 20px;
-   box-sizing: border-box;
-   animation: fadeIn 0.8s ease-in-out;
-   animation-delay: 0.5s;
-   animation-fill-mode: forwards;
-   animation-duration: 1s;
-   animation-iteration-count: 1;
-   animation-timing-function: ease-in-out;
-   animation-delay: 0.5s; // Delay the animation by 0.5 seconds
-   animation-fill-mode: forwards; // Ensure the animation completes before the element is removed
-   animation-duration: 1s; // Duration of the animation
-   animation-iteration-count: 1; // Number of times the animation should play
-   animation-timing-function: ease-in-out; // Timing function for the animation
-   animation-delay: 0.5s; // Delay the animation by 0.5 seconds
-   animation-fill-mode: forwards; // Ensure the animation completes before the element is removed
+#about {
+  background-color: $light-background;
 }
+
 // Services Container Styles
 .services-container {
-  height: 100vh; // Full height of the container
+  height: 100vh;
   width: 100%;
-  max-width: auto; // Maximum width of the container
-  margin: auto; // Center the container
-  padding: 20px; // Padding around the container
-  display: flex; // Use flexbox for layout
-  flex-wrap: wrap; // Allow wrapping to next line
-  justify-content: space-between; // Space between items
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  // Title styling
   .services-title {
     font-weight: bold;
-    font-size: 2.5rem; // Font size for the title
-    color: #003366; // Dark Blue color
-    margin-bottom: 30px; // Space below the title
-    text-align: center; // Center the title
-    text-transform: uppercase; // Uppercase letters for emphasis
-    animation: fadeInDown 0.8s ease; // Fade-in down animation for title
+    font-size: 2.5rem;
+    color: $portfolio-title-color;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    animation: fadeInDown 0.8s ease;
   }
 
-  // Service item card styling
   .service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; // Transition effects
-    height: 100%; // Equal height for all cards
-    border-radius: 15px; // Rounded corners
-    overflow: hidden; // Prevent overflow of content
-    background: linear-gradient(145deg, $white, #e6e6e6); // Gradient background
-    box-shadow: 0 5px 15px $shadow-color; // Soft shadow
-    padding: 20px; // Padding inside the card
-    display: flex; // Use flexbox for alignment
-    flex-direction: column; // Stack children vertically
-    justify-content: space-between; // Space between children
-    position: relative; // For positioning pseudo-elements
-    opacity: 0; // Start with hidden opacity
-    animation: fadeIn 0.8s forwards; // Fade-in animation for cards
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(145deg, $white, #e6e6e6);
+    box-shadow: 0 5px 15px $shadow-color;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
 
     &:hover {
-      transform: translateY(-5px); // Lift effect on hover
-      box-shadow: 0 15px 30px $shadow-hover; // Deeper shadow on hover
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px $shadow-hover;
     }
-  }
-
-  // Button styling
-  .btn-warning {
-    background-color: #ffd700; // Gold color
-    border: none; // Remove border
-    color: #003366; // Dark Blue text color
-    padding: 10px 20px; // Padding for the button
-    border-radius: 5px; // Rounded corners for the button
-    transition: background-color 0.3s ease, transform 0.3s ease; // Smooth transition for hover
-    font-size: 1rem; // Font size for buttons
-    font-weight: bold; // Bold text for buttons
-    text-transform: uppercase; // Uppercase letters for buttons
-    cursor: pointer; // Pointer cursor on hover
-    margin-top: auto; // Push button to the bottom of the card
-
-    &:hover {
-      background-color: #ffc300; // Lighter Gold on hover
-      color: $white; // White text color on hover
-      transform: scale(1.05); // Slightly enlarge button on hover
-    }
-  }
-
-  // Icon styling
-  .service-icon {
-    transition: transform 0.3s ease; // Smooth transition for icons
-    font-size: 3rem; // Increase icon size
-    margin-bottom: 15px; // Space below the icon
-    opacity: 0; // Start with hidden opacity
-    animation: fadeIn 0.8s forwards; // Fade-in animation for icons
-
-    // Icon hover effect
-    &:hover {
-      transform: scale(1.1); // Slightly enlarge icon on hover
-      color: #ffd700; // Change icon color on hover
-    }
-  }
-
-  // Description styling
-  .service-description {
-    font-size: 1rem; // Font size for description
-    color: #555; // Darker gray for better readability
-    margin-bottom: 20px; // Space below the description
-    line-height: 1.5; // Increase line height for better readability
-    opacity: 0; // Start with hidden opacity
-    animation: fadeIn 0.8s forwards; // Fade-in animation for descriptions
-  }
-}
-
-// Responsive adjustments
-@media (max-width: 768px) {
-  .service-card {
-    flex: 1 1 100%; // Full width on smaller screens
-    padding: 15px; // Reduce padding on smaller screens
-  }
-
-  .services-title {
-    font-size: 2rem; // Reduce font size for smaller screens
   }
 
   .btn-warning {
-    font-size: 0.9rem; // Reduce button font size
+    background-color: $gold-color;
+    color: $white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: $hover-gold-color;
+      color: $white;
+    }
   }
 }
 
-// Keyframes for animations
+// Keyframes for Section Animation
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px); // Start slightly lower
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0); // End at original position
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-20px); // Start slightly higher
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;
-    transform: translateY(0); // End at original position
-  }
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1); // Original size
-  }
-  50% {
-    transform: scale(1.05); // Slightly larger size
+    transform: translateY(0);
   }
 }
 
 // Portfolio Styles
-.portfolio {
-  padding: 60px 0px; // Padding for top and bottom
-  margin-top: 220px;
-  background-color: $light-background;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Soft shadow
-  position: relative; // For positioning pseudo-elements
-  opacity: 0; // Start with hidden opacity
-  animation: fadeIn 1.8s forwards; // Fade-in animation for cards
-
-  // Title styling
-  .section-title {
-    h2 {
-      font-weight: bold;
-      font-size: 6rem; // Font size for the title
-      color: #f80000; // Dark Blue color
-      margin-bottom: 20px; // Space below the title
-      // text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.342);
-    }
-
-    p {
-      color: $muted-text; // Muted text color
-      font-size: 1.4rem; // Font size for description
-      font-weight: 700;
-      color: #555555;
-      margin-bottom: 60px; // Space below the description
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); // Shadow for better readability
-    }
-  }
-
-  // Portfolio item styling
-  .portfolio-item {
-    position: relative; // For positioning overlay
-    overflow: hidden; // Prevent overflow
-    border-radius: 10px; // Rounded corners
-    transition: transform 0.3s ease; // Smooth transition for hover effect
-    height: 400px; // Increased height for larger images
-
-    &:hover {
-      transform: scale(1.11); // Slightly enlarge on hover
-    }
-
-    img {
-      width: 100%; // Full width of the card
-      height: auto; // Maintain aspect ratio
-      height: 100%; // Set height to fill the card
-      object-fit: cover; // Maintain aspect ratio and cover the area
-      border-radius: 10px; // Rounded corners
-    }
-
-    // Overlay styling
-    .portfolio-overlay {
-      position: absolute; // Position overlay
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.7); // Semi-transparent black background
-    }
-
-    .portfolio-overlay {
-      position: absolute; // Position overlay
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.7); // Semi-transparent black background
-      color: $white; // White text color
-      display: flex; // Use flexbox for centering
-      flex-direction: column; // Stack children vertically
-      align-items: center; // Center horizontally
-      justify-content: center; // Center vertically
-      opacity: 0; // Start hidden
-      transition: opacity 0.3s ease; // Smooth transition for overlay
-
-      // Show overlay on hover
-      .portfolio-item:hover & {
-        opacity: 1; // Show overlay on hover
-      }
-    }
-  }
-}
-
-// Button styling
-.btn-danger {
-  background-color: $danger-color; // Bootstrap danger color
-  border: none; // Remove border
-  color: $white; // White text color
-  padding: 10px 20px; // Padding for the button
-  border-radius: 5px; // Rounded corners for the button
-  transition: background-color 0.3s ease; // Smooth transition for hover
-
-  &:hover {
-    background-color: #c82333; // Darker shade on hover
-  }
-}
-
-// Responsive adjustments
-@media (max-width: 768px) {
-  .portfolio-item {
-    height: auto; // Allow height to adjust on smaller screens
-  }
-}
-
-// Freelancer Available Styles
-.freelancer-available {
-  width: 100%;
-  height: 100vh;
+.portfolio-container {
+  padding: 80px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: $light-background; // White background for a clean look
-  padding: 0; // Increased padding for better spacing
-  border-radius: 10px; // Slightly more rounded corners
-  box-shadow: 0 8px 30px $shadow-hover; // Enhanced shadow for depth
-  margin: 0; // Margin to separate from other sections
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  animation: fadeIn 0.8s forwards;
 
-  h2 {
-    color: #000000; // Darker color for better readability
-    font-size: 2.5rem; // Larger font size for the heading
-  }
-
-  p {
-    font-size: 1.2rem; // Slightly larger font for the paragraph
-    line-height: 1.6; // Improved line height for readability
-    margin-bottom: 30px; // Space below the paragraph
-  }
-
-  .btn {
-    padding: 12px 25px; // Increased padding for the button
-    border-radius: 5px; // Rounded button
-    font-size: 1.1rem; // Slightly larger font size for the button
-    transition: background-color 0.3s ease, transform 0.3s ease; // Smooth transition for hover effect
-
-    &.btn-primary {
-      background-color: $primary-color; // Bootstrap primary color
-      border: none; // Remove border
-
-      &:hover {
-        background-color: #0056b3; // Darker blue on hover
-        transform: translateY(-2px); // Slight lift effect on hover
-      }
-    }
-  }
-}
-
-
-#testimonials .testimonial {
-  height: 100vh;
- background-color:$light-background;// Light background for contrast
-
-  .section-title {
-    h2 {
-      color: $dark-text; // Dark color for the title
-      font-size: 2.5rem; // Larger font size for the title
-      margin-bottom: 10px; // Space below the title
-    }
-
-    p {
-      font-size: 1.2rem; // Font size for the subtitle
-      color: $muted-text; // Muted color for the subtitle
-    }
-  }
-
-  .rating {
-    font-size: 1.5rem; // Size of the stars
-    color: #ffc107; // Color for the stars (yellow)
-  }
-
-  .testimonial-card {
-    background-color: $light-background;// White background for testimonials
-    border-radius: 10px; // Rounded corners
-    box-shadow: 0 4px 20px $shadow-color; // Subtle shadow
-    transition: transform 0.3s, box-shadow 0.3s; // Smooth transition
-    padding: 20px; // Padding inside the card
-
-    &:hover {
-      transform: translateY(-5px); // Lift effect on hover
-      box-shadow: 0 8px 30px $shadow-hover; // Enhanced shadow on hover
-    }
-
-    .testimonial-text {
-      font-size: 1.1rem; // Font size for testimonial text
-      color: #495057; // Darker color for text
-      margin-bottom: 15px; // Space below testimonial text
-      line-height: 1.5; // Improved line height for readability
-    }
-
-    .testimonial-author {
-      font-size: 1rem; // Font size for author name
-      color: $primary-color; // Bootstrap primary color for author name
-      font-weight: bold; // Bold for emphasis
-    }
-  }
-}
-#testimonials{
-    background-color: $light-background;
-}
-
-// Contact Us Styles
-.contact-us {
-  padding: 250px 0;
-  background-color:$light-background; // Light background
-
-  .section-title {
+  .portfolio-title {
+    color: $portfolio-title-color;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    color: $dark-text; // Dark color for text
-  }
-
-  // Contact Item Styles
-  .contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s; // Animation on hover
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.5s ease;
 
     &:hover {
-      transform: translateY(-5px); // Lift effect
-      box-shadow: 0 4px 20px $shadow-hover; // Shadow effect
-    }
-
-    .icon {
-      font-size: 24px;
-      margin-right: 15px;
-      color: $primary-color; // Bootstrap primary color
-    }
-
-    .text {
-      h4 {
-        margin: 0;
-        font-weight: bold;
-        color: #495057; // Darker text color
-      }
-
-      p {
-        margin: 0;
-        color: $muted-text; // Lighter text color
-      }
+      color: darken($portfolio-title-color, 10%);
     }
   }
 
-  // Form Styles
-  .contact-form {
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ced4da; // Light border
-      border-radius: 5px;
-      transition: border-color 0.3s; // Animation on focus
+  .portfolio-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(145deg, $white, #e6e6e6);
+    box-shadow: 0 5px 15px $shadow-color;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
 
-      &:focus {
-        border-color: $primary-color; // Change border color on focus
-        outline: none; // Remove default outline
-      }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px $shadow-hover;
     }
 
-    button {
-      padding: 10px 20px;
-      background-color: $primary-color; // Primary button color
-      color: $white; // White text
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s; // Animation on hover
+    .portfolio-card-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-top: 0.625rem;
+    }
+
+    .portfolio-card-description {
+      font-size: 1rem;
+      color: $muted-text;
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px $shadow-color;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
 
       &:hover {
-        background-color: #0056b3; // Darker blue on hover
+        transform: scale(1.05);
+        box-shadow: 0 8px 30px $shadow-hover;
       }
     }
   }
@@ -731,88 +430,73 @@ $light-background: #f8f9fa;
 
 // Footer Styles
 .footer {
-  background-color: $dark-text; // Dark background
-  color: $white;
-  padding: 40px 0;
-  perspective: 1000px; // Perspective for 3D effect
+  padding: 20px;
+  background-color: $dark-text;
+  color: $light-background;
+  text-align: center;
 
-  .footer-content {
-    transform-style: preserve-3d; // Preserve 3D transformations
-    transition: transform 0.3s; // Smooth transition for hover effect
+  p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: color 0.5s ease;
 
     &:hover {
-      transform: rotateY(5deg); // Slight rotation on hover for 3D effect
-    }
-
-    h5 {
-      margin-bottom: 20px;
-      font-weight: bold;
-      color: $white; // White text for headings
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // Shadow for depth
-    }
-
-    p {
-      margin-bottom: 15px;
-      color: #d3d3d3; // Light gray for paragraph text
-    }
-
-    a {
-      color: $white; // White links
-      text-decoration: none;
-      transition: color 0.3s, transform 0.3s; // Smooth transition for hover effect
-
-      &:hover {
-        color: $primary-color; // Change color on hover
-        text-decoration: underline; // Underline on hover
-        transform: translateZ(5px); // Move forward slightly on hover
-      }
-    }
-
-    .social-icons {
-      margin-top: 10px;
-
-      a {
-        color: $white; // White icons
-        margin: 0 10px;
-        font-size: 20px; // Size of social media icons
-        transition: color 0.3s, transform 0.3s; // Smooth transition for hover effect
-
-        &:hover {
-          color: $primary-color; // Change color on hover
-          transform: translateY(-3px) translateZ(5px); // Move up and forward slightly on hover
-        }
-      }
+      color: $hover-text-color;
     }
   }
 }
 
-// Horizontal Rule Styles
-hr.my-4 {
-  border-top: 1px solid #d3d3d3; // Light gray line
-  margin: 20px 0; // Spacing around the line
+// Media Queries
+@media (max-width: 1200px) {
+  .progress-bar {
+    font-size: 0.75rem;
+  }
 }
-#portfolio{
-    background-color:$light-background;
+
+@media (max-width: 992px) {
+  .social-links {
+    a {
+      font-size: 1.25rem;
+    }
+  }
+
+  .portfolio-container {
+    padding: 60px;
+    gap: 30px;
+  }
 }
-                
-#home{
-background-color: $light-background;
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 40px;
+    gap: 20px;
+  }
+
+  .portfolio-card {
+    flex-direction: column;
+  }
 }
-#abou{
-background-color: $light-background;
+
+@media (max-width: 576px) {
+  .home-img {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .progress-bar {
+    font-size: 0.65rem;
+  }
 }
-#services-me{
-background-color: $light-background;
-}
-#portfolio{
-background-color: $light-background;
-}
-#testimonials{
-background-color: $light-background;
-}
-#contact-us{
-background-color: $light-background;
-}
-body{
-  color: $light-background;
+
+@media (max-width: 400px) {
+  .home-text {
+    font-size: 0.9rem;
+  }
 }
