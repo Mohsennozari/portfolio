@@ -80,7 +80,9 @@
                      <h2 class="display-5">Mohsen Nozari</h2>
                      <!-- Name heading -->
                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus perspiciatis quidem vitae esse porro officia dolorum labore in adipisci sapiente quod quae commodi, ab, accusantium a?‬ Alias vitae nisi expedita.</p>
+                      <button id="theme-toggle" class="btn btn-primary">Switch to Dark Mode</button>
                      <!-- Description -->
+
                      <a href="#portfolio" class="btn btn-danger" style="font-weight:700">My Work</a> <!-- Button to navigate to portfolio -->
                   </div>
                </div>
@@ -501,5 +503,29 @@
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+      <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleButton = document.getElementById('theme-toggle');
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            
+            // Apply the saved theme
+            document.body.classList.toggle('dark-mode', currentTheme === 'dark');
+            
+            // Update button text based on current theme
+            themeToggleButton.textContent = currentTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+            
+            themeToggleButton.addEventListener('click', () => {
+             // Toggle the theme
+             const isDarkMode = document.body.classList.toggle('dark-mode');
+             
+             // Save the selected theme
+             localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+             
+             // Update button text
+             themeToggleButton.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+            });
+            });
+            
+         </script>
 </body>
 </html>

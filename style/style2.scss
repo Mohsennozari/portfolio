@@ -1,9 +1,9 @@
 // Variables
 $primary-color: #007bff;
 $danger-color: #dc3545;
-$light-background: #000000;
+$light-background: #ffffff;
 $dark-text: #343a40;
-$muted-text: #6c757d;
+$muted-text: #cfcfcf;
 $white: #ffffff;
 $shadow-color: rgba(0, 0, 0, 0.1);
 $shadow-hover: rgba(0, 0, 0, 0.2);
@@ -13,62 +13,83 @@ $gold-color: #ffd700;
 $hover-gold-color: #ffc300;
 $portfolio-title-color: #f80000;
 
-// Body
+// Light Mode
+:root {
+  --background-color: $light-background;
+  --text-color: $dark-text;
+  --navbar-background: $light-background;
+  --button-background: $primary-color;
+  --button-text-color: $white;
+  --card-background: $white;
+  --card-shadow: $shadow-color;
+}
+
+// Dark Mode
+.dark-mode {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --navbar-background: #212529;
+  --button-background: #17a2b8;
+  --button-text-color: #ffffff;
+  --card-background: #343a40;
+  --card-shadow: rgba(255, 255, 255, 0.1);
+}
+
+// Body Style
 body {
   font-family: "Arial", sans-serif;
-  background-color: $light-background;
-  color: $dark-text;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
   font-size: 1rem;
   line-height: 1.5;
   text-align: center;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-// Navbar
+// Navbar Style
 .navbar {
-  background-color: $light-background;
+  background-color: var(--navbar-background);
   height: 3.75rem;
-  padding: 0 1.25rem; // Updated padding
+  padding: 0 1.25rem;
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
-  box-shadow: 0 4px 20px $shadow-color;
+  box-shadow: 0 4px 20px var(--shadow-color);
 
   &.scrolled {
-    background-color: darken($light-background, 10%);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
   }
 
   .nav-link {
-    color: $dark-text;
+    color: var(--text-color);
     font-weight: 800;
     font-family: "Georgia", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-size: 0.875rem;
     transition: color 0.3s ease, transform 0.3s ease;
-    padding: 0.5rem 1rem; // Updated padding
+    padding: 0.5rem 1rem;
 
     &:hover {
-      color: $hover-text-color;
+      color: var(--hover-text-color);
       transform: scale(1.1);
     }
   }
 
   .navbar-brand {
-    font-size: 1.75rem; // Updated font-size
+    font-size: 1.75rem;
     font-family: "Arial", sans-serif;
     font-weight: 700;
   }
 }
 
-// Images and Animations
+// Image and Animations
 .home-img {
   img {
     width: 400px;
-    height: 400px; // Changed height to auto for better responsiveness
-    max-width: 400px; // Updated max-width
-    margin: 20px auto; // Updated margin
+    height: 400px;
+    max-width: 400px;
+    margin: 20px auto;
     object-fit: cover;
     border: 1px solid $white;
     border-radius: 50%;
@@ -104,24 +125,25 @@ body {
   }
 }
 
-// Titles and Texts
+// Section Titles
 .section-title {
   h2 {
-    font-size: 2rem; // Updated font-size
-    color: $dark-text;
-    margin-bottom: 1.5rem; // Updated margin-bottom
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
     transition: color 0.5s ease;
 
     &:hover {
-      color: $hover-danger-color;
+      color: var(--hover-danger-color);
     }
   }
 }
 
+// Fact Items
 .fact-item {
   h4 {
     color: $danger-color;
-    font-size: 1.75rem; // Updated font-size
+    font-size: 1.75rem;
     transition: transform 1.5s ease;
     display: flex;
     text-align: center;
@@ -134,37 +156,38 @@ body {
   }
 }
 
+// Portfolio Title
 .portfolio-title {
   color: $portfolio-title-color;
-  font-size: 2.5rem; // Updated font-size
+  font-size: 2.5rem;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 1.5rem; // Updated margin-bottom
+  margin-bottom: 1.5rem;
   letter-spacing: 0.1rem;
   transition: color 0.5s ease;
 
   &:hover {
-    color: darken($portfolio-title-color, 10%);
+    color: var(--hover-danger-color);
   }
 }
 
 // Services and Portfolio Cards
 .services-container {
-  height: auto; // Changed to auto
+  height: auto;
   width: 100%;
   margin: auto;
-  padding: 2rem; // Updated padding
+  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: $light-background;
+  background-color: var(--background-color);
   animation: fadeIn 0.8s forwards;
 
   .services-title {
     font-weight: bold;
-    font-size: 2rem; // Updated font-size
+    font-size: 2rem;
     color: $portfolio-title-color;
-    margin-bottom: 2rem; // Updated margin-bottom
+    margin-bottom: 2rem;
     text-align: center;
     text-transform: uppercase;
     animation: fadeInDown 0.8s ease;
@@ -172,12 +195,12 @@ body {
 
   .service-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: auto; // Changed to auto
+    height: auto;
     border-radius: 15px;
     overflow: hidden;
-    background: linear-gradient(145deg, $white, #e6e6e6);
-    box-shadow: 0 5px 15px $shadow-color;
-    padding: 1.5rem; // Updated padding
+    background: linear-gradient(145deg, var(--card-background), #e6e6e6);
+    box-shadow: 0 5px 15px var(--card-shadow);
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -193,33 +216,33 @@ body {
 
   .btn-warning {
     background-color: $gold-color;
-    color: $white;
+    color: var(--button-text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
 
     &:hover {
       background-color: $hover-gold-color;
-      color: $white;
+      color: var(--button-text-color);
     }
   }
 }
 
 .portfolio-container {
-  background-color: $light-background;
-  padding: 4rem; // Updated padding
+  background-color: var(--background-color);
+  padding: 4rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem; // Updated gap
+  gap: 2rem;
   animation: fadeIn 0.8s forwards;
 
   .portfolio-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: auto; // Changed to auto
+    height: auto;
     border-radius: 15px;
     overflow: hidden;
-    background: linear-gradient(145deg, $white, #e6e6e6);
-    box-shadow: 0 5px 15px $shadow-color;
-    padding: 1.5rem; // Updated padding
+    background: linear-gradient(145deg, var(--card-background), #e6e6e6);
+    box-shadow: 0 5px 15px var(--card-shadow);
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -235,11 +258,10 @@ body {
     .portfolio-card-title {
       font-weight: bold;
       font-size: 1.5rem;
-      margin-top: 0.5rem; // Updated margin-top
+      margin-top: 0.5rem;
     }
 
     .portfolio-card-description {
-      font-size: 1rem;
       color: $muted-text;
       margin-bottom: 1rem;
     }
@@ -250,7 +272,7 @@ body {
       object-fit: cover;
       margin-bottom: 1rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px $shadow-color;
+      box-shadow: 0 4px 10px var(--card-shadow);
       transition: transform 0.5s ease, box-shadow 0.5s ease;
 
       &:hover {
@@ -265,17 +287,16 @@ body {
 .btn-primary,
 .btn-danger {
   transition: background-color 0.5s ease, transform 0.5s ease;
-  padding: 0.75rem 1.5rem; // Updated padding
+  padding: 0.75rem 1.5rem;
   border-radius: 5px;
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
 }
 
 .btn-primary {
-  background-color: $primary-color;
+  background-color: var(--button-background);
   border: none;
 
   &:hover {
-    background-color: darken($primary-color, 10%);
     transform: scale(1.05);
   }
 }
@@ -285,60 +306,64 @@ body {
   border: none;
 
   &:hover {
-    background-color: $hover-danger-color;
+    background-color: var(--hover-danger-color);
     transform: scale(1.05);
   }
 }
 
 .contact-form .btn {
   background-color: $danger-color;
-  color: $white;
+  color: var(--button-text-color);
   border-radius: 8px;
   font-weight: 600;
-  padding: 0.75rem 1.5rem; // Updated padding
+  padding: 0.75rem 1.5rem;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: $hover-danger-color;
+    background-color: var(--hover-danger-color);
   }
 }
 
 // Contact Form
-.contact-info .contact-item {
-  border-radius: 8px;
-  background-color: $light-background;
-  padding: 1rem; // Updated padding
-  box-shadow: 0 4px 8px $shadow-color;
-  margin-bottom: 1rem; // Added margin-bottom
+.contact-info {
+  .contact-item {
+    border-radius: 8px;
+    background-color: var(--background-color);
+    padding: 1rem;
+    box-shadow: 0 4px 8px $shadow-color;
+    margin-bottom: 1rem;
+
+    .icon {
+      color: $danger-color;
+      font-size: 24px;
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--text-color);
+    }
+  }
 }
 
-.contact-info .contact-item .icon {
-  color: $danger-color;
-  font-size: 24px;
-}
+.contact-form {
+  form {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px $shadow-color;
+  }
 
-.contact-info .contact-item h4 {
-  margin: 0;
-  font-size: 1.125rem; // Updated font-size
-  font-weight: 600;
-}
-
-.contact-info .contact-item p {
-  margin: 0;
-  font-size: 1rem; // Updated font-size
-  color: $dark-text;
-}
-
-.contact-form form {
-  background-color: $light-background;
-  border-radius: 8px;
-  padding: 1.5rem; // Updated padding
-  box-shadow: 0 4px 8px $shadow-color;
-}
-
-.contact-form .form-control {
-  border-radius: 8px;
-  border: 1px solid $muted-text;
+  .form-control {
+    border-radius: 8px;
+    border: 1px solid $muted-text;
+  }
 }
 
 // Social Links
@@ -356,7 +381,7 @@ body {
 
 // Progress Bars
 .progress {
-  background-color: $light-background;
+  background-color: var(--background-color);
   height: 20px;
   border-radius: 80px;
   margin-bottom: 1rem;
@@ -419,7 +444,7 @@ body {
 
 // Footer
 .footer {
-  padding: 1.25rem; // Updated padding
+  padding: 1.25rem;
   background-color: $dark-text;
   color: $light-background;
   text-align: center;
@@ -435,7 +460,7 @@ body {
     transition: color 0.5s ease;
 
     &:hover {
-      color: $hover-text-color;
+      color: var(--hover-text-color);
     }
   }
 }
@@ -455,15 +480,15 @@ body {
   }
 
   .portfolio-container {
-    padding: 3rem; // Updated padding
-    gap: 2rem; // Updated gap
+    padding: 3rem;
+    gap: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .portfolio-container {
-    padding: 2rem; // Updated padding
-    gap: 1.5rem; // Updated gap
+    padding: 2rem;
+    gap: 1.5rem;
   }
 
   .portfolio-card {
@@ -472,11 +497,9 @@ body {
 }
 
 @media (max-width: 576px) {
-  .home-img {
-    img {
-      width: 150px; // Updated width
-      height: 150px; // Updated height
-    }
+  .home-img img {
+    width: 150px;
+    height: 150px;
   }
 
   .progress-bar {
@@ -486,45 +509,33 @@ body {
 
 @media (max-width: 400px) {
   .home-text {
-    font-size: 0.875rem; // Updated font-size
+    font-size: 0.875rem;
   }
 }
-#home{
-background-color: $light-background;
-}
-#about{
-background-color: $light-background;
-margin-bottom: -100px;
-height: 100vh;
-}
-#services-me{
-background-color: $light-background;
-margin: 0;
-padding: 0;
-position: fixed;
-right:0;
-}
-#portfolio{
-background-color: $light-background;
-}
-#testimonials{
-background-color: $light-background;
-margin-bottom: -60px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
 
-
-#contact-us{
-  background-color: $light-background;
-  
-}
-#freelancer-available{
-  width:100%;
-  height:60vh;
+#home, #about, #services-me, #portfolio, #testimonials, #contact-us, #freelancer-available {
+  background-color: var(--background-color);
+  height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $light-background;
+  padding: 0 2rem;
+}
+
+// Specific Styles
+#about {
+  margin-bottom: -100px;
+}
+
+#services-me {
+  position: fixed;
+  right: 0;
+}
+
+#testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -60px;
 }
