@@ -1,18 +1,19 @@
 // Variables
 $primary-color: #007bff;
 $danger-color: #dc3545;
-$light-background: #000000; // تغییر رنگ پس‌زمینه روشن
+$light-background: #ffffff;
 $dark-text: #343a40;
 $muted-text: #6c757d;
 $white: #ffffff;
 $shadow-color: rgba(0, 0, 0, 0.1);
 $shadow-hover: rgba(0, 0, 0, 0.2);
-$hover-text-color: #a50000; // Hover color for links
-$hover-danger-color: #ff0019; // Hover color for danger button
-$gold-color: #ffd700; // Gold color for warning button
-$hover-gold-color: #ffc300; // Hover color for warning button
-$portfolio-title-color: #f80000; // Title color for portfolio section
+$hover-text-color: #a50000;
+$hover-danger-color: #ff0019;
+$gold-color: #ffd700;
+$hover-gold-color: #ffc300;
+$portfolio-title-color: #f80000;
 
+// Body
 body {
   font-family: "Arial", sans-serif;
   background-color: $light-background;
@@ -25,7 +26,7 @@ body {
   transition: background-color 0.5s ease;
 }
 
-// Navbar Styles
+// Navbar
 .navbar {
   background-color: $light-background;
   height: 3.75rem;
@@ -34,7 +35,7 @@ body {
   box-shadow: 0 4px 20px $shadow-color;
 
   &.scrolled {
-    background-color: darken($light-background, 10%); // تغییر رنگ پس‌زمینه هنگام اسکرول
+    background-color: darken($light-background, 10%);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
   }
 
@@ -61,69 +62,7 @@ body {
   }
 }
 
-// Home Section Styles
-.home-section {
-  position: relative;
-  background-color: $light-background;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .container-lg {
-    position: relative;
-    z-index: 2;
-  }
-
-  .home-img {
-    img {
-      width: 400px;
-      height: 400px;
-      object-fit: cover;
-      border: 1px solid $white;
-      border-radius: 50%;
-      box-shadow: 0 10px 30px $shadow-color;
-      animation: imageFadeIn 1.5s ease-in-out;
-    }
-  }
-
-  .home-text {
-    text-align: left;
-    color: $muted-text; // استفاده از رنگ ملایم
-    animation: textSlideIn 1.5s ease-in-out;
-  }
-}
-
-// Keyframes for Image Animation
-@keyframes imageFadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-// Keyframes for Text Animation
-@keyframes textSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-// Home Image Styles
+// Images and Animations
 .home-img {
   img {
     width: 100%;
@@ -143,7 +82,29 @@ body {
   }
 }
 
-// Section Title Styles
+@keyframes imageFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Titles and Texts
 .section-title {
   h2 {
     font-size: 2.5rem;
@@ -157,7 +118,6 @@ body {
   }
 }
 
-// Fact Item Styles
 .fact-item {
   h4 {
     color: $danger-color;
@@ -170,118 +130,21 @@ body {
   }
 }
 
-// Progress Bar Styles
-.progress {
-  background-color: $light-background;
-  height: 20px;
-  border-radius: 80px;
-  margin-bottom: 1rem;
-  transition: background-color 0.5s ease;
-  box-shadow: 0 4px 10px $shadow-color;
-
-  .progress-bar {
-    border-radius: 18px;
-    width: 0;
-    animation: progress-animation 1s ease-out forwards;
-    transition: width 0.5s ease, background-color 0.5s ease;
-    position: relative;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
-
-    &::after {
-      content: attr(data-progress);
-      position: absolute;
-      right: 10px;
-      color: $white;
-      font-size: 0.85rem;
-      line-height: 15px;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-      font-weight: bold;
-    }
-  }
-}
-
-// Keyframes for Progress Animation
-@keyframes progress-animation {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--progress-width);
-  }
-}
-
-// Different classes for each progress bar
-.progress-bar.html {
-  --progress-width: 90%;
-  background-color: $danger-color;
-  animation-delay: 1s;
-}
-
-.progress-bar.css {
-  --progress-width: 75%;
-  background-color: $danger-color;
-  animation-delay: 1.3s;
-}
-
-.progress-bar.javascript {
-  --progress-width: 25%;
-  background-color: $danger-color;
-  animation-delay: 1.5s;
-}
-
-.progress-bar.bootstrap {
-  --progress-width: 65%;
-  background-color: $danger-color;
-  animation-delay: 1.8s;
-}
-
-// Social Links Styles
-.social-links {
-  a {
-    font-size: 1.5rem;
-    transition: color 0.5s ease, transform 0.5s ease;
-
-    &:hover {
-      color: $danger-color;
-      transform: scale(1.3);
-    }
-  }
-}
-
-// Button Styles
-.btn-primary,
-.btn-danger {
-  transition: background-color 0.5s ease, transform 0.5s ease;
-  padding: 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
-}
-
-.btn-primary {
-  background-color: $primary-color;
-  border: none;
+.portfolio-title {
+  color: $portfolio-title-color;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1rem;
+  transition: color 0.5s ease;
 
   &:hover {
-    background-color: darken($primary-color, 10%);
-    transform: scale(1.05);
+    color: darken($portfolio-title-color, 10%);
   }
 }
 
-.btn-danger {
-  background-color: $danger-color;
-  border: none;
-
-  &:hover {
-    background-color: $hover-danger-color;
-    transform: scale(1.05);
-  }
-}
-
-#about {
-  background-color: $light-background;
-}
-
-// Services Container Styles
+// Services and Portfolio Cards
 .services-container {
   height: 100vh;
   width: 100%;
@@ -336,30 +199,6 @@ body {
   }
 }
 
-// Keyframes for Section Animation
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-// Portfolio Styles
 .portfolio-container {
   background-color: $light-background;
   padding: 80px;
@@ -368,20 +207,6 @@ body {
   justify-content: space-between;
   gap: 40px;
   animation: fadeIn 0.8s forwards;
-
-  .portfolio-title {
-    color: $portfolio-title-color;
-    font-size: 3rem;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    letter-spacing: 0.1rem;
-    transition: color 0.5s ease;
-
-    &:hover {
-      color: darken($portfolio-title-color, 10%);
-    }
-  }
 
   .portfolio-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -432,7 +257,161 @@ body {
   }
 }
 
-// Footer Styles
+// Buttons
+.btn-primary,
+.btn-danger {
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border: none;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: scale(1.05);
+  }
+}
+
+.btn-danger {
+  background-color: $danger-color;
+  border: none;
+
+  &:hover {
+    background-color: $hover-danger-color;
+    transform: scale(1.05);
+  }
+}
+
+.contact-form .btn {
+  background-color: $danger-color;
+  color: $white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-danger-color;
+  }
+}
+
+// Contact Form
+.contact-info .contact-item {
+  border-radius: 8px;
+  background-color: $light-background;
+  padding: 15px;
+  box-shadow: 0 4px 8px $shadow-color;
+}
+
+.contact-info .contact-item .icon {
+  color: $danger-color;
+  font-size: 24px;
+}
+
+.contact-info .contact-item h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contact-info .contact-item p {
+  margin: 0;
+  font-size: 16px;
+  color: $dark-text;
+}
+
+.contact-form form {
+  background-color: $light-background;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px $shadow-color;
+}
+
+.contact-form .form-control {
+  border-radius: 8px;
+  border: 1px solid $muted-text;
+}
+
+// Social Links
+.social-links {
+  a {
+    font-size: 1.5rem;
+    transition: color 0.5s ease, transform 0.5s ease;
+
+    &:hover {
+      color: $danger-color;
+      transform: scale(1.3);
+    }
+  }
+}
+
+// Progress Bars
+.progress {
+  background-color: $light-background;
+  height: 20px;
+  border-radius: 80px;
+  margin-bottom: 1rem;
+  transition: background-color 0.5s ease;
+  box-shadow: 0 4px 10px $shadow-color;
+
+  .progress-bar {
+    border-radius: 18px;
+    width: 0;
+    animation: progress-animation 1s ease-out forwards;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+
+    &::after {
+      content: attr(data-progress);
+      position: absolute;
+      right: 10px;
+      color: $white;
+      font-size: 0.85rem;
+      line-height: 15px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes progress-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+.progress-bar.html {
+  --progress-width: 90%;
+  background-color: $danger-color;
+  animation-delay: 1s;
+}
+
+.progress-bar.css {
+  --progress-width: 75%;
+  background-color: $danger-color;
+  animation-delay: 1.3s;
+}
+
+.progress-bar.javascript {
+  --progress-width: 25%;
+  background-color: $danger-color;
+  animation-delay: 1.5s;
+}
+
+.progress-bar.bootstrap {
+  --progress-width: 65%;
+  background-color: $danger-color;
+  animation-delay: 1.8s;
+}
+
+// Footer
 .footer {
   padding: 20px;
   background-color: $dark-text;
@@ -503,101 +482,4 @@ body {
   .home-text {
     font-size: 0.9rem;
   }
-}
-
-// Contact Us Section
-.contact-us {
-  padding: 60px 0;
-}
-
-.contact-info .contact-item {
-  border-radius: 8px;
-  background-color: $light-background;
-  padding: 15px;
-  box-shadow: 0 4px 8px $shadow-color;
-}
-
-.contact-info .contact-item .icon {
-  color: $danger-color;
-  font-size: 24px;
-}
-
-.contact-info .contact-item h4 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.contact-info .contact-item p {
-  margin: 0;
-  font-size: 16px;
-  color: $dark-text;
-}
-
-.contact-form form {
-  background-color: $light-background;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px $shadow-color;
-}
-
-.contact-form .form-control {
-  border-radius: 8px;
-  border: 1px solid $muted-text;
-}
-
-.contact-form .btn {
-  background-color: $danger-color;
-  color: $white;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form .btn:hover {
-  background-color: $hover-danger-color;
-}
-#services-me{
-  background-color: $light-background;
- 
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: $dark-text;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px $shadow-color;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 20px;
-  &:hover {
-    transform: translateY(-5px);
-
-}
-}
-#portfolio{
-  background-color: $light-background;
-  padding: 40px;
-}
-#testimonials{
-  background-color: $light-background;
-}
-#contact-us{
-  background-color: $light-background;
- 
-}
-
-// Animation
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-}
 }

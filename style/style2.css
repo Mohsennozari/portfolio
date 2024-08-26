@@ -1,6 +1,6 @@
 body {
   font-family: "Arial", sans-serif;
-  background-color: #000000;
+  background-color: #ffffff;
   color: #343a40;
   margin: 0;
   padding: 0;
@@ -11,14 +11,14 @@ body {
 }
 
 .navbar {
-  background-color: #000000;
+  background-color: #ffffff;
   height: 3.75rem;
   padding: 0 1.875rem;
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 .navbar.scrolled {
-  background-color: black;
+  background-color: #e6e6e6;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
 }
 .navbar .nav-link {
@@ -41,36 +41,21 @@ body {
   font-weight: 700;
 }
 
-.home-section {
-  position: relative;
-  background-color: #000000;
-}
-.home-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.home-img img {
   width: 100%;
-  height: 100%;
-}
-.home-section .container-lg {
-  position: relative;
-  z-index: 2;
-}
-.home-section .home-img img {
-  width: 400px;
-  height: 400px;
+  height: 500px;
+  max-width: 500px;
+  margin-top: 40px;
   -o-object-fit: cover;
      object-fit: cover;
   border: 1px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  animation: imageFadeIn 1.5s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-.home-section .home-text {
-  text-align: left;
-  color: #6c757d;
-  animation: textSlideIn 1.5s ease-in-out;
+.home-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes imageFadeIn {
@@ -93,23 +78,6 @@ body {
     transform: translateX(0);
   }
 }
-.home-img img {
-  width: 100%;
-  height: 500px;
-  max-width: 500px;
-  margin-top: 40px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-.home-img img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-}
-
 .section-title h2 {
   font-size: 2.5rem;
   color: #343a40;
@@ -129,8 +97,205 @@ body {
   transform: scale(1.1);
 }
 
+.portfolio-title {
+  color: #f80000;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1rem;
+  transition: color 0.5s ease;
+}
+.portfolio-title:hover {
+  color: #c50000;
+}
+
+.services-container {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #ffffff;
+  animation: fadeIn 0.8s forwards;
+}
+.services-container .services-title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #f80000;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  animation: fadeInDown 0.8s ease;
+}
+.services-container .service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+.services-container .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.services-container .btn-warning {
+  background-color: #ffd700;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.services-container .btn-warning:hover {
+  background-color: #ffc300;
+  color: #ffffff;
+}
+
+.portfolio-container {
+  background-color: #ffffff;
+  padding: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  animation: fadeIn 0.8s forwards;
+}
+.portfolio-container .portfolio-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+.portfolio-container .portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.portfolio-container .portfolio-card .portfolio-card-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 0.625rem;
+}
+.portfolio-container .portfolio-card .portfolio-card-description {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+.portfolio-container .portfolio-card .portfolio-card-image {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.portfolio-container .portfolio-card .portfolio-card-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary,
+.btn-danger {
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #0062cc;
+  transform: scale(1.05);
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+.btn-danger:hover {
+  background-color: #ff0019;
+  transform: scale(1.05);
+}
+
+.contact-form .btn {
+  background-color: #dc3545;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.contact-form .btn:hover {
+  background-color: #ff0019;
+}
+
+.contact-info .contact-item {
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info .contact-item .icon {
+  color: #dc3545;
+  font-size: 24px;
+}
+
+.contact-info .contact-item h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contact-info .contact-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #343a40;
+}
+
+.contact-form form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control {
+  border-radius: 8px;
+  border: 1px solid #6c757d;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+.social-links a:hover {
+  color: #dc3545;
+  transform: scale(1.3);
+}
+
 .progress {
-  background-color: #000000;
+  background-color: #ffffff;
   height: 20px;
   border-radius: 80px;
   margin-bottom: 1rem;
@@ -188,183 +353,10 @@ body {
   animation-delay: 1.8s;
 }
 
-.social-links a {
-  font-size: 1.5rem;
-  transition: color 0.5s ease, transform 0.5s ease;
-}
-.social-links a:hover {
-  color: #dc3545;
-  transform: scale(1.3);
-}
-
-.btn-primary,
-.btn-danger {
-  transition: background-color 0.5s ease, transform 0.5s ease;
-  padding: 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border: none;
-}
-.btn-primary:hover {
-  background-color: #0062cc;
-  transform: scale(1.05);
-}
-
-.btn-danger {
-  background-color: #dc3545;
-  border: none;
-}
-.btn-danger:hover {
-  background-color: #ff0019;
-  transform: scale(1.05);
-}
-
-#about {
-  background-color: #000000;
-}
-
-.services-container {
-  height: 100vh;
-  width: 100%;
-  margin: auto;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: #000000;
-  animation: fadeIn 0.8s forwards;
-}
-.services-container .services-title {
-  font-weight: bold;
-  font-size: 2.5rem;
-  color: #f80000;
-  margin-bottom: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  animation: fadeInDown 0.8s ease;
-}
-.services-container .service-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-  border-radius: 15px;
-  overflow: hidden;
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  opacity: 0;
-  animation: fadeIn 0.8s forwards;
-}
-.services-container .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-.services-container .btn-warning {
-  background-color: #ffd700;
-  color: #ffffff;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.services-container .btn-warning:hover {
-  background-color: #ffc300;
-  color: #ffffff;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.portfolio-container {
-  background-color: #000000;
-  padding: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  animation: fadeIn 0.8s forwards;
-}
-.portfolio-container .portfolio-title {
-  color: #f80000;
-  font-size: 3rem;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  letter-spacing: 0.1rem;
-  transition: color 0.5s ease;
-}
-.portfolio-container .portfolio-title:hover {
-  color: #c50000;
-}
-.portfolio-container .portfolio-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-  border-radius: 15px;
-  overflow: hidden;
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  opacity: 0;
-  animation: fadeIn 0.8s forwards;
-}
-.portfolio-container .portfolio-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-.portfolio-container .portfolio-card .portfolio-card-title {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-top: 0.625rem;
-}
-.portfolio-container .portfolio-card .portfolio-card-description {
-  font-size: 1rem;
-  color: #6c757d;
-  margin-bottom: 1rem;
-}
-.portfolio-container .portfolio-card .portfolio-card-image {
-  width: 100%;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-.portfolio-container .portfolio-card .portfolio-card-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-}
-
 .footer {
   padding: 20px;
   background-color: #343a40;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
 }
 .footer p {
@@ -415,99 +407,5 @@ body {
 @media (max-width: 400px) {
   .home-text {
     font-size: 0.9rem;
-  }
-}
-.contact-us {
-  padding: 60px 0;
-}
-
-.contact-info .contact-item {
-  border-radius: 8px;
-  background-color: #000000;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info .contact-item .icon {
-  color: #dc3545;
-  font-size: 24px;
-}
-
-.contact-info .contact-item h4 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.contact-info .contact-item p {
-  margin: 0;
-  font-size: 16px;
-  color: #343a40;
-}
-
-.contact-form form {
-  background-color: #000000;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form .form-control {
-  border-radius: 8px;
-  border: 1px solid #6c757d;
-}
-
-.contact-form .btn {
-  background-color: #dc3545;
-  color: #ffffff;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form .btn:hover {
-  background-color: #ff0019;
-}
-
-#services-me {
-  background-color: #000000;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #343a40;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 20px;
-}
-#services-me:hover {
-  transform: translateY(-5px);
-}
-
-#portfolio {
-  background-color: #000000;
-  padding: 40px;
-}
-
-#testimonials {
-  background-color: #000000;
-}
-
-#contact-us {
-  background-color: #000000;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }/*# sourceMappingURL=style2.css.map */
