@@ -1,0 +1,271 @@
+// ====================
+// Color Variables
+// ====================
+$primary-color: #dd0000; // Red
+$secondary-color: #ffff00; // Yellow
+$light-gray: #f8f9fa;
+$text-color: #333;
+$button-text-color: #fff;
+
+// Dark Mode Colors
+$dark-background: #121212;
+$dark-gray: #1e1e1e;
+$dark-text-color: #ffffff;
+$dark-primary-color: #bb86fc;
+
+// ====================
+// Base Styles
+// ====================
+body {
+    padding-top: 56px;
+    font-family: Georgia, Arial, sans-serif; // Added Georgia as primary font
+    background-color: white;
+    color: $text-color;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.dark-mode {
+        background-color: $dark-background;
+        color: $dark-text-color;
+    }
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: Georgia, Arial, sans-serif; // Use Georgia for headings
+    color: $text-color;
+
+    &.dark-mode {
+        color: $dark-text-color;
+    }
+}
+
+// ====================
+// Navbar Styles
+// ====================
+.navbar {
+    background-color: $primary-color;
+    transition: background-color 0.3s;
+
+    .navbar-brand,
+    .nav-link {
+        color: white !important;
+        font-family: Georgia, Arial, sans-serif; // Use Georgia for navbar text
+        transition: color 0.3s;
+
+        &:hover {
+            color: $secondary-color !important;
+        }
+    }
+
+    &.dark-mode {
+        background-color: $dark-gray;
+    }
+}
+
+// ====================
+// Service Card Styles
+// ====================
+.service-card {
+    background-color: $light-gray;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: Georgia, Arial, sans-serif; // Apply Georgia font
+
+    &:hover {
+        border-color: $primary-color;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &.dark-mode {
+        background-color: $dark-gray;
+        border-color: $dark-gray;
+
+        &:hover {
+            border-color: $dark-primary-color;
+        }
+    }
+}
+
+// ====================
+// Portfolio Item Styles
+// ====================
+.portfolio-item {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    transition: transform 0.2s, border-color 0.2s;
+    font-family: Georgia, Arial, sans-serif; // Apply Georgia font
+
+    &:hover {
+        transform: scale(1.05);
+        border-color: $primary-color;
+    }
+
+    &.dark-mode {
+        border-color: #333;
+    }
+}
+
+// ====================
+// Blockquote Styles
+// ====================
+.blockquote {
+    border-left: 5px solid $primary-color;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-family: Georgia, Arial, sans-serif; // Apply Georgia font
+    transition: border-color 0.3s;
+
+    &.dark-mode {
+        border-color: $dark-primary-color;
+    }
+}
+
+// ====================
+// Footer Styles
+// ====================
+.footer {
+    background-color: $dark-gray;
+    padding: 40px 0;
+    text-align: center;
+    font-family: Georgia, Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.dark-mode {
+        background-color: $dark-background;
+        color: $dark-text-color;
+    }
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+
+        p {
+            margin: 0;
+            padding: 10px 0;
+            font-size: 18px;
+            color: $light-gray;
+
+            &.dark-mode {
+                color: $dark-text-color;
+            }
+
+            a {
+                color: $light-gray;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+
+                &.dark-mode {
+                    color: $dark-primary-color;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .social-icons {
+        margin-top: 20px;
+
+        a {
+            margin: 0 15px;
+            font-size: 20px;
+            display: inline-block;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            i {
+                display: inline-block;
+                vertical-align: middle;
+
+                // رنگ‌های واقعی برای هر آیکون
+                &.fa-facebook-f {
+                    color: #3b5998; // رنگ فیسبوک
+                }
+                &.fa-twitter {
+                    color: #1da1f2; // رنگ توییتر
+                }
+                &.fa-instagram {
+                    color: #e4405f; // رنگ اینستاگرام
+                }
+                &.fa-linkedin-in {
+                    color: #0077b5; // رنگ لینکدین
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        .footer-content {
+            p {
+                font-size: 13px;
+            }
+
+            .social-icons a {
+                margin: 0 10px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+// ====================
+// Button Styles
+// ====================
+.button {
+    background-color:rgb(255, 175, 1);
+    color: $light-gray;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Georgia, Arial, sans-serif; // Apply Georgia font
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+        background-color: $secondary-color;
+        transform: scale(1.05);
+    }
+
+    &.dark-mode {
+        background-color: $dark-primary-color;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+}
+
+// ====================
+// Responsive Styles
+// ====================
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .service-card,
+    .portfolio-item {
+        margin-bottom: 15px;
+    }
+}
