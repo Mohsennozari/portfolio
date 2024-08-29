@@ -44,24 +44,71 @@ h2 {
 // Navbar Styles
 // ====================
 .navbar {
-    background-color: $primary-color;
-    transition: background-color 0.3s;
-
-    .navbar-brand,
-    .nav-link {
-        color: white !important;
-        font-family: Georgia, Arial, sans-serif; // Use Georgia for navbar text
-        transition: color 0.3s;
-
+    background-color: $primary-color; // رنگ پس‌زمینه نوار ناوبری
+    .navbar-brand {
+        color: white;
         &:hover {
-            color: $secondary-color !important;
+            color: $secondary-color;
         }
     }
-
+    
+    .navbar-nav .nav-link {
+        color: white;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+    
+    #theme-toggle {
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        &:hover {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+    
+    .dropdown-menu {
+        background-color: $dark-gray;
+        .dropdown-item {
+            color: $text-color;
+            &:hover {
+                background-color: $primary-color;
+                color: white;
+            }
+        }
+    }
+    
     &.dark-mode {
         background-color: $dark-gray;
+        
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: $dark-text-color;
+        }
+        
+        #theme-toggle {
+            border-color: $dark-primary-color;
+            color: $dark-primary-color;
+            &:hover {
+                background-color: $dark-primary-color;
+                color: $dark-text-color;
+            }
+        }
+        
+        .dropdown-menu {
+            background-color: $dark-background;
+            .dropdown-item {
+                color: $dark-text-color;
+                &:hover {
+                    background-color: $dark-primary-color;
+                    color: white;
+                }
+            }
+        }
     }
 }
+
 
 // ====================
 // Service Card Styles
