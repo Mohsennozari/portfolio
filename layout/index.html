@@ -1,265 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My Portfolio - Showcasing My Skills and Work">
-    <meta name="author" content="[Your Name]">
-    <meta property="og:title" content="My Portfolio">
-    <meta property="og:description" content="Explore my portfolio and see my skills and projects.">
-    <meta property="og:image" content="path/to/image.jpg">
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="My Portfolio">
-    
-    <!-- Title -->
-    <title>Portfolio</title>
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/i18next@latest/dist/umd/i18next.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@latest/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
-</head>
-
-<body class="light-mode">
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <a class="navbar-brand" href="#" data-i18n="welcome">IR</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+   <head>
+      <!-- Meta Tags -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="My Portfolio - Showcasing My Skills and Work">
+      <meta name="author" content="[Your Name]">
+      <meta property="og:title" content="My Portfolio">
+      <meta property="og:description" content="Explore my portfolio and see my skills and projects.">
+      <meta property="og:image" content="path/to/image.jpg">
+      <meta property="og:url" content="https://yourwebsite.com">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="My Portfolio">
+      <!-- Title -->
+      <title>Portfolio</title>
+      <!-- Stylesheets -->
+      <link rel="stylesheet" href="/style/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/i18next@latest/dist/umd/i18next.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@latest/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+   </head>
+   <body class="light-mode">
+      <!-- Navbar -->
+      <nav class="navbar  fixed-top">
+         <a class="navbar-brand" href="#" data-i18n="welcome">IR</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 15 20 " style="fill: #ffffff;">
+               <path fill-rule="evenodd" d="M2 2h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2zm0 6h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2zm0 6h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2z"/>
+            </svg>
+         </button>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#home" data-i18n="home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about" data-i18n="about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services" data-i18n="services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio" data-i18n="portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#blog" data-i18n="blog">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="#testimonials" data-i18n="testimonials">Testimonials</a></li>
-                <li class="nav-item"><a class="nav-link" href="#faq" data-i18n="faq">FAQ</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="contact">Contact Us</a></li>
-                <li class="nav-item">
-                    <button id="theme-toggle" class="btn btn-outline-secondary bg-white text-dark" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false" aria-label="Select Language">
-                        <span data-i18n="language">Language</span>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <a class="dropdown-item" href="#" data-lang="en">English</a>
-                        <a class="dropdown-item" href="#" data-lang="fa">فارسی</a>
-                        <a class="dropdown-item" href="#" data-lang="ar">العربية</a>
-                    </div>
-                </li>
+               <li class="nav-item"><a class="nav-link" href="#home" data-i18n="home">Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="#about" data-i18n="about">About</a></li>
+               <li class="nav-item"><a class="nav-link" href="#services" data-i18n="services">Services</a></li>
+               <li class="nav-item"><a class="nav-link" href="#portfolio" data-i18n="portfolio">Portfolio</a></li>
+               <li class="nav-item"><a class="nav-link" href="#blog" data-i18n="blog">Blog</a></li>
+               <li class="nav-item"><a class="nav-link" href="#testimonials" data-i18n="testimonials">Testimonials</a></li>
+               <li class="nav-item"><a class="nav-link" href="#faq" data-i18n="faq">FAQ</a></li>
+               <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="contact">Contact Us</a></li>
+               <li class="nav-item">
+                  <button id="theme-toggle" class="btn btn-outline-secondary" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="false" aria-label="Select Language">
+                  <span data-i18n="language">Language</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                     <a class="dropdown-item" href="#" data-lang="en">English</a>
+                     <a class="dropdown-item" href="#" data-lang="fa">فارسی</a>
+                     <a class="dropdown-item" href="#" data-lang="ar">العربية</a>
+                  </div>
+               </li>
             </ul>
+         </div>
+      </nav>
+      <main>
+         <!-- Home Section -->
+         <section id="home" class="text-center py-5">
+            <div class="container">
+            </div>
+         </section>
+         <!-- About Section -->
+       <section id="about" class="animate-section">
+    <div class="container">
+        <h2 data-i18n="aboutMe" class="text-center mb-4 font-weight-bold" style="color: #005358; font-size: 60px;">About Me</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p data-i18n="aboutText" class="lead">
+                <h2 style="color: #005358;">
+                    I'm 
+                    <span style="color: #ff0000; font-weight: bold;">Mohsen</span>
+                    <span style="color: #ff8800; font-weight: bold;">Me</span>
+                </h2>
+                Hi! I’m Mohsen Nozari, a <span style="color: #02a34b; font-weight: bold;">Front-End Developer</span> with over 5 years of experience in creating beautiful and functional web applications. I specialize in <span style="color: rgb(0, 124, 124); font-weight: bold;">HTML, CSS, JavaScript</span>, and frameworks like React and Vue.js. With a passion for coding and design, I aim to deliver responsive, user-friendly websites and continually seek to enhance user experiences. Let’s transform the digital world together!
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="/assets/profile-portfolio-2.jpg" alt="Mohsen Nozari - Front-End Developer Profile Image" class="img-fluid rounded-circle shadow" style="max-width: 450px; height: 450px; object-fit: cover">
+            </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="text-center py-5">
-            <div class="container">
-                <h1 data-i18n="welcome">Welcome to My Portfolio</h1>
-                <p data-i18n="intro">I am [Your Name], a [Your Profession/Field]. Let’s create something amazing together!</p>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-5">
-            <div class="container">
-                <h2 data-i18n="aboutMe">About Me</h2>
-                <p data-i18n="aboutText">I am a passionate [Your Profession] with [X years] of experience in [Your Field/Industry]. My journey began when [Brief background story or motivation]. I specialize in [Your Specializations].</p>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-5">
-            <div class="container">
-                <h2 data-i18n="services">Services</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="service-card">
-                            <h5 data-i18n="service1">Service 1</h5>
-                            <p data-i18n="service1Desc">[Brief description of Service 1]</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="service-card">
-                            <h5 data-i18n="service2">Service 2</h5>
-                            <p data-i18n="service2Desc">[Brief description of Service 2]</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="service-card">
-                            <h5 data-i18n="service3">Service 3</h5>
-                            <p data-i18n="service3Desc">[Brief description of Service 3]</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="service-card">
-                            <h5 data-i18n="service4">Service 4</h5>
-                            <p data-i18n="service4Desc">[Brief description of Service 4]</p>
-                        </div>
-                    </div>
-                </div>
-                <p data-i18n="contact">Feel free to reach out for a custom solution tailored to your project!</p>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="py-5">
-            <div class="container">
-                <h2 data-i18n="portfolio">Portfolio</h2>
-                <div class="row">
-                    <div class="col-md-4 portfolio-item">
-                        <h5 data-i18n="project1">Project 1</h5>
-                        <p data-i18n="project1Desc">[Brief description and link to the project]</p>
-                    </div>
-                    <div class="col-md-4 portfolio-item">
-                        <h5 data-i18n="project2">Project 2</h5>
-                        <p data-i18n="project2Desc">[Brief description and link to the project]</p>
-                    </div>
-                    <div class="col-md-4 portfolio-item">
-                        <h5 data-i18n="project3">Project 3</h5>
-                        <p data-i18n="project3Desc">[Brief description and link to the project]</p>
-                    </div>
+         <!-- Services Section -->
+      
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 data-i18n="services">Services</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-code service-icon"></i> <!-- Font Awesome icon for Web Development -->
+                    <h5 data-i18n="service1">Web Development</h5>
+                    <p data-i18n="service1Desc">We create responsive and user-friendly websites that engage your audience and drive conversions. Our team specializes in HTML, CSS, and JavaScript to deliver high-quality web solutions.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Blog Section -->
-        <section id="blog" class="py-5">
-            <div class="container">
-                <h2 data-i18n="blog">Blog</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <h5 data-i18n="latestPost1">Latest Post 1</h5>
-                        <p data-i18n="latestPost1Desc">[Brief description of the post and a link to read more]</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h5 data-i18n="latestPost2">Latest Post 2</h5>
-                        <p data-i18n="latestPost2Desc">[Brief description of the post and a link to read more]</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h5 data-i18n="latestPost3">Latest Post 3</h5>
-                        <p data-i18n="latestPost3Desc">[Brief description of the post and a link to read more]</p>
-                    </div>
+            <div class="col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-paint-brush service-icon"></i> <!-- Font Awesome icon for UI/UX Design -->
+                    <h5 data-i18n="service2">UI/UX Design</h5>
+                    <p data-i18n="service2Desc">Our design team focuses on creating intuitive user interfaces and seamless user experiences. We conduct user research and testing to ensure your product is both beautiful and functional.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-5">
-            <div class="container">
-                <h2 data-i18n="testimonials">Testimonials</h2>
-                <blockquote class="blockquote">
-                    <p class="mb-0" data-i18n="testimonial1">“Testimonial from Client 1 about your work.”</p>
-                    <footer class="blockquote-footer" data-i18n="client1">Client 1</footer>
-                </blockquote>
-                <blockquote class="blockquote">
-                    <p class="mb-0" data-i18n="testimonial2">“Testimonial from Client 2 about your work.”</p>
-                    <footer class="blockquote-footer" data-i18n="client2">Client 2</footer>
-                </blockquote>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="py-5">
-            <div class="container">
-                <h2 data-i18n="faq">FAQ</h2>
-                <div id="accordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                    aria-expanded="true" aria-controls="collapseOne">
-                                    <span data-i18n="faqQuestion1">Question 1?</span>
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                            <div class="card-body" data-i18n="faqAnswer1">
-                                Answer to question 1.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
-                                    <span data-i18n="faqQuestion2">Question 2?</span>
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body" data-i18n="faqAnswer2">
-                                Answer to question 2.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                                    aria-expanded="false" aria-controls="collapseThree">
-                                    <span data-i18n="faqQuestion3">Question 3?</span>
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                            <div class="card-body" data-i18n="faqAnswer3">
-                                Answer to question 3.
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-store service-icon"></i> <!-- Font Awesome icon for E-commerce Solutions -->
+                    <h5 data-i18n="service3">E-commerce Solutions</h5>
+                    <p data-i18n="service3Desc">We offer comprehensive e-commerce solutions, from setting up online stores to integrating payment gateways. Our goal is to help you maximize your online sales with a robust platform.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-5">
-            <div class="container">
-                <h2 data-i18n="contact">Contact Us</h2>
-                <p data-i18n="contactText">I would love to hear from you! Whether you have a question or want to discuss a project, feel free to reach out.</p>
-                <ul>
-                    <li><strong data-i18n="email">Email:</strong> [Your Email]</li>
-                    <li><strong data-i18n="phone">Phone:</strong> [Your Phone Number]</li>
-                    <li><strong data-i18n="socialMedia">Social Media:</strong> [Links to your social media profiles]</li>
-                </ul>
+            <div class="col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-search service-icon"></i> <!-- Font Awesome icon for SEO & Digital Marketing -->
+                    <h5 data-i18n="service4">SEO & Digital Marketing</h5>
+                    <p data-i18n="service4Desc">Enhance your online presence with our SEO and digital marketing services. We employ the latest strategies to improve your website's visibility and attract more visitors.</p>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+        <p data-i18n="contact">Feel free to reach out for a custom solution tailored to your project!</p>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer text-center py-4">
-        <div class="container">
+
+         <!-- Portfolio Section -->
+         <section id="portfolio" class="py-5">
+            <div class="container">
+               <h2 data-i18n="portfolio">Portfolio</h2>
+               <div class="row">
+                  <div class="col-md-4 portfolio-item">
+                     <h5 data-i18n="project1">Project 1</h5>
+                     <p data-i18n="project1Desc">[Brief description and link to the project]</p>
+                  </div>
+                  <div class="col-md-4 portfolio-item">
+                     <h5 data-i18n="project2">Project 2</h5>
+                     <p data-i18n="project2Desc">[Brief description and link to the project]</p>
+                  </div>
+                  <div class="col-md-4 portfolio-item">
+                     <h5 data-i18n="project3">Project 3</h5>
+                     <p data-i18n="project3Desc">[Brief description and link to the project]</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Blog Section -->
+         <section id="blog" class="py-5">
+            <div class="container">
+               <h2 data-i18n="blog">Blog</h2>
+               <div class="row">
+                  <div class="col-md-4">
+                     <h5 data-i18n="latestPost1">Latest Post 1</h5>
+                     <p data-i18n="latestPost1Desc">[Brief description of the post and a link to read more]</p>
+                  </div>
+                  <div class="col-md-4">
+                     <h5 data-i18n="latestPost2">Latest Post 2</h5>
+                     <p data-i18n="latestPost2Desc">[Brief description of the post and a link to read more]</p>
+                  </div>
+                  <div class="col-md-4">
+                     <h5 data-i18n="latestPost3">Latest Post 3</h5>
+                     <p data-i18n="latestPost3Desc">[Brief description of the post and a link to read more]</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Testimonials Section -->
+         <section id="testimonials" class="py-5">
+            <div class="container">
+               <h2 data-i18n="testimonials">Testimonials</h2>
+               <blockquote class="blockquote">
+                  <p class="mb-0" data-i18n="testimonial1">“Testimonial from Client 1 about your work.”</p>
+                  <footer class="blockquote-footer" data-i18n="client1">Client 1</footer>
+               </blockquote>
+               <blockquote class="blockquote">
+                  <p class="mb-0" data-i18n="testimonial2">“Testimonial from Client 2 about your work.”</p>
+                  <footer class="blockquote-footer" data-i18n="client2">Client 2</footer>
+               </blockquote>
+            </div>
+         </section>
+         <!-- FAQ Section -->
+         <section id="faq" class="py-5">
+            <div class="container">
+               <h2 data-i18n="faq">FAQ</h2>
+               <div id="accordion">
+                  <div class="card">
+                     <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                           <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                              aria-expanded="true" aria-controls="collapseOne">
+                           <span data-i18n="faqQuestion1">Question 1?</span>
+                           </button>
+                        </h5>
+                     </div>
+                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body" data-i18n="faqAnswer1">
+                           Answer to question 1.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                           <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                              aria-expanded="false" aria-controls="collapseTwo">
+                           <span data-i18n="faqQuestion2">Question 2?</span>
+                           </button>
+                        </h5>
+                     </div>
+                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body" data-i18n="faqAnswer2">
+                           Answer to question 2.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                           <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                              aria-expanded="false" aria-controls="collapseThree">
+                           <span data-i18n="faqQuestion3">Question 3?</span>
+                           </button>
+                        </h5>
+                     </div>
+                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body" data-i18n="faqAnswer3">
+                           Answer to question 3.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Contact Section -->
+         <section id="contact" class="py-5">
+            <div class="container">
+               <h2 data-i18n="contact">Contact Us</h2>
+               <p data-i18n="contactText">I would love to hear from you! Whether you have a question or want to discuss a project, feel free to reach out.</p>
+               <ul>
+                  <li><strong data-i18n="email">Email:</strong> [Your Email]</li>
+                  <li><strong data-i18n="phone">Phone:</strong> [Your Phone Number]</li>
+                  <li><strong data-i18n="socialMedia">Social Media:</strong> [Links to your social media profiles]</li>
+               </ul>
+            </div>
+         </section>
+      </main>
+      <!-- Footer -->
+      <footer class="footer text-center py-4">
+         <div class="container">
             <p>© <span id="year"></span> [Your Name]. All rights reserved.</p>
             <p>
-                <a href="#" data-i18n="privacyPolicy">Privacy Policy</a> | 
-                <a href="#" data-i18n="termsOfService">Terms of Service</a>
+               <a href="#" data-i18n="privacyPolicy">Privacy Policy</a> | 
+               <a href="#" data-i18n="termsOfService">Terms of Service</a>
             </p>
             <div class="social-icons">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+               <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+               <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+               <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+               <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="/js/script.js"></script>
-        
-</body>
+         </div>
+      </footer>
+      <!-- Scripts -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="js/script.js"></script>
+   </body>
 </html>

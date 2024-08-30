@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding-top: 56px;
   font-family: Georgia, Arial, sans-serif;
@@ -21,43 +25,22 @@ h2.dark-mode {
 }
 
 .navbar {
-  background-color: #dd0000;
-}
-.navbar .navbar-brand {
-  color: white;
-}
-.navbar .navbar-brand:hover {
-  color: #ffff00;
-}
-.navbar .navbar-nav .nav-link {
-  color: white;
-}
-.navbar .navbar-nav .nav-link:hover {
-  color: #ffff00;
-}
-.navbar #theme-toggle {
-  border: 1px solid #dd0000;
-  color: #dd0000;
-}
-.navbar #theme-toggle:hover {
-  background-color: #dd0000;
-  color: white;
-}
-.navbar .dropdown-menu {
-  background-color: #1e1e1e;
-}
-.navbar .dropdown-menu .dropdown-item {
-  color: #333;
-}
-.navbar .dropdown-menu .dropdown-item:hover {
-  background-color: #dd0000;
-  color: white;
+  background-color: #ad0000;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
 }
 .navbar.dark-mode {
   background-color: #1e1e1e;
+  color: #ffffff;
 }
-.navbar.dark-mode .navbar-brand,
-.navbar.dark-mode .navbar-nav .nav-link {
+.navbar.dark-mode .navbar-brand, .navbar.dark-mode .navbar-nav .nav-link {
   color: #ffffff;
 }
 .navbar.dark-mode #theme-toggle {
@@ -76,7 +59,114 @@ h2.dark-mode {
 }
 .navbar.dark-mode .dropdown-menu .dropdown-item:hover {
   background-color: #bb86fc;
-  color: white;
+  color: #ffffff;
+}
+.navbar .navbar-brand {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.navbar .navbar-brand:hover {
+  color: #ffff00;
+}
+.navbar .navbar-nav {
+  margin-right: 20px;
+}
+.navbar .navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffff00;
+}
+.navbar #theme-toggle {
+  border: 1px solid #ad0000;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.navbar #theme-toggle.dark-mode {
+  border-color: #bb86fc;
+}
+.navbar .dropdown-menu {
+  background-color: #b3b3b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #ad0000;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+.navbar .dropdown-menu .dropdown-item {
+  color: #1e1e1e;
+}
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: rgb(255, 196, 0);
+  color: #000000;
+  border-radius: 10px;
+}
+
+/* Fade-in animation for container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Slide-in animation for text */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Slide-in animation for image */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Apply animations to elements */
+#about {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+#about h2 {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+#about .lead {
+  animation: slideInLeft 1s ease-in-out forwards;
+}
+
+#about .img-fluid {
+  animation: slideInRight 1s ease-in-out forwards;
 }
 
 .service-card {
@@ -89,7 +179,7 @@ h2.dark-mode {
   font-family: Georgia, Arial, sans-serif;
 }
 .service-card:hover {
-  border-color: #dd0000;
+  border-color: #ad0000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .service-card.dark-mode {
@@ -98,6 +188,73 @@ h2.dark-mode {
 }
 .service-card.dark-mode:hover {
   border-color: #bb86fc;
+}
+
+.service-card {
+  text-align: center; /* Center-aligns text and icons */
+  padding: 20px; /* Adds padding around the content */
+  border: 1px solid #ddd; /* Adds a border around each card */
+  border-radius: 8px; /* Rounds the corners of each card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  background-color: #fff; /* Sets a white background color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds a smooth transition for hover effects */
+}
+.service-card:hover {
+  border-color: #ad0000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.service-card.dark-mode {
+  background-color: #1e1e1e;
+  border-color: #1e1e1e;
+}
+.service-card.dark-mode:hover {
+  border-color: #bb86fc;
+}
+
+.service-card:hover {
+  transform: translateY(-10px); /* Moves the card up slightly on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+}
+
+.service-icon {
+  font-size: 50px; /* Sets the icon size */
+  color: #005358; /* Sets the icon color */
+  margin-bottom: 15px; /* Adds space below the icon */
+}
+
+/* Animation for fade-in and slide-up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Apply animations to service cards */
+.service-card {
+  opacity: 0; /* Initial state */
+  animation: fadeInUp 1s ease-out forwards;
+  margin-bottom: 30px; /* Adds space between cards */
+}
+
+/* Animation delay for each card */
+.service-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.service-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.service-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.service-card:nth-child(4) {
+  animation-delay: 0.8s;
 }
 
 .portfolio-item {
@@ -110,14 +267,14 @@ h2.dark-mode {
 }
 .portfolio-item:hover {
   transform: scale(1.05);
-  border-color: #dd0000;
+  border-color: #ad0000;
 }
 .portfolio-item.dark-mode {
   border-color: #333;
 }
 
 .blockquote {
-  border-left: 5px solid #dd0000;
+  border-left: 5px solid #ad0000;
   padding-left: 15px;
   margin-bottom: 20px;
   font-style: italic;

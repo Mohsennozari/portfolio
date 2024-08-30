@@ -7,7 +7,7 @@ i18next
     resources: {
       en: {
         translation: {
-          welcome: "Welcome to My Portfolio",
+          welcome: "IR",
           intro: "I am [Your Name], a [Your Profession/Field]. Let’s create something amazing together!",
           aboutMe: "About Me",
           aboutText: "I am a passionate [Your Profession] with [X years] of experience in [Your Field/Industry]. My journey began when [Brief background story or motivation]. I specialize in [Your Specializations].",
@@ -59,7 +59,7 @@ i18next
       },
       fa: {
         translation: {
-          welcome: "به پرتفوی من خوش آمدید",
+          welcome: "IR",
           intro: "من [نام شما] هستم، [حرفه/زمینه شما]. بیایید چیزی شگفت‌انگیز بسازیم!",
           aboutMe: "درباره من",
           aboutText: "من یک [حرفه شما] پرشور با [X سال] تجربه در [حوزه/صنعت شما] هستم. سفر من زمانی آغاز شد که [داستان یا انگیزه مختصر]. من در [تخصص‌های شما] تخصص دارم.",
@@ -111,7 +111,7 @@ i18next
       },
       ar: {
         translation: {
-          welcome: "مرحبا بك في محفظتي",
+          welcome: "IR",
           intro: "أنا [اسمك]، [مجالك/مهنة]. دعنا نخلق شيئًا رائعًا معًا!",
           aboutMe: "عني",
           aboutText: "أنا [مجالك] المتحمس مع [X سنوات] من الخبرة في [مجال/صناعة]. بدأت رحلتي عندما [قصة خلفية قصيرة أو حافز]. أخصص في [تخصصاتك].",
@@ -192,4 +192,47 @@ document.querySelectorAll('[data-lang]').forEach(el => {
 // Handle theme toggle
 document.getElementById('theme-toggle').addEventListener('click', function() {
   document.body.classList.toggle('dark-mode');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const aboutSection = document.getElementById('about');
+    const leadText = aboutSection.querySelector('.lead');
+    const profileImage = aboutSection.querySelector('.img-fluid');
+
+    setTimeout(() => {
+        aboutSection.style.opacity = '1';
+    }, 500); // Delay for container
+
+    setTimeout(() => {
+        leadText.style.opacity = '1';
+    }, 1000); // Delay for text
+
+    setTimeout(() => {
+        profileImage.style.opacity = '1';
+    }, 1500); // Delay for image
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    // Function to check if an element is in the viewport
+    const isInViewport = (element) => {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    };
+
+    // Add event listener for scroll to trigger animations
+    const handleScroll = () => {
+        serviceCards.forEach((card) => {
+            if (isInViewport(card)) {
+                card.style.opacity = '1'; // Make the card visible
+            }
+        });
+    };
+
+    // Run the function on scroll
+    window.addEventListener('scroll', handleScroll);
+    // Trigger animation on page load
+    handleScroll();
 });
