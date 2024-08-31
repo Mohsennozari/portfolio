@@ -453,6 +453,7 @@ h2 {
 
 //faq
 #faq {
+    text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
      h2{
                 color: #039ae0;
@@ -495,7 +496,7 @@ h2 {
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
         color: #0080bc;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+       
 
         &.dark-mode {
             color: $dark-text-color;

@@ -346,6 +346,7 @@ h2.dark-mode {
 }
 
 #faq {
+  text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 #faq h2 {
@@ -380,7 +381,6 @@ h2.dark-mode {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   color: #0080bc;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 #contact h2.dark-mode {
   color: #ffffff;
