@@ -39,7 +39,8 @@ h2.dark-mode {
   background-color: #1e1e1e;
   color: #ffffff;
 }
-.navbar.dark-mode .navbar-brand, .navbar.dark-mode .navbar-nav .nav-link {
+.navbar.dark-mode .navbar-brand,
+.navbar.dark-mode .navbar-nav .nav-link {
   color: #ffffff;
 }
 .navbar.dark-mode #theme-toggle {
@@ -332,7 +333,9 @@ h2.dark-mode {
 #blog.dark-mode {
   background-color: #1e1e1e;
 }
-#blog.dark-mode h5, #blog.dark-mode p, #blog.dark-mode a {
+#blog.dark-mode h5,
+#blog.dark-mode p,
+#blog.dark-mode a {
   color: #ffffff;
 }
 
