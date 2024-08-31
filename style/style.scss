@@ -11,19 +11,22 @@ $button-text-color: #fff;
 $dark-background: #121212;
 $dark-gray: #1e1e1e;
 $dark-text-color: #ffffff;
-$dark-primary-color: #bb86fc;
+$dark-primary-color: #520ca8;
+$dark-light-gray: #b3b3b3;
+$dark-border-color: #333;
+$dark-link-color: #0080bc;
 
 // ====================
 // Base Styles
 // ====================
 html {
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
 
 body {
     padding-top: 56px;
     font-family: Georgia, Arial, sans-serif;
-    background-color: white;
+    background-color: $light-gray;
     color: $text-color;
     transition: background-color 0.3s, color 0.3s;
 
@@ -36,7 +39,6 @@ body {
 h2 {
     margin-bottom: 30px;
     font-weight: bold;
-    font-family: Georgia, Arial, sans-serif;
     color: $text-color;
 
     &.dark-mode {
@@ -49,8 +51,8 @@ h2 {
 // ====================
 .navbar {
     background-color: $primary-color;
+    color: $button-text-color;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #ffffff;
     font-weight: 600;
     padding: 10px 0;
     position: fixed;
@@ -70,6 +72,7 @@ h2 {
         #theme-toggle {
             border-color: $dark-primary-color;
             color: $dark-primary-color;
+
             &:hover {
                 background-color: $dark-primary-color;
                 color: $dark-text-color;
@@ -77,20 +80,22 @@ h2 {
         }
 
         .dropdown-menu {
-            background-color: $dark-background;
+            background-color: $dark-gray;
+            border-color: $dark-border-color;
 
             .dropdown-item {
                 color: $dark-text-color;
+
                 &:hover {
                     background-color: $dark-primary-color;
-                    color: #ffffff;
+                    color: $button-text-color;
                 }
             }
         }
     }
 
     .navbar-brand {
-        color: #ffffff;
+        color: $button-text-color;
         font-size: 1.5rem;
         font-weight: bold;
         margin-left: 20px;
@@ -104,7 +109,7 @@ h2 {
         margin-right: 20px;
 
         .nav-link {
-            color: #ffffff;
+            color: $button-text-color;
             font-size: 1.2rem;
             font-weight: 600;
             margin-left: 20px;
@@ -118,7 +123,7 @@ h2 {
 
     #theme-toggle {
         border: 1px solid $primary-color;
-        background-color: #ffffff;
+        background-color: $button-text-color;
         color: rgb(0, 0, 0);
         font-size: 1.2rem;
         font-weight: 600;
@@ -129,27 +134,38 @@ h2 {
 
         &.dark-mode {
             border-color: $dark-primary-color;
+            background-color: $dark-background;
         }
     }
 
     .dropdown-menu {
-        background-color: #b3b3b3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        border-radius: 20px;
+        background-color: $light-gray;
         border: 1px solid $primary-color;
+        border-radius: 20px;
         padding: 10px;
         margin-top: 10px;
 
         .dropdown-item {
-            color: #1e1e1e;
+            color: $text-color;
+
             &:hover {
-                background-color: rgb(255, 196, 0);
-                color: #000000;
+                background-color: $secondary-color;
+                color: $dark-gray;
                 border-radius: 10px;
+            }
+        }
+
+        &.dark-mode {
+            background-color: $dark-gray;
+            border-color: $dark-border-color;
+
+            .dropdown-item {
+                color: $dark-text-color;
+
+                &:hover {
+                    background-color: $dark-primary-color;
+                    color: $button-text-color;
+                }
             }
         }
     }
@@ -158,6 +174,13 @@ h2 {
 // ====================
 // About Section
 // ====================
+#about{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    h2 p span{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align:justify;
+    }
+}
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -210,15 +233,25 @@ h2 {
 // ====================
 // Service Card Styles
 // ====================
+#services{
+    text-align: center;
+    h2{
+        color: #039ae0;
+        margin: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
 .service-card {
-    background-color: $light-gray;
-    border: 1px solid #ddd;
+    
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   border: #ad0000 solid 1px;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-family: Georgia, Arial, sans-serif;
+   
 
     &:hover {
         border-color: $primary-color;
@@ -237,7 +270,7 @@ h2 {
 
     .service-icon {
         font-size: 50px;
-        color: #005358;
+        color: $dark-primary-color;
         margin-bottom: 15px;
     }
 }
@@ -246,35 +279,41 @@ h2 {
 // Portfolio Item Styles
 // ====================
 #portfolio {
-    background-color: $light-gray;
+  font-family:Georgia, 'Times New Roman', Times, serif ;
     padding: 50px 0;
+    border: none;
 
     h2 {
         text-align: center;
         margin-bottom: 30px;
         font-size: 2.5rem;
-        color: $text-color;
+    color: #039ae0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    // Dark mode styles
+    &.dark-mode {
+        background-color: $dark-background;
+
+        h2 {
+            color: $dark-text-color;
+        }
     }
 }
 
 .portfolio-item {
-    background: #ffffff;
-    border: 1px solid #ddd;
+   
+    
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, border-color 0.2s;
     height: 450px;
     margin-bottom: 30px;
-    font-family: Georgia, Arial, sans-serif;
 
     &:hover {
         transform: translateY(-5px);
         border-color: $primary-color;
-    }
-
-    &.dark-mode {
-        border-color: #333;
     }
 
     img {
@@ -285,7 +324,7 @@ h2 {
 
     h5 {
         font-size: 2rem;
-        color: #d60505;
+        color: $primary-color;
     }
 
     p {
@@ -294,7 +333,7 @@ h2 {
     }
 
     a {
-        color: #00aeff;
+        color: $dark-link-color;
         font-weight: 700;
         font-size: larger;
         text-decoration: none;
@@ -303,21 +342,35 @@ h2 {
             text-decoration: underline;
         }
     }
+
+    // Dark mode styles
+    &.dark-mode {
+        background: $dark-gray;
+        border: 1px solid $dark-light-gray;
+
+        p {
+            color: $dark-light-gray;
+        }
+
+        a {
+            color: $dark-link-color;
+        }
+    }
 }
 
 // ====================
 // Blog Styles
 // ====================
 #blog {
-    background-color: #ffffff;
+    
     padding: 50px 0;
-
+     font-family: Georgia, 'Times New Roman', Times, serif;
     h2 {
         text-align: center;
         margin-bottom: 40px;
         font-size: 2.5rem;
-        color: $text-color;
-        font-family: 'Arial', sans-serif;
+        color:#039ae0;
+       
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -347,7 +400,7 @@ h2 {
 
     h5 {
         font-size: 1.75rem;
-        color: #007bff;
+        color: $dark-link-color;
         margin-top: 15px;
         font-family: 'Georgia', serif;
         text-align: center;
@@ -361,170 +414,294 @@ h2 {
     }
 
     a {
-        color: #007bff;
+        color: $dark-link-color;
+        font-weight: 700;
+        font-size: larger;
         text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s;
 
         &:hover {
-            color: #0056b3;
             text-decoration: underline;
+        }
+    }
+
+    &.dark-mode {
+        background-color: $dark-gray;
+
+        h5, p, a {
+            color: $dark-text-color;
         }
     }
 }
 
 // ====================
-// testimonials
+// Testimonials Styles
 // ====================
-#testimonials {
-    background-color: #f8f9fa;
-    padding: 50px 0;
+#testimonials{
+    h2{
+        color: #0080bc;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 }
-
-#testimonials h2 {
-    font-size: 2.5rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-#testimonials .row {
-    justify-content: center;
-}
-
-#testimonials .blockquote {
-    margin-bottom: 30px;
-    padding: 20px;
-    border-left: 5px solid #007bff;
-    border-radius: 5px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s;
-}
-
-#testimonials .blockquote:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-#testimonials .blockquote p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 10px;
-}
-
-#testimonials .blockquote-footer {
-    font-size: 1rem;
-    color: #999;
-    font-weight: bold;
-}
-
-#testimonials .rounded-circle {
-    width: 50px;
-    height: 50px;
-    text-align: justify;
-}
-
-.blockquote {
-    background: #ffffff;
-    border-left: 5px solid #007bff;
-    padding: 20px;
-    border-radius: 5px;
-    transition: box-shadow 0.3s;
-}
-
-.blockquote:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.rounded-circle {
-    border: 2px solid #007bff;
-    padding: 2px;
-}
-
 .blockquote-footer {
-    font-size: 0.9rem;
-    color: #666;
+    
+    &.dark-mode {
+        background-color: $dark-gray;
+    }
 }
 
 
 
+//faq
+#faq {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+     h2{
+                color: #039ae0;
+                font-size: 2rem;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+   span{
+    color: #0072a7;
+    font-size: 2rem;
+   }
+  .card{
+    color: #0080bc;
+    font-size: 1.5rem;
+    background-color: #ffcc00;
+  }
+   .card-body{
+    background-color: #ad0000;
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   }
+}
+
+//faq
+
 
 
 
 // ====================
-// testimonials
+// Contact Section Styles
 // ====================
+#contact {
+    color: $button-text-color;
+    padding: 5rem 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #0080bc;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
-
-
-
-// ====================
-// Footer Styles
-// ====================
-footer {
-    background-color: #f8f9fa;
-    color: #666;
-    padding: 40px 0;
-    font-size: 0.9rem;
-    text-align: center;
-    border-top: 3px solid $primary-color;
-    font-family: Georgia, Arial, sans-serif;
-
-    &.dark-mode {
-        background-color: $dark-background;
-        color: $dark-text-color;
+        &.dark-mode {
+            color: $dark-text-color;
+        }
     }
 
     p {
-        margin-bottom: 0;
-        color: inherit;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        color: $button-text-color;
+
+        &.dark-mode {
+            color: $dark-text-color;
+        }
+    }
+
+    .contact-info {
+        width: 100%;
+        list-style: none;
+        padding: 50px;
+        text-align: start;
+        margin-right: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        text-align: justify;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        li {
+        }
+        strong{
+            color: #0080bc;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+             
+        }
+
+        li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: $text-color;
+            font-weight: bold;
+
+            i {
+                margin-right: 0.5rem;
+                color: $primary-color;
+            }
+
+            &.dark-mode {
+                color: $dark-text-color;
+
+                i {
+                    color: $dark-primary-color;
+                }
+            }
+        }
 
         a {
             color: $primary-color;
-            font-weight: bold;
             text-decoration: none;
+            font-weight: bold;
 
             &:hover {
-                text-decoration: underline;
+                color: $text-color;
+            }
+
+            &.dark-mode {
+                color: $dark-primary-color;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+    #contact-form {
+        .form-group {
+            margin-bottom: 1.5rem;
+            color: #039ae0;
+
+            label {
+                font-size: 1.1rem;
+               
+                font-weight: bold;
+
+                &.dark-mode {
+                    color: $dark-text-color;
+                }
+            }
+           
+
+            input,
+            textarea {
+                border: 2px solid $primary-color;
+                border-radius: 5px;
+                padding: 0.75rem;
+                font-size: 1rem;
+                background-color: $light-gray;
+                color: $text-color;
+                transition: border-color 0.3s;
+
+                &:focus {
+                    border-color: $primary-color;
+                    outline: none;
+                }
+
+                &.dark-mode {
+                    border-color: $dark-primary-color;
+                    background-color: $dark-gray;
+                    color: $dark-text-color;
+                }
+            }
+        }
+
+        button {
+            background-color: $primary-color;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+                background-color: $primary-color;
+                color: $button-text-color;
+            }
+
+            &.dark-mode {
+                background-color: $dark-primary-color;
+                color: $dark-text-color;
             }
         }
     }
 }
 
 // ====================
-// Scroll to Top Button
+// Footer Styles
 // ====================
-#scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
+footer {
     background-color: $primary-color;
     color: $button-text-color;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
+    padding: 2rem 0;
+    font-size: 1rem;
 
-    &:hover {
-        background-color: $secondary-color;
+    p {
+        margin: 0.5rem 0;
+
+        a {
+            color: $secondary-color;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $button-text-color;
+            }
+        }
+    }
+
+    .social-icons {
+        margin-top: 1rem;
+
+        a {
+            color: $button-text-color;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $secondary-color;
+            }
+
+            i {
+                font-size: 1.5rem;
+            }
+        }
     }
 
     &.dark-mode {
-        background-color: $dark-primary-color;
+        background-color: $dark-gray;
         color: $dark-text-color;
 
-        &:hover {
-            background-color: $primary-color;
+        p a {
+            color: $dark-primary-color;
+
+            &:hover {
+                color: $dark-text-color;
+            }
+        }
+
+        .social-icons a {
+            color: $dark-text-color;
+
+            &:hover {
+                color: $dark-primary-color;
+            }
         }
     }
 }

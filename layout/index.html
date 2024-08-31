@@ -18,6 +18,7 @@
       <link rel="stylesheet" href="/style/style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
       <script src="https://cdn.jsdelivr.net/npm/i18next@latest/dist/umd/i18next.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@latest/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
@@ -69,177 +70,164 @@
             </div>
          </section>
          <!-- About Section -->
-       <section id="about" class="animate-section">
-    <div class="container">
-        <h2 data-i18n="aboutMe" class="text-center mb-4 font-weight-bold" style="color: #005358; font-size: 60px;">About Me</h2>
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <p data-i18n="aboutText" class="lead">
-                <h2 style="color: #005358;">
-                    I'm 
-                    <span style="color: #ff0000; font-weight: bold;">Mohsen</span>
-                    <span style="color: #ff8800; font-weight: bold;">Me</span>
-                </h2>
-                Hi! I’m Mohsen Nozari, a <span style="color: #02a34b; font-weight: bold;">Front-End Developer</span> with over 5 years of experience in creating beautiful and functional web applications. I specialize in <span style="color: rgb(0, 124, 124); font-weight: bold;">HTML, CSS, JavaScript</span>, and frameworks like React and Vue.js. With a passion for coding and design, I aim to deliver responsive, user-friendly websites and continually seek to enhance user experiences. Let’s transform the digital world together!
-                </p>
+         <section id="about" class="animate-section">
+            <div class="container">
+               <h2 data-i18n="aboutMe" class="text-center mb-4 font-weight-bold" style="color: #05adb6; font-size: 60px;">About Me</h2>
+               <div class="row align-items-center">
+                  <div class="col-md-6">
+                     <p data-i18n="aboutText" class="lead">
+                     <h2 style="color: #07c3cd;">
+                        I'm 
+                        <span style="color: #ff0000; font-weight: bold;">Mohsen</span>
+                        <span style="color: #ff8800; font-weight: bold;">Me</span>
+                     </h2>
+                     Hi! I’m Mohsen Nozari, a <span style="color: #02a34b; font-weight: bold;">Front-End Developer</span> with over 5 years of experience in creating beautiful and functional web applications. I specialize in <span style="color: rgb(0, 124, 124); font-weight: bold;">HTML, CSS, JavaScript</span>, and frameworks like React and Vue.js. With a passion for coding and design, I aim to deliver responsive, user-friendly websites and continually seek to enhance user experiences. Let’s transform the digital world together!
+                     </p>
+                  </div>
+                  <div class="col-md-6 text-center">
+                     <img src="/assets/profile-portfolio-2.jpg" alt="Mohsen Nozari - Front-End Developer Profile Image" class="img-fluid rounded-circle shadow" style="max-width: 450px; height: 450px; object-fit: cover">
+                  </div>
+               </div>
             </div>
-            <div class="col-md-6 text-center">
-                <img src="/assets/profile-portfolio-2.jpg" alt="Mohsen Nozari - Front-End Developer Profile Image" class="img-fluid rounded-circle shadow" style="max-width: 450px; height: 450px; object-fit: cover">
-            </div>
-        </div>
-    </div>
-</section>
-
+         </section>
          <!-- Services Section -->
-      
-<section id="services" class="py-5">
-    <div class="container">
-        <h2 data-i18n="services">Services</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="service-card">
-                    <i class="fas fa-code service-icon"></i> <!-- Font Awesome icon for Web Development -->
-                    <h5 data-i18n="service1">Web Development</h5>
-                    <p data-i18n="service1Desc">We create responsive and user-friendly websites that engage your audience and drive conversions. Our team specializes in HTML, CSS, and JavaScript to deliver high-quality web solutions.</p>
-                </div>
+         <section id="services" class="py-5">
+            <div class="container">
+               <h2 data-i18n="services">Services</h2>
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="service-card">
+                        <i class="fas fa-code service-icon"></i> <!-- Font Awesome icon for Web Development -->
+                        <h5 data-i18n="service1">Web Development</h5>
+                        <p data-i18n="service1Desc">We create responsive and user-friendly websites that engage your audience and drive conversions. Our team specializes in HTML, CSS, and JavaScript to deliver high-quality web solutions.</p>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="service-card">
+                        <i class="fas fa-paint-brush service-icon"></i> <!-- Font Awesome icon for UI/UX Design -->
+                        <h5 data-i18n="service2">UI/UX Design</h5>
+                        <p data-i18n="service2Desc">Our design team focuses on creating intuitive user interfaces and seamless user experiences. We conduct user research and testing to ensure your product is both beautiful and functional.</p>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="service-card">
+                        <i class="fas fa-store service-icon"></i> <!-- Font Awesome icon for E-commerce Solutions -->
+                        <h5 data-i18n="service3">E-commerce Solutions</h5>
+                        <p data-i18n="service3Desc">We offer comprehensive e-commerce solutions, from setting up online stores to integrating payment gateways. Our goal is to help you maximize your online sales with a robust platform.</p>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="service-card">
+                        <i class="fas fa-search service-icon"></i> <!-- Font Awesome icon for SEO & Digital Marketing -->
+                        <h5 data-i18n="service4">SEO & Digital Marketing</h5>
+                        <p data-i18n="service4Desc">Enhance your online presence with our SEO and digital marketing services. We employ the latest strategies to improve your website's visibility and attract more visitors.</p>
+                     </div>
+                  </div>
+               </div>
+               <p data-i18n="contact">Feel free to reach out for a custom solution tailored to your project!</p>
             </div>
-            <div class="col-md-6">
-                <div class="service-card">
-                    <i class="fas fa-paint-brush service-icon"></i> <!-- Font Awesome icon for UI/UX Design -->
-                    <h5 data-i18n="service2">UI/UX Design</h5>
-                    <p data-i18n="service2Desc">Our design team focuses on creating intuitive user interfaces and seamless user experiences. We conduct user research and testing to ensure your product is both beautiful and functional.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="service-card">
-                    <i class="fas fa-store service-icon"></i> <!-- Font Awesome icon for E-commerce Solutions -->
-                    <h5 data-i18n="service3">E-commerce Solutions</h5>
-                    <p data-i18n="service3Desc">We offer comprehensive e-commerce solutions, from setting up online stores to integrating payment gateways. Our goal is to help you maximize your online sales with a robust platform.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="service-card">
-                    <i class="fas fa-search service-icon"></i> <!-- Font Awesome icon for SEO & Digital Marketing -->
-                    <h5 data-i18n="service4">SEO & Digital Marketing</h5>
-                    <p data-i18n="service4Desc">Enhance your online presence with our SEO and digital marketing services. We employ the latest strategies to improve your website's visibility and attract more visitors.</p>
-                </div>
-            </div>
-        </div>
-        <p data-i18n="contact">Feel free to reach out for a custom solution tailored to your project!</p>
-    </div>
-</section>
-
-
+         </section>
          <!-- Portfolio Section -->
-      <section id="portfolio" class="py-5">
-    <div class="container">
-        <h2 data-i18n="portfolio">Portfolio</h2>
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <img src="/assets/WEATHER SCREEN.png" alt="Weather App" class="img-fluid mb-3">
-                <h5 data-i18n="project1">Weather App</h5>
-                <p data-i18n="project1Desc">Stay updated with real-time weather forecasts and alerts. Plan your day with confidence using accurate data and a user-friendly interface.<br> <a href="#">View project</a>.</p>
+         <section id="portfolio" class="py-5">
+            <div class="container">
+               <h2 data-i18n="portfolio">Portfolio</h2>
+               <div class="row">
+                  <div class="col-md-4 portfolio-item">
+                     <img src="/assets/WEATHER SCREEN.png" alt="Weather App" class="img-fluid mb-3">
+                     <h5 data-i18n="project1">Weather App</h5>
+                     <p data-i18n="project1Desc">Stay updated with real-time weather forecasts and alerts. Plan your day with confidence using accurate data and a user-friendly interface.<br> <a href="#">View project</a>.</p>
+                  </div>
+                  <div class="col-md-4 portfolio-item">
+                     <img src="/assets/note scrin.png" alt="Note App" class="img-fluid mb-3">
+                     <h5 data-i18n="project2">Note App</h5>
+                     <p data-i18n="project2Desc">Organize your thoughts and ideas effortlessly. Create, edit, and manage notes with ease. Access your notes anywhere, anytime.<br> <a href="#">View project</a>.</p>
+                  </div>
+                  <div class="col-md-4 portfolio-item">
+                     <img src="/assets/qout screen.png" alt="Quote App" class="img-fluid mb-3">
+                     <h5 data-i18n="project3">Quote App</h5>
+                     <p data-i18n="project3Desc">Discover and share inspiring quotes from various authors. Get daily motivation and positivity delivered to your device.<br> <a href="#">View project</a>.</p>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-4 portfolio-item">
-                <img src="/assets/note scrin.png" alt="Note App" class="img-fluid mb-3">
-                <h5 data-i18n="project2">Note App</h5>
-                <p data-i18n="project2Desc">Organize your thoughts and ideas effortlessly. Create, edit, and manage notes with ease. Access your notes anywhere, anytime.<br> <a href="#">View project</a>.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <img src="/assets/qout screen.png" alt="Quote App" class="img-fluid mb-3">
-                <h5 data-i18n="project3">Quote App</h5>
-                <p data-i18n="project3Desc">Discover and share inspiring quotes from various authors. Get daily motivation and positivity delivered to your device.<br> <a href="#">View project</a>.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+         </section>
          <!-- Blog Section -->
-    <section id="blog" class="py-5">
-    <div class="container">
-        <h2 data-i18n="blog">Blog</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="/assets/css grid img.png" alt="Understanding CSS Grid Layout" class="img-fluid mb-3">
-                <h5 data-i18n="latestPost1">Understanding CSS Grid Layout</h5>
-                <p data-i18n="latestPost1Desc">Explore the fundamentals of CSS Grid Layout, a powerful tool for creating responsive web designs. <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Read more</a>.</p>
+         <section id="blog" class="py-5">
+            <div class="container">
+               <h2 data-i18n="blog">Blog</h2>
+               <div class="row">
+                  <div class="col-md-4">
+                     <img src="/assets/css grid img.png" alt="Understanding CSS Grid Layout" class="img-fluid mb-3">
+                     <h5 data-i18n="latestPost1">Understanding CSS Grid Layout</h5>
+                     <p data-i18n="latestPost1Desc">Explore the fundamentals of CSS Grid Layout, a powerful tool for creating responsive web designs. <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Read more</a>.</p>
+                  </div>
+                  <div class="col-md-4">
+                     <img src="/assets/es6 img.jpg" alt="JavaScript ES6 Features" class="img-fluid mb-3">
+                     <h5 data-i18n="latestPost2">JavaScript ES6 Features</h5>
+                     <p data-i18n="latestPost2Desc">Dive into the new features introduced in JavaScript ES6, including arrow functions, promises, and modules. <a href="https://www.boardinfinity.com/blog/top-10-features-of-es6/">Read more</a>.</p>
+                  </div>
+                  <div class="col-md-4">
+                     <img src="/assets/responsiv img.png" alt="Building Responsive Websites" class="img-fluid mb-3">
+                     <h5 data-i18n="latestPost3">Building Responsive Websites</h5>
+                     <p data-i18n="latestPost3Desc">Learn the best practices for building responsive websites that look great on any device. <a href=https://www.browserstack.com/guide/how-to-create-responsive-website">Read more</a>.</p>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-4">
-                <img src="/assets/es6 img.jpg" alt="JavaScript ES6 Features" class="img-fluid mb-3">
-                <h5 data-i18n="latestPost2">JavaScript ES6 Features</h5>
-                <p data-i18n="latestPost2Desc">Dive into the new features introduced in JavaScript ES6, including arrow functions, promises, and modules. <a href="https://www.boardinfinity.com/blog/top-10-features-of-es6/">Read more</a>.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="/assets/responsiv img.png" alt="Building Responsive Websites" class="img-fluid mb-3">
-                <h5 data-i18n="latestPost3">Building Responsive Websites</h5>
-                <p data-i18n="latestPost3Desc">Learn the best practices for building responsive websites that look great on any device. <a href=https://www.browserstack.com/guide/how-to-create-responsive-website">Read more</a>.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+         </section>
          <!-- Testimonials Section -->
-   <section id="testimonials" class="py-5 bg-light">
+        <section id="testimonials" class="py-5">
     <div class="container">
         <h2 data-i18n="testimonials" class="text-center mb-5">Testimonials</h2>
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <blockquote class="blockquote text-center">
                         <img src="/assets/profile-44.webp" alt="Client 1" class="rounded-circle mb-3" width="180" height="180">
                         <p class="mb-0" data-i18n="testimonial1">“Working with Mohsen Nozari has been a game-changer for our company. The website redesign not only looks fantastic but also performs exceptionally well. Highly recommend!”</p>
-                        <footer class="blockquote-footer" data-i18n="client1">Jack, <cite title="Position">CEO, Tech Innovations</cite></footer>
+                        <div class="testimonial-footer" data-i18n="client1">
+                            Jack, <cite title="Position">CEO, Tech Innovations</cite>
+                        </div>
                     </blockquote>
                 </div>
                 <div class="carousel-item">
                     <blockquote class="blockquote text-center">
                         <img src="/assets/ff-gg.jpg" alt="Client 2" class="rounded-circle mb-3" width="80" height="80">
                         <p class="mb-0" data-i18n="testimonial2">“Mohsen Nozari delivered our project on time and exceeded our expectations. The attention to detail and creativity in the design made a huge difference for our brand.”</p>
-                        <footer class="blockquote-footer" data-i18n="client2">Tom, <cite title="Position">Marketing Director, Creative Solutions</cite></footer>
+                        <div class="testimonial-footer" data-i18n="client2">
+                            Tom, <cite title="Position">Marketing Director, Creative Solutions</cite>
+                        </div>
                     </blockquote>
                 </div>
                 <div class="carousel-item">
                     <blockquote class="blockquote text-center">
                         <img src="/assets/profile-portfolio-2.jpg" alt="Client 3" class="rounded-circle mb-3" width="80" height="80">
                         <p class="mb-0" data-i18n="testimonial3">“We are thrilled with the results! Mohsen Nozari was professional, responsive, and truly understood our vision. Our new site has received rave reviews from our clients!”</p>
-                        <footer class="blockquote-footer" data-i18n="client3">Bungalow, <cite title="Position">Project Manager, Bungalow Designs</cite></footer>
+                        <div class="testimonial-footer" data-i18n="client3">
+                            Bungalow, <cite title="Position">Project Manager, Bungalow Designs</cite>
+                        </div>
                     </blockquote>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </div>
 </section>
 
-
-
-
          <!-- FAQ Section -->
          <section id="faq" class="py-5">
             <div class="container">
-               <h2 data-i18n="faq">FAQ</h2>
+               <h2 data-i18n="faq">Frequently Asked Questions (FAQ)</h2>
                <div id="accordion">
                   <div class="card">
                      <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
                               aria-expanded="true" aria-controls="collapseOne">
-                           <span data-i18n="faqQuestion1">Question 1?</span>
+                           <span data-i18n="faqQuestion1">What is the purpose of this application?</span>
                            </button>
                         </h5>
                      </div>
                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body" data-i18n="faqAnswer1">
-                           Answer to question 1.
+                           This application is designed to help users manage their tasks efficiently and provide quick access to important information.
                         </div>
                      </div>
                   </div>
@@ -248,13 +236,13 @@
                         <h5 class="mb-0">
                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
                               aria-expanded="false" aria-controls="collapseTwo">
-                           <span data-i18n="faqQuestion2">Question 2?</span>
+                           <span data-i18n="faqQuestion2">How can I reset my password?</span>
                            </button>
                         </h5>
                      </div>
                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body" data-i18n="faqAnswer2">
-                           Answer to question 2.
+                           To reset your password, go to the login page and click on the "Forgot Password?" link. Follow the instructions sent to your email.
                         </div>
                      </div>
                   </div>
@@ -263,13 +251,13 @@
                         <h5 class="mb-0">
                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
                               aria-expanded="false" aria-controls="collapseThree">
-                           <span data-i18n="faqQuestion3">Question 3?</span>
+                           <span data-i18n="faqQuestion3">Where can I find user support?</span>
                            </button>
                         </h5>
                      </div>
                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="card-body" data-i18n="faqAnswer3">
-                           Answer to question 3.
+                           User support can be found on our support page or by contacting our customer service team via email or chat.
                         </div>
                      </div>
                   </div>
@@ -277,22 +265,84 @@
             </div>
          </section>
          <!-- Contact Section -->
-         <section id="contact" class="py-5">
-            <div class="container">
-               <h2 data-i18n="contact">Contact Us</h2>
-               <p data-i18n="contactText">I would love to hear from you! Whether you have a question or want to discuss a project, feel free to reach out.</p>
-               <ul>
-                  <li><strong data-i18n="email">Email:</strong> [Your Email]</li>
-                  <li><strong data-i18n="phone">Phone:</strong> [Your Phone Number]</li>
-                  <li><strong data-i18n="socialMedia">Social Media:</strong> [Links to your social media profiles]</li>
-               </ul>
-            </div>
-         </section>
+         <!DOCTYPE html>
+         <html lang="en">
+            <head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Contact Info with Bootstrap Icons</title>
+               <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+               <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+            </head>
+            <body>
+               <section id="contact" class="py-5">
+                  <div class="container">
+                     <h2 data-i18n="contact" class="text-center mb-4">Contact Us</h2>
+                     <p data-i18n="contactText" class="text-center mb-5">
+                        I would love to hear from you! Whether you have a question or want to discuss a project, feel free to reach out.
+                     </p>
+                     <div class="row">
+                        <div class="col-md-6 text-center mb-4">
+                           <ul class="contact-info list-unstyled">
+                              <li>
+                                 <i class="bi bi-envelope me-2" style="font-size: 20px;"></i>
+                                 <strong data-i18n="email">Email: </strong><br>
+                                 <a href="mailto:your-email@example.com">your-email@example.com</a>
+                              </li>
+                              <li>
+                                 <i class="bi bi-telephone me-2" style="font-size: 20px;"></i>
+                                 <strong data-i18n="phone">Phone: </strong><br>
+                                 <a href="tel:+1234567890">+123 456 7890</a>
+                              </li>
+                              <li>
+                                 <strong data-i18n="socialMedia">Social Media:</strong><br>
+                                 <a href="#" target="_blank" class="d-inline-flex align-items-center">
+                                 <i class="bi bi-facebook me-2" style="font-size: 20px;"></i>
+                                 Facebook
+                                 </a><br>
+                                 <a href="#" target="_blank" class="d-inline-flex align-items-center">
+                                 <i class="bi bi-linkedin me-2" style="font-size: 20px;"></i>
+                                 LinkedIn
+                                 </a><br>
+                                 <a href="#" target="_blank" class="d-inline-flex align-items-center">
+                                 <i class="bi bi-twitter me-2" style="font-size: 20px;"></i>
+                                 Twitter
+                                 </a><br>
+                                 <a href="#" target="_blank" class="d-inline-flex align-items-center">
+                                 <i class="bi bi-instagram me-2" style="font-size: 20px;"></i>
+                                 Instagram
+                                 </a><br>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="col-md-6">
+                           <form id="contact-form" class="text-center">
+                              <div class="form-group mb-3">
+                                 <label for="name" data-i18n="name">Name:</label>
+                                 <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                              </div>
+                              <div class="form-group mb-3">
+                                 <label for="email" data-i18n="email">Email:</label>
+                                 <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                              </div>
+                              <div class="form-group mb-3">
+                                 <label for="message" data-i18n="message">Message:</label>
+                                 <textarea id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                              </div>
+                              <button type="submit" class="btn btn-primary">Send Message</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+            </body>
+         </html>
       </main>
       <!-- Footer -->
       <footer class="footer text-center py-4">
          <div class="container">
-            <p>© <span id="year"></span> [Your Name]. All rights reserved.</p>
+            <p>© <span id="year"></span> MOHSEN NOARI. All rights reserved.</p>
             <p>
                <a href="#" data-i18n="privacyPolicy">Privacy Policy</a> | 
                <a href="#" data-i18n="termsOfService">Terms of Service</a>
@@ -305,10 +355,17 @@
             </div>
          </div>
       </footer>
+      <!-- JavaScript to update the year dynamically -->
+      <script>
+         document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
       <!-- Scripts -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <script src="js/script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+      <script src="js/i18next.min.js"></script>
+      <script src="/js/script.js"></script>
    </body>
 </html>
