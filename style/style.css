@@ -132,6 +132,10 @@ h2.dark-mode {
 
 #about {
   font-family: Georgia, "Times New Roman", Times, serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #about h2 p span {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -173,6 +177,7 @@ h2.dark-mode {
 }
 #about h2 {
   animation: fadeIn 1.5s ease-in-out forwards;
+  font-size: 40px;
 }
 #about .lead {
   animation: slideInLeft 1s ease-in-out forwards;
@@ -183,6 +188,7 @@ h2.dark-mode {
 
 #services {
   text-align: center;
+  height: 100vh;
 }
 #services h2 {
   color: #039ae0;
@@ -680,4 +686,53 @@ footer.dark-mode .social-icons a {
 }
 footer.dark-mode .social-icons a:hover {
   color: #520ca8;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#faq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contac {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
