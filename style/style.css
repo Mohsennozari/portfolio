@@ -69,7 +69,7 @@ h2.dark-mode {
   margin-left: 20px;
 }
 .navbar .navbar-brand:hover {
-  color: #ffff00;
+  color: #ffcc00;
 }
 .navbar .navbar-nav {
   margin-right: 20px;
@@ -82,13 +82,13 @@ h2.dark-mode {
   transition: color 0.3s;
 }
 .navbar .navbar-nav .nav-link:hover {
-  color: #ffff00;
+  color: #ffcc00;
 }
 .navbar #theme-toggle {
   border: 1px solid #ad0000;
   background-color: #fff;
   color: rgb(0, 0, 0);
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   padding: 5px 10px;
   border-radius: 5px;
@@ -105,12 +105,16 @@ h2.dark-mode {
   border-radius: 20px;
   padding: 10px;
   margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 30px;
 }
 .navbar .dropdown-menu .dropdown-item {
   color: #333;
 }
 .navbar .dropdown-menu .dropdown-item:hover {
-  background-color: #ffff00;
+  background-color: #ffcc00;
   color: #1e1e1e;
   border-radius: 10px;
 }
@@ -239,6 +243,8 @@ h2.dark-mode {
   transition: transform 0.3s, border-color 0.2s;
   height: 450px;
   margin-bottom: 30px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .portfolio-item:hover {
   transform: translateY(-5px);
@@ -252,6 +258,7 @@ h2.dark-mode {
 .portfolio-item h5 {
   font-size: 2rem;
   color: #ad0000;
+  margin-top: 30px;
 }
 .portfolio-item p {
   color: #666;
@@ -277,6 +284,117 @@ h2.dark-mode {
   color: #0080bc;
 }
 
+/* Card container with entry animation */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Individual card styling */
+.card-skill {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 350px;
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Entry animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Exit animation (not used in this example, but provided for reference) */
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+/* Scroll animation effect */
+/* Specific background colors for each technology */
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.card-image {
+  width: 80px;
+  /* Adjusted size for better visibility */
+  height: 80px;
+  /* Adjusted size for better visibility */
+  margin-bottom: 15px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card-title {
+  font-size: 44px;
+  /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;
+  /* Changed to white for better contrast */
+}
+
+.card-description {
+  font-size: 20px;
+  /* Increased font size */
+  color: #000000;
+  /* Changed to white for better contrast */
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    /* Replace with your desired dark background */
+  }
+  .card-skill {
+    background-color: #1e1e1e;
+    /* Replace with your desired dark card background */
+    color: #fff;
+    /* Replace with your desired dark text color */
+  }
+  .card-title,
+  .card-description {
+    color: #fff;
+    /* Replace with your desired dark text color */
+  }
+  .card-image {
+    filter: brightness(0.8);
+  }
+}
 #blog {
   padding: 50px 0;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -346,6 +464,20 @@ h2.dark-mode {
 
 .blockquote-footer.dark-mode {
   background-color: #1e1e1e;
+}
+
+.rating .fa-star {
+  color: #ffd700;
+  /* Gold color for stars */
+}
+
+.rating .fa-star-half-o {
+  color: #ffd700;
+}
+
+.rating .fa-star:not(.checked) {
+  color: #e0e0e0;
+  /* Grey color for unfilled stars */
 }
 
 #faq {
@@ -446,7 +578,7 @@ h2.dark-mode {
   color: #520ca8;
 }
 #contact .contact-info a.dark-mode:hover {
-  color: #ffff00;
+  color: #ffcc00;
 }
 #contact #contact-form .form-group {
   margin-bottom: 1.5rem;
@@ -510,7 +642,7 @@ footer p {
   margin: 0.5rem 0;
 }
 footer p a {
-  color: #ffff00;
+  color: #ffcc00;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -528,7 +660,7 @@ footer .social-icons a {
   transition: color 0.3s;
 }
 footer .social-icons a:hover {
-  color: #ffff00;
+  color: #ffcc00;
 }
 footer .social-icons a i {
   font-size: 1.5rem;

@@ -150,6 +150,38 @@
                </div>
             </div>
          </section>
+         <div class="card-container">
+            <div class="card-skill html-card">
+               <img src="/assets/html-5 (1).png" alt="HTML Logo" class="card-image">
+               <div class="card-title">HTML</div>
+               <div class="card-description">Structuring web pages with HTML.</div>
+            </div>
+            <div class="card-skill css-card">
+               <img src="/assets/css-3.png" alt="CSS Logo" class="card-image">
+               <div class="card-title">CSS</div>
+               <div class="card-description">Styling and designing web pages with CSS.</div>
+            </div>
+            <div class="card-skill bootstrap-card">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap Logo" class="card-image">
+               <div class="card-title">Bootstrap</div>
+               <div class="card-description">Powerful CSS framework for responsive design.</div>
+            </div>
+            <div class="card-skill js-card">
+               <img src="/assets/icons8-javascript-480.png" alt="JavaScript Logo" class="card-image">
+               <div class="card-title">JavaScript</div>
+               <div class="card-description">Creating dynamic interactions on web pages with JavaScript.</div>
+            </div>
+            <div class="card-skill github-card">
+               <img src="/assets/icons8-github-512.png" alt="GitHub Logo" class="card-image">
+               <div class="card-title">GitHub</div>
+               <div class="card-description">Version control and code sharing with GitHub.</div>
+            </div>
+            <div class="card-skill sass-card">
+               <img src="/assets/icons8-sass-480.png" alt="SASS Logo" class="card-image">
+               <div class="card-title">SASS</div>
+               <div class="card-description">Powerful CSS preprocessor for better CSS management.</div>
+            </div>
+         </div>
          <!-- Blog Section -->
          <section id="blog" class="py-5">
             <div class="container">
@@ -174,42 +206,83 @@
             </div>
          </section>
          <!-- Testimonials Section -->
-         <section id="testimonials" class="py-5">
-            <div class="container">
-               <h2 data-i18n="testimonials" class="text-center mb-5">Testimonials</h2>
-               <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-                  <div class="carousel-inner">
-                     <div class="carousel-item active">
-                        <blockquote class="blockquote text-center">
-                           <img src="/assets/profile-44.webp" alt="Client 1" class="rounded-circle mb-3" width="180" height="180">
-                           <p class="mb-0" data-i18n="testimonial1">“Working with Mohsen Nozari has been a game-changer for our company. The website redesign not only looks fantastic but also performs exceptionally well. Highly recommend!”</p>
-                           <div class="testimonial-footer" data-i18n="client1">
-                              Jack, <cite title="Position">CEO, Tech Innovations</cite>
-                           </div>
-                        </blockquote>
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="6000" style="width: auto; height: 430px;">
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+               <button type="button" data-target="#carouselExampleIndicators" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: red; border-radius: 5px; width: 60px; height: 10px; border:none; margin-top:0px; margin-left:20px"></button>
+               <button type="button" data-target="#carouselExampleIndicators" data-slide-to="1" aria-label="Slide 2" style="background-color: red; border-radius: 5px; width: 60px; height: 10px; border:none; margin-top:0px; margin-left:20px"></button>
+               <button type="button" data-target="#carouselExampleIndicators" data-slide-to="2" aria-label="Slide 3" style="background-color: red; border-radius: 5px; width: 60px; height: 10px; border:none; margin-top:0px; margin-left:20px"></button>
+            </div>
+            <!-- Carousel Inner -->
+            <div class="carousel-inner">
+               <!-- Slide 1 -->
+               <div class="carousel-item active">
+                  <blockquote class="blockquote text-center">
+                     <img src="/assets/profile-44.webp" alt="Client 1" class="rounded-circle mb-3" width="180" height="180">
+                     <p class="mb-0" data-i18n="testimonial1">“Working with Mohsen Nozari has been a game-changer for our company. The website redesign not only looks fantastic but also performs exceptionally well. Highly recommend!”</p>
+                     <!-- Star Rating -->
+                     <div class="rating mt-2">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
                      </div>
-                     <div class="carousel-item">
-                        <blockquote class="blockquote text-center">
-                           <img src="/assets/ff-gg.jpg" alt="Client 2" class="rounded-circle mb-3" width="80" height="80">
-                           <p class="mb-0" data-i18n="testimonial2">“Mohsen Nozari delivered our project on time and exceeded our expectations. The attention to detail and creativity in the design made a huge difference for our brand.”</p>
-                           <div class="testimonial-footer" data-i18n="client2">
-                              Tom, <cite title="Position">Marketing Director, Creative Solutions</cite>
-                           </div>
-                        </blockquote>
+                     <div class="testimonial-footer" data-i18n="client1">
+                        Jack, <cite title="Position">CEO, Tech Innovations</cite>
                      </div>
-                     <div class="carousel-item">
-                        <blockquote class="blockquote text-center">
-                           <img src="/assets/profile-portfolio-2.jpg" alt="Client 3" class="rounded-circle mb-3" width="80" height="80">
-                           <p class="mb-0" data-i18n="testimonial3">“We are thrilled with the results! Mohsen Nozari was professional, responsive, and truly understood our vision. Our new site has received rave reviews from our clients!”</p>
-                           <div class="testimonial-footer" data-i18n="client3">
-                              Bungalow, <cite title="Position">Project Manager, Bungalow Designs</cite>
-                           </div>
-                        </blockquote>
+                  </blockquote>
+               </div>
+               <!-- Slide 2 -->
+               <div class="carousel-item">
+                  <blockquote class="blockquote text-center">
+                     <img src="/assets/ff-gg.jpg" alt="Client 2" class="rounded-circle mb-3" width="180" height="180">
+                     <p class="mb-0" data-i18n="testimonial2">“Mohsen Nozari delivered our project on time and exceeded our expectations. The attention to detail and creativity in the design made a huge difference for our brand.”</p>
+                     <!-- Star Rating -->
+                     <div class="rating mt-2">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-half-o checked"></span>
+                        <span class="fa fa-star"></span>
                      </div>
-                  </div>
+                     <div class="testimonial-footer" data-i18n="client2">
+                        Tom, <cite title="Position">Marketing Director, Creative Solutions</cite>
+                     </div>
+                  </blockquote>
+               </div>
+               <!-- Slide 3 -->
+               <div class="carousel-item">
+                  <blockquote class="blockquote text-center">
+                     <img src="/assets/profile-portfolio-2.jpg" alt="Client 3" class="rounded-circle mb-3" width="180" height="180">
+                     <p class="mb-0" data-i18n="testimonial3">“We are thrilled with the results! Mohsen Nozari was professional, responsive, and truly understood our vision. Our new site has received rave reviews from our clients!”</p>
+                     <!-- Star Rating -->
+                     <div class="rating mt-2">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                     </div>
+                     <div class="testimonial-footer" data-i18n="client3">
+                        Bungalow, <cite title="Position">Project Manager, Bungalow Designs</cite>
+                     </div>
+                  </blockquote>
                </div>
             </div>
-         </section>
+            <!-- Navigation Controls -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+         </div>
+         <!-- FontAwesome CSS for star icons -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <!-- Custom CSS for rating -->
          <!-- FAQ Section -->
          <section id="faq" class="py-5">
             <div class="container">
