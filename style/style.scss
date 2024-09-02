@@ -187,6 +187,7 @@ h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #000000;
 
 	h2 p span {
 		font-family: Georgia, 'Times New Roman', Times, serif;
@@ -244,7 +245,8 @@ h2 {
 	}
 
 	.img-fluid {
-		animation: slideInRight 1s ease-in-out forwards;
+		animation: slideInRight 2s ease-in-out forwards;
+		border: #ffffff solid 6px;
 	}
 }
 
@@ -328,7 +330,7 @@ h2 {
     
 	border-radius: 8px;
 	padding: 20px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	
 	transition: transform 0.3s, border-color 0.2s;
 	height: 450px;
 	margin-bottom: 30px;
