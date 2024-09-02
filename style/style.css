@@ -741,4 +741,30 @@ footer.dark-mode .social-icons a:hover {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ca0404;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 transparent;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #8a0202 transparent;
+  background-color: #ffbb00;
 }/*# sourceMappingURL=style.css.map */
