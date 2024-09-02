@@ -16,7 +16,7 @@ i18next
   "testimonials": "Testimonials",
   "faq": "FAQ",
   "contact": "Contact Us",
-  "aboutMe": "About Me",
+  
   "service1": "Web Development",
   "service1Desc": "We build responsive, user-friendly websites tailored to your needs.",
   "service2": "UI/UX Design",

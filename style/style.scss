@@ -248,6 +248,7 @@ h2 {
 	}
 }
 
+
 // ====================
 // Service Card Styles
 // ====================
@@ -910,35 +911,45 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	@media screen and (max-width: 768px){
+		
+	}
 }
 #services{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	
+	margin-top: 10px;
 }
 #portfolio{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin-top: 10px;
 }
 #blog{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 10px;
 }
 #testimonials{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 10px;
 }
 #faq{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 10px;
 }
 #contac{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 10px;
 }

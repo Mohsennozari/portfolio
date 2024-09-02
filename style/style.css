@@ -699,11 +699,11 @@ footer.dark-mode .social-icons a:hover {
   align-items: center;
   justify-content: center;
 }
-
 #services {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 
 #portfolio {
@@ -711,28 +711,33 @@ footer.dark-mode .social-icons a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 
 #blog {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 
 #testimonials {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 
 #faq {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 
 #contac {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */
