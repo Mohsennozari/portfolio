@@ -84,7 +84,7 @@ h2 {
 		.dropdown-menu {
 			background-color: $dark-gray;
 			border-color: $dark-border-color;
-			
+
 
 			.dropdown-item {
 				color: $dark-text-color;
@@ -192,7 +192,7 @@ h2 {
 	h2 p span {
 		font-family: Georgia, 'Times New Roman', Times, serif;
 		text-align: justify;
-		
+
 	}
 }
 
@@ -327,10 +327,10 @@ h2 {
 
 .portfolio-item {
 
-    
+
 	border-radius: 8px;
 	padding: 20px;
-	
+
 	transition: transform 0.3s, border-color 0.2s;
 	height: 450px;
 	margin-bottom: 30px;
@@ -903,82 +903,89 @@ footer {
 	}
 }
 
-        
-#home{
+
+#home {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-#about{
+
+#about {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	@media screen and (max-width: 768px){
-		
-	}
+
+	@media screen and (max-width: 768px) {}
 }
-#services{
+
+#services {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+
 	margin-top: 10px;
 }
-#portfolio{
+
+#portfolio {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	margin-top: 10px;
 }
-#blog{
+
+#blog {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: 10px;
 }
-#testimonials{
+
+#testimonials {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: 10px;
 }
-#faq{
+
+#faq {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: 10px;
 }
-#contac{
+
+#contac {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: 10px;
 }
+
 ::-webkit-scrollbar {
-    width: 15px;
+	width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+	background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #ca0404;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    background-clip: padding-box;
+	background-color: #ca0404;
+	border-radius: 10px;
+	border: 2px solid transparent;
+	background-clip: padding-box;
 }
 
 * {
-    scrollbar-width: thin;
-    scrollbar-color: #000000 transparent;
+	scrollbar-width: thin;
+	scrollbar-color: #000000 transparent;
 }
 
 html {
-	
-    scrollbar-width: thin;
-    scrollbar-color: #8a0202 transparent;
-    background-color: #ffbb00;
-	
+
+	scrollbar-width: thin;
+	scrollbar-color: #8a0202 transparent;
+	background-color: #ffbb00;
+
 }
