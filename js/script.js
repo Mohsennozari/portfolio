@@ -191,50 +191,30 @@ document.querySelectorAll('[data-lang]').forEach(el => {
   });
 });
 
-// Handle theme toggle
-document.getElementById('theme-toggle').addEventListener('click', function() {
-  document.body.classList.toggle('dark-mode');
+// Select the theme toggle button
+const themeToggleButton = document.getElementById('theme-toggle');
+
+// Check for saved user preference in localStorage
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
+// Add click event listener to the button
+themeToggleButton.addEventListener('click', () => {
+    // Toggle the dark-mode class on the body
+    document.body.classList.toggle('dark-mode');
+
+    // Check if dark mode is currently enabled
+    if (document.body.classList.contains('dark-mode')) {
+        // Save the theme preference in localStorage
+        localStorage.setItem('theme', 'dark');
+        themeToggleButton.textContent = 'Toggle Light Mode'; // Change button text
+    } else {
+        // Remove the theme preference from localStorage
+        localStorage.removeItem('theme');
+        themeToggleButton.textContent = 'Toggle Dark Mode'; // Change button text
+    }
 });
 
-// Animate content on page load
-document.addEventListener('DOMContentLoaded', () => {
-  // Animate About section
-  const aboutSection = document.getElementById('about');
-  const leadText = aboutSection.querySelector('.lead');
-  const profileImage = aboutSection.querySelector('.img-fluid');
-
-  setTimeout(() => {
-    aboutSection.style.opacity = '1';
-  }, 500); // Delay for container
-
-  setTimeout(() => {
-    leadText.style.opacity = '1';
-  }, 1000); // Delay for text
-
-  setTimeout(() => {
-    profileImage.style.opacity = '1';
-  }, 1500); // Delay for image
-
-  // Animate Service cards on scroll
-  const serviceCards = document.querySelectorAll('.service-card');
-
-  // Function to check if an element is in the viewport
-  const isInViewport = (element) => {
-    const rect = element.getBoundingClientRect();
-    return rect.top <= (window.innerHeight || document.documentElement.clientHeight);
-  };
-
-  // Add event listener for scroll to trigger animations
-  const handleScroll = () => {
-    serviceCards.forEach((card) => {
-      if (isInViewport(card)) {
-        card.style.opacity = '1'; // Make the card visible
-      }
-    });
-  };
-
-  // Run the function on scroll
-  window.addEventListener('scroll', handleScroll);
-  // Trigger animation on page load
-  handleScroll();
-});
+ 
